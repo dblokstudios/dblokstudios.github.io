@@ -1,0 +1,9 @@
+*.psd
+_resources/*
+README.md
+template.txt
+LICENSE.md
+node_modules/*
+Gruntfile.coffee
+package.json
+assets/css/libraries/*
