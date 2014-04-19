@@ -1,4 +1,4 @@
-// $CONTENTS                                                            
+// $CONTENTS
 /* -- CONTENTS............You’re reading it!         */
 /* -- FLAGS...............Configure options          */
 /* -- FUNCTIONS...........Functions for calculations */
@@ -15,7 +15,7 @@
 
 
 
-// $FLAGS   
+// $FLAGS
 /* -- browser with Media Query support */
 $media-queries-supported: true !default;
 $no-mq-classname: '.no-mediaquery';
@@ -47,8 +47,8 @@ $no-mq-classname: '.no-mediaquery';
 /* -- Colors */
 /* ---- Cool */
 $color--aqua:  #7FDBFF;
-$color--blue:  #0054a4;
-$color--navy:  #001F3F;
+$color--blue:  #3A99D8;
+$color--navy:  #35495D;
 $color--teal:  #39CCCC;
 $color--green: #5d9632;
 $color--olive: #3D9970;
@@ -70,12 +70,12 @@ $color--gray:          #555;
 $color--gray-light:   #999;
 $color--gray-lighter: #eee;
 $color--white:        #fff;
-  
+
 /* -- Gutters */
 $gutter--normal: 24px;
 $gutter--narrow: 12px;
 $gutter--skinny: 6px;
- 
+
 /* -- Typography */
 $type--micro:  7px;
 $type--tiny:   9px;
@@ -91,16 +91,20 @@ $size--max-width: 960px;
 $size--width: 90%;
 
 /* -- Breakpoints */
-$palm:     em(300px);
+$palm:     em(320px);
 $lap:      em(480.1px);
-$portable: em(1024px);
+$tablet:   em(768px);
 $desk:     em(1024.1px);
+$footer:   em(650px);
+$header:   em(575px);
 
 /* -- Libraries  */
 /* ---- Typecsset */
-$typecsset-base-font-size:    $type--base;
-$typecsset-base-line-height:  32px;
+/* $typecsset-base-font-size:    $type--base; */
+/* $typecsset-base-line-height:  22px; */
 $typecsset-show-baseline:     false;
+$typecsset-auto-scale:        true;
+$typecsset-ratio:             5,4;
 
 /* ---- Grids */
 $grid__gutter:                $gutter--normal;
@@ -111,14 +115,17 @@ $grid__push:                  false;
 $grid__pull:                  false;
 $grid__use-markup-fix:        true;
 $grid__breakpoints: (
-  'palm' '(max-width: #{$palm})',
-  'lap' '(min-width: #{$lap}) and (max-width: #{$portable})',
-  'portable' '(max-width: #{$portable})',
-  'desk' '(min-width: #{$desk})'
+  'palm' '(min-width: #{$palm})',
+  'lap' '(min-width: #{$lap})',
+  'tablet' '(min-width: #{$tablet})',
+  'desk' '(min-width: #{$desk})',
+  'footer' '(min-width: #{$footer})',
+  'header' '(min-width: #{$header})'
 );
-$grid__breakpoint-has-widths: ('palm', 'lap', 'portable', 'desk');
-$grid__breakpoint-has-push:   ('palm', 'lap', 'portable', 'desk');
-$grid__breakpoint-has-pull:   ('palm', 'lap', 'portable', 'desk');
+
+$grid__breakpoint-has-widths: ('palm', 'lap', 'tablet', 'desk', 'footer', 'header');
+$grid__breakpoint-has-push:   ('palm', 'lap', 'tablet', 'desk', 'footer', 'header');
+$grid__breakpoint-has-pull:   ('palm', 'lap', 'tablet', 'desk', 'footer', 'header');
 
 
 
@@ -152,7 +159,7 @@ $grid__breakpoint-has-pull:   ('palm', 'lap', 'portable', 'desk');
 @import "typecsset.scss";
 @import "csswizardry-grids.scss";
 @import "//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.0/normalize.min.css";
-
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
 
 
 
@@ -161,7 +168,7 @@ $grid__breakpoint-has-pull:   ('palm', 'lap', 'portable', 'desk');
 *,
 *:before,
 *:after {
-  box-sizing:  border-box;
+  box-sizing: border-box;
 }
 
 
@@ -173,6 +180,7 @@ $grid__breakpoint-has-pull:   ('palm', 'lap', 'portable', 'desk');
 // $TYPOGRAPHY
 body {
   font-weight: 200;
+  font-family: Avenir, 'Open Sans', sans-serif;
 }
 
 blockquote {
@@ -216,25 +224,24 @@ th {
   border: 1px solid $color--black;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  padding: 0;
-}
 
 a {
-  color: $color--blue;
+  color: $color--navy;
 
   &:hover,
   &:focus {
-    color: $color--aqua;
+
+    &:before {
+      color: $color--blue;
+    }
+    color: $color--blue;
   }
 
   &:active {
-    color: $color--navy;
+    &:before {
+      color: $color--aqua;
+    }
+    color: $color--aqua;
   }
 }
 
@@ -255,3 +262,31 @@ a {
 
 
 // $MODULES
+@import "modules/_font";
+@import "modules/_header";
+@import "modules/_site-nav";
+@import "modules/_radio";
+@import "modules/_footer";
+
+// $SECTIONS
+section.container {
+  margin: $gutter--normal;
+  margin-top: $gutter--normal * 2;
+
+  .section-title {
+    color: $color--navy;
+    margin-bottom: 0;
+    padding-bottom: $gutter--skinny;
+    font-weight: 200;
+
+    @include typecsset-font-size($typecsset-h3-size);
+  }
+}
+
+
+
+@import "sections/about";
+@import "sections/collective";
+
+// $PAGES
+@import "pages/_terms-of-service";

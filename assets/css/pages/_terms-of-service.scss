@@ -1,0 +1,17 @@
+.terms-of-service {
+
+
+  .container {
+    margin: $gutter--normal;
+  }
+
+  h2 {
+    text-decoration: underline;
+    margin-bottom: 0;
+    padding-bottom: $gutter--narrow;
+
+    @include typecsset-font-size($typecsset-h4-size);
+  }
+
+}
+

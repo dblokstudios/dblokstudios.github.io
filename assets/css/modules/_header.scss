@@ -1,0 +1,32 @@
+.site-header {
+  @extend %clearfix;
+
+  .header__wrapper {
+    background-color: $color--navy;
+    background-image: url(assets/svg/header-logo.svg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    display: block;
+    height: 200px;
+  }
+
+  .site-name {
+    text-align: center;
+    background-color: $color--white;
+    text-transform: lowercase;
+    font-weight: normal;
+    color: $color--navy;
+
+    @include mediaQuery(em(385px), max-width) {
+      @include typecsset-font-size($typecsset-h1-size);
+    }
+
+  }
+
+  .site-tagline {
+    float: left;
+    width: 100%;
+
+    @include typecsset-font-size($typecsset-h6-size);
+  }
+}

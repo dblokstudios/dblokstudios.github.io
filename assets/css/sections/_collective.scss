@@ -1,0 +1,46 @@
+.collective {
+
+  .artist-list,
+  .friends-list {
+    @extend %grid;
+  }
+
+  .artist {
+    @extend %grid__item;
+    @extend %palm--one-half;
+    @extend %lap--one-third;
+    @extend %tablet--one-quarter;
+    @extend %desk--one-quarter;
+
+    text-align: center;
+    margin-bottom: $gutter--narrow;
+  }
+
+  .artist__name {
+    margin-bottom: 0;
+    color: $color--navy;
+    font-weight: 200;
+
+    @include typecsset-font-size($typecsset-h4-size);
+  }
+
+  .artist__details,
+  .genres__list {
+    @extend %clean-list;
+
+    display: inline;
+    color: $color--gray-light;
+    @include typecsset-font-size($type--small);
+    line-height: $type--small;
+  }
+
+  .location,
+  .genres {
+    display: inline;
+  }
+
+  .genre {
+    display: inline;
+    margin: 0 $gutter--skinny / 2;
+  }
+}

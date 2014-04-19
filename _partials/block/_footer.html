@@ -1,13 +1,20 @@
-<!-- $block-nav footer-nav -->
-<footer id="footer">
-  <!-- @include nav -->
+<footer class="site-footer" id="footer">
 
-  <p>
-    <small><!-- $copyright --></small>
-  </p>
+  <section class="colophon">
+    <!-- $block-nav footer-nav -->
+    <!-- @include nav --><!--
 
-  <ul>
-    <li><a href="<!-- @path tos -->">Terms of Service</a></li>
-    <li><a href="<!-- @path privacy -->">Privacy Agreement</a></li>
-  </ul>
+    --><!-- @include social -->
+  </section>
+
+  <section class="fine-print">
+    <p class="site-copyright">
+      <!-- $copyright -->
+    </p>
+
+    <ul class="fine-print__menu">
+      <li class="fine-print__item"><a class="fine-print__link" href="<!-- @path tos -->">Terms of Service</a></li>
+      <li class="fine-print__item"><a class="fine-print__link" href="<!-- @path privacy -->">Privacy Agreement</a></li>
+    </ul>
+  </section>
 </footer>

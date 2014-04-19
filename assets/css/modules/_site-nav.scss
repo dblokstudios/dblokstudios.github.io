@@ -1,0 +1,61 @@
+.site-nav {
+  background-color: darken($color--navy, 10%);
+  box-shadow: inset 0 -3px 5px rgba(0,0,0,0.3);
+
+  .site-nav__list {
+    @extend %clean-list;
+    @extend %grid--full;
+  }
+
+  .site-nav__item {
+    @extend %grid__item;
+    @extend %palm--one-third;
+    @extend %header--one-sixth;
+
+    text-align: center;
+    border: 1px solid darken($color--navy, 15%);
+    border-left: none;
+    border-top: none;
+
+    // disable border on the third elements
+    @include mediaQuery($lap, max-width) {
+      &:nth-of-type(3n + 3) {
+        border-right: none;
+/*         box-shadow: inset 0 -3px 5px rgba(0,0,0,0.3); */
+      }
+    }
+
+    @include mediaQuery($lap) {
+      &:last-of-type {
+        border-right: none;
+      }
+    }
+
+
+  }
+
+  .site-nav__link {
+    color: lighten($color--navy, 10%);
+    text-decoration: none;
+    height: $size--touch-target;
+    line-height: $size--touch-target;
+    display: block;
+    background-color: transparent;
+    transition: 0.3s;
+    transition-property: background-color, color;
+    transition-timing-function: ease-in-out;
+
+    &:before {
+      margin-right: $gutter--skinny;
+    }
+  }
+
+  .site-nav__link:hover {
+    color: $color--white;
+    background-color: lighten($color--navy, 10%);
+
+    &:before {
+      color: $color--white;
+    }
+  }
+}

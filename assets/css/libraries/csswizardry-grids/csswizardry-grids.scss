@@ -102,7 +102,7 @@ $grid__pull:                  false!default;
 
 /**
  * This grid uses flex-box for browsers that support it and falls back to `inline-block`.
- * `Using `inline-block` means that the grid items need their whitespace removed in order for them to work 
+ * `Using `inline-block` means that the grid items need their whitespace removed in order for them to work
  * correctly. Set the following to true if you are going to achieve this by manually removing/commenting out
  * any whitespace in your HTML yourself.
  *
@@ -224,7 +224,7 @@ $grid__class-type:            unquote(".");
     padding:0;                        /* [3] */
     margin-left:-$grid__gutter;             /* [4] */
     @supports not (flex-wrap: wrap) { /* [5] */
-            display: block; 
+            display: block;
     }
     @if $grid__use-markup-fix != true{
         letter-spacing:-0.31em;
