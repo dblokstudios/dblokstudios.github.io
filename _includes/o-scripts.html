@@ -1,0 +1,20 @@
+{% comment %}
+Site-Scripts
+
+loads scripts to bottom of page
+
+use in each file to add script to the "js" string array
+{% capture js %}{% if js %}{{js}}|{% endif %}/assets/js/site-nav.js{% endcapture %}
+
+---
+below the code takes the "js" string array and converts it into a liquid array
+
+Then the array is looped to create a list of scripts
+{% endcomment %}
+
+{% assign js = js | split: "|" %}
+
+
+{% for js in js %}
+  <script src="{{js}}"></script>
+{% endfor %}

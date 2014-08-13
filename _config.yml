@@ -1,0 +1,51 @@
+# Github Defaults - Non-changable
+safe: true
+lsi: false
+
+# Site Defaults
+#name: "D-Blok Studios"
+#tagline: "We make beats. We throw parties. You get down."
+#copyright: "(c) 2014 D-Blok Studios LLC."
+social:
+  -
+    safe: "facebook"
+    name: "Facebook"
+    url:  //facebook.com/dblokstudios
+  -
+    safe: "twitter"
+    name: "Twitter"
+    url:  //twitter.com/dblokstudios
+  -
+    safe: "mixcloud"
+    name: "MixCloud"
+    url:  //mixcloud.com/dblockstudios
+small-print:
+  -
+    safe: "terms"
+    name: "Terms of Service"
+    url:  /terms-of-service
+  -
+    safe: "privacy"
+    name: "Privacy Policy"
+    url:  /privacy
+site-nav:
+  -
+    safe: "home"
+    name: "Home"
+    url:  /
+  -
+    safe: "artists"
+    name: "Artists"
+    url:  /artists
+  -
+    safe: "shows"
+    name: "Shows"
+    url:  /shows
+  -
+    safe: "events"
+    name: "Events"
+    url:  /events
+  -
+    safe: "about"
+    name: "About"
+    url:  /about

@@ -1,6 +1,0 @@
-/* -- $FUNCTIONS --                         */
-
-/* em($px) - convert px to ems              */ 
-@function em($px){
-  @return ($px/16px)+0em;
-}
