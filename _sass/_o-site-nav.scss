@@ -1,25 +1,4 @@
 /**
- * Housekeeping. Nothing to see here...
- */
-html {
-    font-size: 12px;
-    line-height: 1.5;
-    font-family: sans-serif;
-}
-
-a {
-    text-decoration: none;
-
-    &:hover {
-        text-decoration: underline;
-    }
-
-}
-
-
-
-
-/**
  * Very simple, pared-back, mobile-first, responsive nav.
  */
 $responsive-nav-hit-area:   44px;

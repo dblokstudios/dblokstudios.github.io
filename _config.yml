@@ -3,9 +3,9 @@ safe: true
 lsi: false
 
 # Site Defaults
-#name: "D-Blok Studios"
-#tagline: "We make beats. We throw parties. You get down."
-#copyright: "(c) 2014 D-Blok Studios LLC."
+name: "D-Blok Studios"
+tagline: "We make beats. We throw parties. You get down."
+copyright: "(c) 2014 D-Blok Studios LLC."
 social:
   -
     safe: "facebook"
@@ -49,3 +49,16 @@ site-nav:
     safe: "about"
     name: "About"
     url:  /about
+collections:
+  artists:
+    output: true
+  events:
+    output: true
+  shows:
+    output: true
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default"
