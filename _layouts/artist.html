@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<main>
+  <article class="artist">
+    <header class="artist__header">
+      <div class="artist__headshot">
+        <img class="artist__image"
+             src="{{ page.headshot }}" />
+      </div>
+    
+      <h2 class="artist__title">{{ page.title }}</h2>
+    
+      <small class="artist__location">{{ page.city }}, {{ page.state }}</small>
+      
+      <ul class="artist__genres  genre__list">
+        {% for genre in page.genres %}
+          <li class="artist__genre  genre__item">{{ genre }}</li>
+        {% endfor %}
+      </ul>
+    
+      {% for social in page.social %}
+        {{ social[0] }}
+      {% endfor %}
+    </header>
+    
+    <section class="artist__bio">
+      {{ content }}
+    </section>
+    
+  </article>
+</main>

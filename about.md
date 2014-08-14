@@ -20,8 +20,9 @@ D-Blok Studios started as the brain child of two Duncan-ites, who wanted to brin
 + + Co-Founder
 
 ## Staff
-+ ### Felix Huet
-+ + Visual Artist
++ ### Neil Hamilton
++ + Lead Stage Tech
++ + "The Sound Guy"
 + ### Tim Lange
 + + Artists & Repertoire
 + ### Mitch Mckinnon

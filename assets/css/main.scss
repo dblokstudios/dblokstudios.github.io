@@ -1,3 +1,9 @@
 ---
 ---
-//@import 'o-site-nav';
+$responsive-nav-hit-area:   44px;
+$responsive-nav-icon-size:  16px;
+$responsive-nav-color:      #fff;
+$responsive-nav-background: #f43059;
+$responsive-nav-borders:    lighten($responsive-nav-background, 10%);
+
+@import 'o-site-nav';

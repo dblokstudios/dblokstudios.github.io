@@ -1,13 +1,4 @@
 /**
- * Very simple, pared-back, mobile-first, responsive nav.
- */
-$responsive-nav-hit-area:   44px;
-$responsive-nav-icon-size:  16px;
-$responsive-nav-color:      #fff;
-$responsive-nav-background: #f43059;
-$responsive-nav-borders:    lighten($responsive-nav-background, 10%);
-
-/**
  * An element (`nav`) in which to house our dropdown.
  *
  * 1. Make sure we can’t actually see the absolutely positioned dropdown.
@@ -15,10 +6,10 @@ $responsive-nav-borders:    lighten($responsive-nav-background, 10%);
 .site-nav {
     position: relative;
     z-index: 1;
-    width:  $responsive-nav-hit-area;
-    height: $responsive-nav-hit-area;
-    color: $responsive-nav-color;
-    background-color: $responsive-nav-background;
+    width:  44px;
+    height: 44px;
+    color: #fff;
+    background-color: #663399;
     overflow: hidden; /* [1] */
     border-radius: 3px;
     cursor: pointer;
@@ -32,7 +23,7 @@ $responsive-nav-borders:    lighten($responsive-nav-background, 10%);
         width:  auto;
         height: auto;
         background: none;
-        color: $responsive-nav-background;
+        color: #663399;
     }
 
     /**
@@ -41,15 +32,15 @@ $responsive-nav-borders:    lighten($responsive-nav-background, 10%);
      */
     &:after {
         content: "☰";
-        font-size: $responsive-nav-icon-size;
+        font-size: 16px;
         width: 1em;
         line-height: 1;
         text-align: center;
         position: absolute;
         top: 50%;
         left: 50%;
-        margin-top:  -($responsive-nav-icon-size / 2);
-        margin-left: -($responsive-nav-icon-size / 2);
+        margin-top:  -(16px / 2);
+        margin-left: -(16px / 2);
 
         /**
          * Remove the hamburger on wider viewports.
@@ -98,11 +89,11 @@ $responsive-nav-borders:    lighten($responsive-nav-background, 10%);
         list-style: none;
         margin:  0;
         padding: 0;
-        padding-top: $responsive-nav-hit-area;
+        padding-top: 44px;
         position: absolute;
         top:   0;
         left:  0;
-        background-color: $responsive-nav-background;
+        background-color: #663399;
         width: 250px;
         border-radius: 3px;
         z-index: -1; /* [1] */
@@ -123,7 +114,7 @@ $responsive-nav-borders:    lighten($responsive-nav-background, 10%);
     }
 
         .site-nav__item {
-            border-top: 1px solid $responsive-nav-borders;
+            border-top: 1px solid lighten(#663399, 10%);
 
                 @media screen and (min-width: 720px) {
                     display: inline-block;
@@ -137,15 +128,15 @@ $responsive-nav-borders:    lighten($responsive-nav-background, 10%);
              * 2. Ensure that the link text is the same height as the trigger.
              */
             .site-nav__link {
-                color: $responsive-nav-color;
+                color: #fff;
                 display: block;
                 white-space: nowrap;
-                padding-right: ($responsive-nav-hit-area - $responsive-nav-icon-size) / 2; /* [1] */
-                padding-left:  ($responsive-nav-hit-area - $responsive-nav-icon-size) / 2; /* [1] */
-                line-height: $responsive-nav-hit-area; /* [2] */
+                padding-right: (44px - 16) / 2; /* [1] */
+                padding-left:  (44px - 16) / 2; /* [1] */
+                line-height: 44px; /* [2] */
 
                 @media screen and (min-width: 720px) {
-                    color: $responsive-nav-background;
+                    color: #663399;
                 }
 
             }

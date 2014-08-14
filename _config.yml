@@ -60,5 +60,11 @@ defaults:
   -
     scope:
       path: ""
+      type: "artists"
+    values:
+      layout: "artist"
+  -
+    scope:
+      path: ""
     values:
       layout: "default"
