@@ -2,11 +2,12 @@
 <html lang="en-GB">
 <head>
   <meta charset="utf-8">
+  <title></title>
   
   <link href="/assets/css/main.css" rel="stylesheet" />
   <link href="/assets/css/theme.css" rel="stylesheet" />
   
-  <title></title>
+  <script src="/bower_components/prefixfree/prefixfree.min.js"></script>
 <body>
   
   <header class="site-header  header" id="js-site-header">
@@ -18,7 +19,8 @@
 </small>
 </header>
   
-  <main class="home-page">
+  <!--
+<main class="home-page">
 
   <section class="home-page__section--about  home-page__section  section">
     <h2 class="section__title">About Us</h2>
@@ -34,12 +36,14 @@
   </section>
   
 </main>
+-->
 
 
   
   
-
-<nav class="site-nav  nav" id="js-site-nav">
+       
+<nav class="site-nav  nav"
+     id="js-site-nav">         
   <ul class="site-nav__list  nav__list">
         
       <li class="site-nav__item--home  site-nav__item  nav__item">
@@ -63,7 +67,24 @@
      href="/about">About</a></li>
     
   </ul>
+  
+  <ul class="social-nav__list  nav__list">
+        
+      <li class="social-nav__item--facebook  social-nav__item  nav__item">
+  <a class="social-nav__link--facebook  social-nav__link  nav__link"
+     href="//facebook.com/dblokstudios">Facebook</a></li>
+        
+      <li class="social-nav__item--twitter  social-nav__item  nav__item">
+  <a class="social-nav__link--twitter  social-nav__link  nav__link"
+     href="//twitter.com/dblokstudios">Twitter</a></li>
+        
+      <li class="social-nav__item--mixcloud  social-nav__item  nav__item">
+  <a class="social-nav__link--mixcloud  social-nav__link  nav__link"
+     href="//mixcloud.com/dblockstudios">MixCloud</a></li>
+    
+  </ul>
 </nav>
+
   
   <footer class="site-footer  footer" id="js-site-footer">
   <nav class="social-nav  nav" id="js-social-nav">

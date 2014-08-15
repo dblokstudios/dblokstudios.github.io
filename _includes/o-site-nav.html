@@ -1,9 +1,16 @@
 {% capture js %}{% if js %}{{js}}|{% endif %}/assets/js/site-nav.js{% endcapture %}
-
-<nav class="site-nav  nav" id="js-site-nav">
+       
+<nav class="site-nav  nav"
+     id="js-site-nav">         
   <ul class="site-nav__list  nav__list">
     {% for item in site.site-nav %}    
       {% include m-site-nav__item.html %}
+    {% endfor %}
+  </ul>
+  
+  <ul class="social-nav__list  nav__list">
+    {% for item in site.social %}    
+      {% include m-social-nav__item.html %}
     {% endfor %}
   </ul>
 </nav>

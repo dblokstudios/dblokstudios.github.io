@@ -2,6 +2,14 @@
 safe: true
 lsi: false
 
+exclude:
+  - 'bower_components/csswizardry-grids'
+  - 'bower_components/normalize-css'
+
+sass:
+  sass_dir: /
+  style: :compressed
+
 # Site Defaults
 name: "D-Blok Studios"
 tagline: "We make beats. We throw parties. You get down."
