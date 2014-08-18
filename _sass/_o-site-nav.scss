@@ -7,6 +7,7 @@
   cursor: pointer;
   top: 0;
   left: 0;
+  user-select: none;
 
   @media screen and (min-width: $breakpoint--lap) {
     position: static;
@@ -109,4 +110,6 @@
 
 .site-nav--open .social-nav__item {
   border-top-color: lighten($color--primary, 15%);
+  display: block;
 }
+
