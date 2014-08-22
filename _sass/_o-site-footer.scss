@@ -10,53 +10,10 @@ html {
   padding-right: $gutter--normal;
   padding-left: $gutter--normal;
   text-align: center;
+  font-family: $type__sans-serif;
   
   position: absolute;
   left: 0;
   bottom: 0;
-//   height: 100px;
   width: 100%;
-}
-
-.copyright {
-  
-}
-
-.social-nav {
-  
-} 
-
-.social-nav__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.social-nav__item {
-  display: inline-block;
-}
-
-.social-nav__link {
-  color: $color--white;
-  text-decoration: none;
-}
-
-.small-print-nav {
-  text-align: center;
-  font-size: $type--small;
-}
-
-.small-print-nav__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.small-print-nav__item {
-  display: inline-block;
-}
-
-.small-print-nav__link {
-  color: lighten($color--primary, 20%);
-  text-decoration: none;
 }

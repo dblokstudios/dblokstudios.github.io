@@ -2,6 +2,7 @@
 safe: true
 lsi: false
 
+# build Stuff
 exclude:
   - 'bower_components/csswizardry-grids'
   - 'bower_components/normalize-css'
@@ -9,6 +10,7 @@ exclude:
 sass:
   sass_dir: /
   style: :compressed
+
 
 # Site Defaults
 name: "D-Blok Studios"

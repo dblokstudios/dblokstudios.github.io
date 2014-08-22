@@ -1,0 +1,105 @@
+h3 {
+	font-style: italic;
+	margin-bottom: 10px;
+	padding: 0;
+}
+  
+  
+.post {
+  
+  .post__header {
+    text-align:center;
+  }
+  
+    .post__head-group {
+      
+    }
+      
+      .post__title {      
+      	font-family: $type__sans-serif;
+        font-size: 2.747em;
+        margin: 0;
+        line-height:1.1;
+        text-transform: uppercase;
+        color: #27272E;
+        border-bottom: 1px solid darkgrey;
+        padding-bottom: 20px;
+      }
+      
+      .post__title--alternate {
+      	font-family: $type__serif;
+      	font-style:italic;
+      	font-size:0.63em;
+      	display:block;
+      	margin: 1em auto 0 auto;
+      	text-transform: none;
+      }
+      
+      .post__author {
+        text-transform: uppercase;
+        font-size: .874em;
+        text-align: center;
+        line-height:1;
+        background: white;
+        position: relative;
+        padding: 0 5%;
+       	display:  inline;
+       	top: -1em;
+      }
+      
+      .post__details-list {
+        @extend %reset-list;
+        @extend %clearfix;
+      }
+      
+      .post__detail {
+        display: inline-block;
+        text-align: center;
+        float: left;
+      }
+      
+      .post__detail--date {}
+      .post__detail--updates {}
+      
+      .post__tags-list {
+        @extend %reset-list;
+        @extend %clearfix;
+      }
+      .post__tag {}
+      
+      .post__category-list {
+        @extend %reset-list;
+        @extend %clearfix;
+      }
+      .post__category {}
+      
+  p {
+    margin: 0 0 1.5em 0;
+  }
+  
+  p:first-of-type {}
+  p:first-child {}
+  p + p {}
+  p:first-child:first-letter {}
+  
+  
+  
+  .post__footer {}
+  
+  .post__byline {}
+  
+  .post__related {}
+  .post__related-items {}
+  .post__related-item {}
+    
+  @for $i from 1 through $grid--columns {
+    li:nth-child(#{$grid--columns}n+1):nth-last-child(#{$i}) {
+      width: 100% / $i;
+      
+      & ~ li {
+        width: 100% / $i;
+      }
+    }
+  }
+
+}

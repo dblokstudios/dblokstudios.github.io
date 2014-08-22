@@ -6,6 +6,8 @@
   @return ($px/16px)+0em;
 }
 
+$site--domain: '127.0.0.1:8005';
+
 $responsive:            true;
 $mobile-first:          true;
 $gutter:                24px;
@@ -86,9 +88,6 @@ $body__color: $color--white;
 $text__color: #473f3f;
 
 
-
-
-
 // -- Typography
 // ---- Sizes
 $type--micro:  7px;
@@ -104,9 +103,9 @@ $type__baseline-height: 1.5em;
 $type__measure: 35em;
 
 // ---- Font Families
-$type__serif: 'Source Serif Pro', serif;
+$type__serif: 'Source Serif Pro', Georgia, 'Times New Roman', Times, serif;
 $type__serif--small_screen: serif;
-$type__sans-serif: 'Source Sans Pro', sans-serif;
+$type__sans-serif: 'Source Sans Pro', Helvetica, Arial, sans-serif;
 $type__sans-serif--small_screen: sans-serif;
 $type__mono: 'Source Code Pro', monospace;
 $type__mono--small_screen: monospace;
@@ -134,7 +133,21 @@ $breakpoint--desk: $desk;
 
 
 
-@import 'bower_components/normalize-css/normalize--mod';
+$grid--columns: 3;
+
+
+@import url(http://fonts.googleapis.com/css?family=Bevan);
+@import url(http://fonts.googleapis.com/css?family=Lobster+Two&text=%26);
+
+@import '_sass/mixins';
+
+@import '_sass/base';
 @import 'bower_components/csswizardry-grids/csswizardry-grids';
+@import '_sass/icons';
+@import '_sass/type';
 @import '_sass/o-site-nav';
 @import '_sass/o-site-footer';
+
+
+
+

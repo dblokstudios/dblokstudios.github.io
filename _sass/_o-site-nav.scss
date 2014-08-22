@@ -101,6 +101,12 @@
     @media screen and (min-width: $breakpoint--lap) {
       color: $color--primary;
     }
+    
+    // icon
+    &:before {
+      width: 32px;
+      padding: 0;
+    }
   }
 }
 
