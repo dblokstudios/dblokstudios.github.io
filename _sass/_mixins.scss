@@ -1,3 +1,8 @@
+%container {
+  padding-right: 1.25%;
+  padding-left:  1.25%;
+}
+
 %reset-box {
   padding: 0;
   margin: 0;
@@ -77,4 +82,14 @@
   &:before {
     clear: both;
   }
+}
+
+@mixin mask($arguments) {
+    /* Filename, Position / Size, Repeat */
+    // url(/assets/img/dblok-logo.svg) 50% 50% / 100px 100px no-repeat;
+    /* Modernizr.cssmask is the test needed to pass - snippet below */
+    -webkit-mask: $arguments;
+        -ms-mask: $arguments;
+         -o-mask: $arguments;
+            mask: $arguments;
 }

@@ -38,7 +38,7 @@ small-print:
     safe: "privacy"
     name: "Privacy Policy"
     url:  /privacy
-site-nav:
+page-nav:
   -
     safe: "home"
     name: "Home"

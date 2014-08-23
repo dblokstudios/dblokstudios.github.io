@@ -58,7 +58,7 @@ $color--becca-purple: #663399;
 
 // ---- Mains
 $color--primary:   #206396;
-$color--secondary: #a33215;
+$color--secondary: $color--orange;
 $color--tertiary:  #282f36;
 
 // ---- Neutrals
@@ -100,7 +100,7 @@ $type--large: 28.424px;
 // ---- Font Measurements
 $type--cutom_font_width: em(1000px); // width to load external fonts
 $type__baseline-height: 1.5em;
-$type__measure: 35em;
+$type__measure: 36em;
 
 // ---- Font Families
 $type__serif: 'Source Serif Pro', Georgia, 'Times New Roman', Times, serif;
@@ -112,7 +112,7 @@ $type__mono--small_screen: monospace;
 
 // -- Sizes
 $size--touch-target: 44px;
-$size--menu-width: 90%;
+$size--menu-width: 250px;
 $size--max-width: 960px;
 $size--width: 90%;
 $size--icon: 16px;
@@ -123,7 +123,7 @@ $gutter--narrow: 12px;
 $gutter--skinny: 6px;
 
 // -- Breakpoints
-$palm:     em(300px);
+$palm:     em(320px);
 $lap:      em(768px);
 $desk:     em(1024px);
 
@@ -145,7 +145,8 @@ $grid--columns: 3;
 @import 'bower_components/csswizardry-grids/csswizardry-grids';
 @import '_sass/icons';
 @import '_sass/type';
-@import '_sass/o-site-nav';
+@import '_sass/o-page-head';
+@import '_sass/o-primary-nav';
 @import '_sass/o-site-footer';
 
 

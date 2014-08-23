@@ -6,6 +6,8 @@ h3 {
   
   
 .post {
+  // measure set
+  max-width: $type__measure;
   
   .post__header {
     text-align:center;

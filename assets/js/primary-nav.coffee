@@ -8,9 +8,9 @@
   when the viewport no longer matches `responsiveNavBreakpoint`.
 ###
 
-siteNav = document.getElementById('js-site-nav');
+siteNav = document.getElementById('js-primary-nav');
 siteNavBreakpoint = 720;
 
 siteNav.addEventListener 'click', () =>
   if window.innerWidth < siteNavBreakpoint
-    siteNav.classList.toggle 'site-nav--open'
+    siteNav.classList.toggle 'primary-nav--open'

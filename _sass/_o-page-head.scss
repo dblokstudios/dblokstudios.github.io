@@ -1,0 +1,32 @@
+/*------------------------------------*\
+    #page-head
+\*------------------------------------*/
+
+.page-head {
+    display: block;
+    height: 15vh;
+    text-align: center;
+    position: relative;
+}
+
+    .page-head__logo {
+        @extend %reset-box;
+        
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        text-indent: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        height: 100%;
+        background-color: $color--primary;
+        
+        @include mask(url(/assets/img/dblok-logo.svg) 50% 50% no-repeat);
+    }
+    
+        .page-head__tagline {
+            font-size: $type--small;
+            display: block;
+        }
+       

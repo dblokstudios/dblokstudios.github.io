@@ -64,26 +64,26 @@
 }
 
 // Classed Icons
-.site-nav__link:before {
+.page-nav__link:before {
   @extend %fontawesome;
 }
   
-.site-nav__link--home:before {
+.page-nav__link--home:before {
   content: "\f015";
 }
 
-.site-nav__link--artists:before {
+.page-nav__link--artists:before {
   content: "\f0c0";
 }
 
-.site-nav__link--shows:before {
+.page-nav__link--shows:before {
   content: "\f09e";
 }
 
-.site-nav__link--about:before {
+.page-nav__link--about:before {
   content: "\f129";
 }
 
-.site-nav__link--events:before {
+.page-nav__link--events:before {
   content: "\f073";
 }
