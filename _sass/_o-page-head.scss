@@ -4,7 +4,9 @@
 
 .page-head {
     display: block;
-    height: 15vh;
+    height: 50vw;
+    min-height: 150px;
+    max-height: 300px;
     text-align: center;
     position: relative;
 }

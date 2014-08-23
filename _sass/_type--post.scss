@@ -6,6 +6,8 @@ h3 {
   
   
 .post {
+  @extend %container;
+  margin: 0 auto;
   // measure set
   max-width: $type__measure;
   

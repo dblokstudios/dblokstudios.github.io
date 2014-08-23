@@ -39,7 +39,7 @@
     
     &--open {
         overflow: visible;
-        width: $size--menu-width;
+        width: auto;
     }
 
     
@@ -63,7 +63,9 @@
     
     .page-nav__list,
     .social-nav__list {
-        width: $size--menu-width;
+        width: auto;
+        
+
         list-style: none;
         margin:  0;
         padding: 0;
@@ -90,7 +92,7 @@
     
         .page-nav__item,
         .social-nav__item {
-
+            
             @media screen and (min-width: $breakpoint--lap) {
                 display: inline-block;
                 border-top: none;
@@ -99,6 +101,7 @@
     
             .page-nav__link,
             .social-nav__link {
+                padding-right: $size--touch-target / 2 + $gutter--narrow;
                 border-top: 1px solid lighten($color--primary, 5%);
                 background-color: $color--primary;
                 color: $color--white;
