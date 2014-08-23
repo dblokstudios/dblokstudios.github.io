@@ -1,2 +1,6 @@
 .DS_store
 _site
+_site/*
+_site/index.html
+
+_site/assets/css/main.css
