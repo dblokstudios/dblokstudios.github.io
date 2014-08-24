@@ -4,4 +4,7 @@
 
 .section {
     @extend %container;
+    
+    padding-top: $gutter--normal;
+    padding-bottom: $gutter--normal;
 }

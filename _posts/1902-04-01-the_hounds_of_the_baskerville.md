@@ -1,9 +1,9 @@
 ---
 layout: post
-title: The Hound
-subtitle: of the Baskervilles
+title: The Hounds
+subtitle: of the Baskerville
 author: Sir Arthur Conan Doyle
-updated: 0001-01-01
+updated: 
 tags:
   - one
   - two

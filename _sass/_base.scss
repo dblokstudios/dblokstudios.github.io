@@ -1,11 +1,44 @@
 /**************\
   Base Styles
 \**************/
+
+/**
+ * Box Sizing Change
+ */
+ 
 *,
 *:before,
 *:after {
   box-sizing: border-box;
 }
+
+
+/**
+ * Footer
+ */
+
+html {
+    min-height: 100%;
+    position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+/**
+ *
+ */
+
+::-moz-selection { background-color: rgba(253, 133, 47, 0.70); } 
+::selection      { background-color: rgba(253, 133, 47, 0.70); } 
+
+
 
 /**
  * Remove default margin.
@@ -73,6 +106,24 @@ template {
  */
 a {
   background: transparent;
+  color: $color--primary;
+  text-decoration: none;
+//   border-bottom: 1px dotted $color--primary;
+  
+  &:before,
+  &:after {
+      line-height: $type--base;
+  }
+  
+  &:before {
+      width: 24px;
+      text-align: center;
+  }
+  
+  &:after {
+      font-size: $type--tiny;
+      padding-left: $gutter--skinny;
+  }
 }
 
 /**

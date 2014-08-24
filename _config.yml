@@ -15,7 +15,7 @@ sass:
 # Site Defaults
 name: "D-Blok Studios"
 tagline: "We make beats. We throw parties. You get down."
-copyright: "(c) 2014 D-Blok Studios LLC."
+copyright: "©2014 D-Blok Studios LLC."
 social:
   -
     safe: "facebook"
@@ -29,7 +29,7 @@ social:
     safe: "mixcloud"
     name: "MixCloud"
     url:  //mixcloud.com/dblockstudios
-small-print:
+fine-print:
   -
     safe: "terms"
     name: "Terms of Service"

@@ -1,0 +1,11 @@
+<nav class="fine-print-nav">
+  <ul class="fine-print-nav__list"><!--
+    {% for item in site.fine-print %}
+   --><li class="fine-print-nav__item
+                 fine-print-nav__item--{{ item.safe }}">
+      <a class="fine-print-nav__link
+                fine-print-nav__link--{{ item.safe }}"
+          href="{{ item.url }}">{{ item.name }}</a></li><!--
+    {% endfor %}
+--></ul>
+</nav>

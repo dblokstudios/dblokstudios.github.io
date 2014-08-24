@@ -10,13 +10,13 @@ $site--domain: '0.0.0.0:4000';
 
 $responsive:            true;
 $mobile-first:          true;
-$gutter:                24px;
+$gutter:                20px;
 $use-silent-classes:    true;
-$push:                  false;
+$push:                  true;
 $pull:                  false;
 $use-markup-fix:        true;
 $breakpoints: (
-    'palm' '(max-width: 480px)',
+    'palm' '(min-width: 320px) and (max-width: 480px)',
     'lap' '(min-width: 481px) and (max-width: 1023px)',
     'portable' '(max-width: 1023px)',
     'desk' '(min-width: 1024px)'
@@ -147,7 +147,8 @@ $grid--columns: 3;
 @import '_sass/type';
 @import '_sass/o-page-head';
 @import '_sass/o-primary-nav';
-@import '_sass/o-site-footer';
+@import '_sass/o-page-foot';
+@import '_sass/o-artists';
 
 
 

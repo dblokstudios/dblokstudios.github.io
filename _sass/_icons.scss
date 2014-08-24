@@ -23,9 +23,8 @@
 }
 
 // Automatic Icons
-
-[href^="http"]:not([href*="$site-domain"]):before,
-[href^="https"]:not([href*="$site-domain"]):before {
+[href^="http"]:not([href*='127.0.0.1:8005']):after,
+[href^="https"]:not([href*='127.0.0.1:8005']):after {
   @extend %fontawesome;
   content: "\f08e";
 }
