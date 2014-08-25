@@ -5,3 +5,4 @@ _site/index.html
 *.sass-cache*
 node_modules
 *.scssc
+_dev-files/_tmp/*

@@ -18,7 +18,12 @@
         position: static;
         width:  auto;
         height: auto;
-        background-color: transparent;
+        background-color: orange;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+
     }
     
     &:before {
@@ -64,8 +69,6 @@
     .page-nav__list,
     .social-nav__list {
         width: auto;
-        
-
         list-style: none;
         margin:  0;
         padding: 0;
@@ -87,6 +90,10 @@
         
         &:first-child {
             padding-top: $size--touch-target;
+            
+            @media screen and (min-width: $breakpoint--lap) {
+              padding-top: 0;
+            }
         }
     }
     
@@ -138,8 +145,15 @@
                 border-top-color: lighten($color--primary, 15%);
                 background-color: lighten($color--primary, 10%);
                 
+                @media screen and (min-width: $breakpoint--lap) {
+                  width: $size--touch-target;
+                  overflow: hidden;
+                }
+                
                 &:before {
                     background-color: lighten($color--primary, 12.5%);
+                    
+                    
                 }
             }
 }

@@ -9,6 +9,10 @@
     max-height: 300px;
     text-align: center;
     position: relative;
+    
+    @media screen and (min-width: $breakpoint--lap) {
+      margin-top: $size--touch-target;
+    }
 }
 
     .page-head__logo {

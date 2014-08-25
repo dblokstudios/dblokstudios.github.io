@@ -1090,6 +1090,9 @@ sub {
   max-height: 300px;
   text-align: center;
   position: relative; }
+  @media screen and (min-width: 48em) {
+    .page-head {
+      margin-top: 44px; } }
 
 .page-head__logo {
   position: absolute;
@@ -1135,7 +1138,11 @@ sub {
       position: static;
       width: auto;
       height: auto;
-      background-color: transparent; } }
+      background-color: orange;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0; } }
   .primary-nav:before {
     color: #206396;
     content: "☰";
@@ -1187,6 +1194,10 @@ sub {
     .primary-nav .page-nav__list:first-child,
     .primary-nav .social-nav__list:first-child {
       padding-top: 44px; }
+      @media screen and (min-width: 48em) {
+        .primary-nav .page-nav__list:first-child,
+        .primary-nav .social-nav__list:first-child {
+          padding-top: 0; } }
   @media screen and (min-width: 48em) {
     .primary-nav .page-nav__item,
     .primary-nav .social-nav__item {
@@ -1226,6 +1237,10 @@ sub {
   .primary-nav .social-nav__link {
     border-top-color: #308cd3;
     background-color: #297fc0; }
+    @media screen and (min-width: 48em) {
+      .primary-nav .social-nav__link {
+        width: 44px;
+        overflow: hidden; } }
     .primary-nav .social-nav__link:before {
       background-color: #2b86cb; }
 
