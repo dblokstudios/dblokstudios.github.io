@@ -10,5 +10,6 @@ siteNav = document.getElementById('js-primary-nav');
 siteNavBreakpoint = 720;
 
 siteNav.addEventListener 'click', () =>
+  console.log 'open';
   if window.innerWidth < siteNavBreakpoint
     siteNav.classList.toggle 'primary-nav--open'

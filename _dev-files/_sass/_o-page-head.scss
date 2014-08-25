@@ -9,6 +9,7 @@
     max-height: 300px;
     text-align: center;
     position: relative;
+    border-bottom: 1px solid red;
     
     @media screen and (min-width: $breakpoint--lap) {
       margin-top: $size--touch-target;
@@ -27,8 +28,9 @@
         white-space: nowrap;
         height: 100%;
         background-color: $color--primary;
-        
-        @include mask(url(/assets/img/dblok-logo.svg) 50% 50% no-repeat);
+        border-bottom: 1px solid red;
+//         
+//         @include mask(url(/assets/img/dblok-logo.svg) 50% 50% no-repeat);
     }
     
         .page-head__tagline {

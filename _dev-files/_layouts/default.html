@@ -22,4 +22,21 @@
   
   {% include o-scripts.html %}
   
-  
+    <!-- build :remove:deploy -- > 
+    <script src="/bower_components/perfbar/build/perfbar.js"></script>
+    <script type="text/javascript">
+    perfBar.init();
+    
+    var err = perfBar.addMetric({
+      id: 'Test',
+      label: 'Test new metric', // human readable name
+      value: 18,
+      budget: {
+        max: 20,
+        min: 1
+      }
+    });
+    
+    if ( !err ) console.log('Woho , no errors all is ok!');
+    </script>
+    <!-- /build -->

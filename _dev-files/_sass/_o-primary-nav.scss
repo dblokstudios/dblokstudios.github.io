@@ -2,30 +2,35 @@
     #primary-nav
 \*------------------------------------*/
 
-.primary-nav {
+.primary-nav {    
+    // generic styling
+    font-family: $type__sans-serif;
+    background-color: blue;
+    
+    // top left
     position: absolute;
+    top: 0;
+    left: 0;
     z-index: 1;
-    width:  $size--touch-target;
+    
+    // menu icon
+    width: $size--touch-target;
     height: $size--touch-target;
     overflow: hidden;
     cursor: pointer;
-    top: 0;
-    left: 0;
-    user-select: none;
-    font-family: $type__sans-serif;
     
+    // prevent selection
+    user-select: none;
+    
+    
+    // lap device - ipad portrait and up
     @media screen and (min-width: $breakpoint--lap) {
-        position: static;
-        width:  auto;
         height: auto;
-        background-color: orange;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-
+        background-color: $color--green;
+        overflow: visible;
     }
     
+    // hamburger icon
     &:before {
         color: $color--primary;
         content: "☰";
@@ -36,56 +41,51 @@
         height: $size--touch-target;
         line-height: $size--touch-target;
         
+        // remove on non-palm devices
         @media screen and (min-width: $breakpoint--lap) {
           content: normal;
           content: none;
         }
     }
     
+    
+    // open menu
     &--open {
         overflow: visible;
-        width: auto;
-    }
-
-    
-    &--open:before {
-        content: "✕";
-        display: block;
-        color: $color--white;
-        background-color: lighten($color--primary, 2.5%);
-      
-
-        @media screen and (min-width: $breakpoint--lap) {
-            content: normal;
-            content: none;
+        height: auto;
+        
+        // modify the hamburger icon
+        &:before {
+            content: "✕";
+            display: block;
+            color: $color--white;
+            background-color: lighten($color--primary, 2.5%);
+            
+            // hide icon on larger than palm devices
+            @media screen and (min-width: $breakpoint--lap) {
+                content: normal;
+                content: none;
+            }
         }
-    }
-    
-
-    &--open .page-nav__list {
-        background-color: $color--primary;
+        
+        // open menu background color
+        .page-nav__list {
+            padding-top: $size--touch-target;
+            background-color: $color--primary;
+        }
     }
     
     .page-nav__list,
     .social-nav__list {
-        width: auto;
         list-style: none;
         margin:  0;
         padding: 0;
         z-index: -1;
         overflow: hidden;
         
-        @media screen and (max-width: $breakpoint--palm) {
-            width: $size--touch-target;
-        }
-        
+
         @media screen and (min-width: $breakpoint--lap) {
           padding-top: 0;
-          position: static;
-          width: auto;
-          display: block;
-          background: none;
-          text-align: left;
         }
         
         &:first-child {
@@ -99,11 +99,7 @@
     
         .page-nav__item,
         .social-nav__item {
-            
-            @media screen and (min-width: $breakpoint--lap) {
-                display: inline-block;
-                border-top: none;
-            }
+
         }
     
             .page-nav__link,
@@ -117,19 +113,13 @@
                 line-height: $size--touch-target;
                 text-decoration: none;
                 
-                @media screen and (min-width: $breakpoint--lap) {
-                  color: $color--primary;
-                }
-                
                 &:hover,
                 &:hover:before {
                   background-color: $color--secondary;
                   border-top-color: lighten($color--secondary, 5%);
                 }
                 
-                /**
-                 * Icons
-                 */
+                // icons
                 &:before {
                   width:  $size--touch-target;
                   height: $size--touch-target;
@@ -145,15 +135,46 @@
                 border-top-color: lighten($color--primary, 15%);
                 background-color: lighten($color--primary, 10%);
                 
-                @media screen and (min-width: $breakpoint--lap) {
-                  width: $size--touch-target;
-                  overflow: hidden;
-                }
-                
                 &:before {
                     background-color: lighten($color--primary, 12.5%);
-                    
-                    
                 }
             }
+
+
+}
+
+.primary-nav {
+    @extend %grid--full;
+    width: 100%;
+}
+
+.page-nav__list {
+    @extend %grid--full;
+    @extend %grid__item;
+    @extend %breakpoint-lap--four-fifths;
+    
+    width: $size--touch-target;
+
+}
+
+.social-nav__list {
+    @extend %grid--full;
+    @extend %grid__item;
+    @extend %breakpoint-lap--one-fifth;
+    
+    
+}
+
+.page-nav__item {
+    @extend %grid__item;
+    @extend %breakpoint-lap--one-fifth;
+}
+
+.social-nav__item {
+    @extend %grid__item;
+    @extend %breakpoint-lap--one-third;
+    
+    max-width: $size--touch-target;
+    overflow: hidden;
+
 }

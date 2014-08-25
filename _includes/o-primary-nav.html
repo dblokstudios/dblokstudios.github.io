@@ -1,14 +1,14 @@
 {% capture js %}{% if js %}{{js}}|{% endif %}/assets/js/primary-nav.js{% endcapture %}
              
 <nav class="primary-nav"
-         id="js-primary-nav">                 
+        id="js-primary-nav">                 
     <ul class="page-nav__list"><!--
         {% for item in site.page-nav %}        
             {% include m-page-nav__item.html %}
         {% endfor %}
- --></ul>
+ --></ul><!--
     
-    <ul class="social-nav__list"><!--
+ --><ul class="social-nav__list"><!--
         {% for item in site.social %}        
             {% include m-social-nav__item.html %}
         {% endfor %}
