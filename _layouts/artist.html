@@ -5,21 +5,31 @@ layout: default
   <article class="artist">
     <header class="artist__header">
         <img class="artist__headshot"
-             src="{{ page.headshot }}" />
+             src="{{ page.headshot }}" /><!--
+        
+     --><div class="artist__head-wrapper"><!--
+     --><h2 class="artist__title">{{ page.title }}</h2><!--
     
-      <h2 class="artist__title">{{ page.title }}</h2>
-    
-      <small class="artist__location">{{ page.city }}, {{ page.state }}</small>
+     --><small class="artist__location">{{ page.city }}, {{ page.state }}</small><!--
       
-      <ul class="artist__genres">
-        {% for genre in page.genres %}
-          <li class="genres__genre">{{ genre }}</li>
-        {% endfor %}
-      </ul>
+     --><ul class="artist__genres"><!--
+            {% for genre in page.genres %}
+         --><li class="genres__genre">{{ genre }}</li><!--
+            {% endfor %}
+     --></ul><!--
     
-      {% for social in page.social %}
-        {{ social }}
-      {% endfor %}
+        {% if page.social %}
+     --><ul class="artist__social-list"><!--
+            {% for social in page.social %}
+         --><li class="artist__social-item">
+                <a class="artist__social-link
+                          artist__social-link--{{ social[0] }}"
+                   href="{{ social[1] }}">{{ social[0] }}</a>
+            </li><!--
+            {% endfor %}
+     --></ul><!--
+        {% endif %}
+     --></div>
     </header>
     
     <section class="artist__bio">

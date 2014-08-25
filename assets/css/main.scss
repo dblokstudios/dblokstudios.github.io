@@ -17,11 +17,12 @@ $pull:                  false;
 $use-markup-fix:        true;
 $breakpoints: (
     'palm' '(min-width: 320px) and (max-width: 480px)',
+    'palm-wide' '(min-width: 480px)',
     'lap' '(min-width: 481px) and (max-width: 1023px)',
     'portable' '(max-width: 1023px)',
     'desk' '(min-width: 1024px)'
 );
-$breakpoint-has-widths: ('palm', 'lap', 'portable', 'desk');
+$breakpoint-has-widths: ('palm', 'palm-wide', 'lap', 'portable', 'desk');
 $breakpoint-has-push:   ('palm', 'lap', 'portable', 'desk');
 $breakpoint-has-pull:   ('palm', 'lap', 'portable', 'desk');
 
@@ -124,8 +125,10 @@ $gutter--skinny: 6px;
 
 // -- Breakpoints
 $palm:     em(320px);
+$palm-wide: em(480px);
 $lap:      em(768px);
 $desk:     em(1024px);
+
 
 $breakpoint--palm: $palm;
 $breakpoint--lap: $lap;

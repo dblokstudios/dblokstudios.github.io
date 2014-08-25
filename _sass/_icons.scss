@@ -40,12 +40,14 @@
   @extend %fontawesome;
   content: "\f0e0";
 }
-[href*="twitter.com"]:before {
+[href*="twitter.com"]:before,
+.artist__social-link--twitter:before {
   @extend %fontawesome;
   content: "\f099";
 }
 
-[href*="facebook.com"]:before {
+[href*="facebook.com"]:before,
+.artist__social-link--facebook:before {
   @extend %fontawesome;
   content: "\f09a";
 }
@@ -60,6 +62,11 @@
 [href*="mixcloud.com"]:before {
   @extend %fontawesome;
   content: "\f0c2";
+}
+[href*="soundcloud.com"]:before,
+.artist__social-link--soundcloud:before {
+  @extend %fontawesome;
+  content: "\f1be";
 }
 
 // Classed Icons
