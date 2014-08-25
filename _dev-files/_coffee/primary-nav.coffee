@@ -1,5 +1,3 @@
----
----
 ###
   We need to add a class of `responsive-nav--open` to
   `#js-responsive-nav` ONLY when the nav is clicked AND

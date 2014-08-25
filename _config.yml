@@ -6,11 +6,13 @@ lsi: false
 exclude:
   - 'bower_components/csswizardry-grids'
   - 'bower_components/normalize-css'
+  - 'node_modules'
+  - 'Gruntfile.coffee'
+  - '_dev-files'
 
 sass:
   sass_dir: /
   style: :compressed
-
 
 # Site Defaults
 name: "D-Blok Studios"

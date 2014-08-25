@@ -1,0 +1,55 @@
+---
+layout: default
+---
+
+<main>
+  
+  <article class="post">
+    <header class="post__header">
+      <hgroup class="post__head-group">
+      	<h1 class="post__title">
+        	<span class="post__title--alternate">{{ page.title }}</span>
+        	{{ page.subtitle }}
+        </h1>
+      	<h2 class="post__author">{{ page.author }}</h2>
+      </hgroup>
+      
+    	<ul class="post__details-list">
+    		<li class="post__detail  post__detail--date">Date: {{ page.date | date: "%Y-%m-%d" }}</li>
+    		{% if page.updated %}
+    		<li class="post__detail  post__detail--updates">Updated: {{ page.updated }}</li>
+        {% endif %}
+    	</ul>
+    	
+    	<ul class="post__tags-list">
+    		{% for tag in page.tags %}
+    		<li class="post__tag">{{ tag }}</li>
+    		{% endfor %}
+    	</ul>
+    	
+    	<ul class="post__category-list">
+    		{% for category in page.categories %}
+    		<li class="post__category">{{ category }}</li>
+    		{% endfor %}
+    	</ul>
+    </header>
+    
+    {{ content }}
+    
+    <footer class="post__footer">
+    	<section class="post__byline">
+    		<h2 class="section-title">About {{ page.author }}</h2>
+    		{{ page.byline }}
+    	</section>
+    	<section class="post__related">
+    		<h2 class="section-title">Related Items</h2>
+  			<ul class="post__related-items">
+  				{% for item in page.related %}
+  				<li class="post__related-item">{{ item }}</li>
+  				{% endfor %}
+  			</ul>
+    	</section>
+    </footer>
+  </article>
+  
+</main>

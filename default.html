@@ -5,13 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{{page.title}}</title>
   
-  <!-- build:css /assets/css/main.min.cs -->
-  <link rel="stylesheet"
-        href="/assets/css/main.css" />
-  <!-- /build -->
-  
+  {% if site.dev == true %}
+  <link href="/assets/css/main.css" rel="stylesheet" />
+  <script src="/bower_components/prefixfree/prefixfree.min.js"></script>
+  {% else %}
+  <link href="/assets/css/main.min.css" rel="stylesheet" />
+  {% endif %}
 <body>
-      
+  
   {% include o-page-head.html %}
     
   {{content}}
@@ -21,5 +22,3 @@
   {% include o-page-foot.html %}
   
   {% include o-scripts.html %}
-  
-  

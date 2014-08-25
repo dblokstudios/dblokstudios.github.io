@@ -100,8 +100,8 @@
             
             .artist__head-wrapper {
                 @extend %grid__item;
-                @extend %one-hole;
-                @extend %palm-wid--one-half;
+                @extend %one-whole;
+                @extend %palm-wide--one-half;
             }
             
             .artist__title {
