@@ -28,10 +28,6 @@ html {
 
 
 
-
-
-
-
 /**
  *
  */
@@ -46,6 +42,8 @@ html {
  */
 body {
   margin: 0 auto;
+  background-color: $color--grey;
+    color: $color--white;
 }
 
 /**
@@ -125,7 +123,18 @@ a {
       font-size: $type--tiny;
       padding-left: $gutter--skinny;
   }
+  
+  &:hover {
+    color: $color--primary-light;
+    }
+    
+    &:focus, &:active {
+        color: $color--primary-dark;
+    }
 }
+
+    
+    
 
 /**
  * Improve readability when focused and also mouse hovered in all browsers.

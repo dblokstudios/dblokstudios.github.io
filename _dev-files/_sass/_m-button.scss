@@ -1,0 +1,44 @@
+.button {
+    display: block;
+    width: 100%;
+    margin: $gutter--skinny 0;
+    border-radius: $size--border-radius;
+    border: none;
+    background-color: $color--primary;
+    padding-left:  $gutter--normal;
+    padding-right:  $gutter--normal;
+    line-height: $size--touch-target;
+    color: $color--white;
+    
+    &--is-hover, &:hover {
+        background-color: $color--primary-light;
+    }
+    
+    &--is-focus, &:focus,
+    &--is-active, &:active {
+        background-color: $color--primary-dark;
+    }
+    
+    &--is-disabled {
+        background-color: $color--gray-light;
+        cursor: default;
+        
+        &:hover,
+        &:active {
+            background-color: $color--gray-light;
+        }
+    }
+    
+    &--is-hollow {
+        background-color: transparent;
+        border: 2px solid $color--white;
+        
+        &:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+        
+        &:active {
+            background-color: rgba(0,0,0,0.1);
+        }
+    }
+}

@@ -1,35 +1,118 @@
 ---
 layout: default
 ---
-<article class="atoms">
 
-
-
-<div>
-    <h1>Molecules</h1>
-
-
-    <h2>Tags</h2>
-
-    <a class="tag  tag--genre"
-       href="#">
-           <span class="tag__count">10</span>
-           Drum & Bass
-    </a>
+<article class="styleguide">
     
-    <h2>Buttons</h2>
-    
-    <button class="module__button">Btn</button>
-    <button class="module__button module__button--is-hover">Btn:hover</button>
-    <button class="module__button module__button--is-focus module__button--is-active">Btn:active/focus</button>
-    <button class="module__button module__button--is-disabled">Btn:Disabled</button>
-    <button class="module__button module__button--is-hollow">Btn:hollow</button>
+    <section class="styleguide__atoms">
+        <h1 class="styleguide__section-title">Atoms</h1>
         
-</div>
+        <!--
+          - ATOM: XXX
+          -
+          -->
+        <div class="styleguide__atom">
+            None
+        </div>
+        
+    </section>
+    
+    <section class="styleguide__molecules">
+        <h1 class="styleguide__section-title">Molecules</h1>
+        
+        <!--
+          - MOLECULE: Tag
+          -
+          -->
+        <div class="styleguide__molecule">
+            <h2 class="styleguide__molecule-title">Tag</h2>
+            
+            <div class="styleguide__description">
+                <p>Denote the genre of music with a count of how many other artists play or produce the same genre.
+                
+                <p><em>Click</em>: Links to genre page with references to genre
+            </div>
+            
+            <div class="styleguide__code">
+                <h3 class="styleguide__code-head">Usage</h3>
+                    
+                <pre class="styleguide__code-pre">
+<code class="styleguide__code-area">
+&lt;a class=&quot;tag  tag--genre&quot;
+   href=&quot;#&quot;&gt;
+       &lt;span class=&quot;tag__count&quot;&gt;10&lt;/span&gt;
+       Drum &amp; Bass
+&lt;/a&gt;
+</code>
+</pre>
+            </div><!--
+            
+         --><div class="styleguide__demo">
+                <h3 class="styleguide__demo-head">Example</h3>
+                
+                <div class="styleguide__preview">
+                    <a class="tag  tag--genre"
+                       href="#">
+                           <span class="tag__count">10</span>
+                           Drum & Bass
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        <!--
+          - MOLECULE: Button
+          -
+          -->
+        <div class="styleguide__molecule">
+            <h2 class="styleguide__molecule-title">button</h2>
+            
+            <div class="styleguide__description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel felis eget arcu tincidunt feugiat eu vitae ipsum. Maecenas pharetra, dui et imperdiet tristique, lorem nisl fermentum magna, quis iaculis elit est vitae ante. Aenean adipiscing nec quam in pulvinar. Curabitur tempor risus feugiat, tristique enim in, dapibus felis. Morbi elementum ultrices cursus.
+            </div>
+            
+            <div class="styleguide__code">
+                <h3 class="styleguide__code-head">Usage</h3>
+                    
+                <pre class="styleguide__code-pre">
+<code class="styleguide__code-area">
+&lt;button class=&quot;button&quot;&gt;Btn&lt;/button&gt;
+&lt;button class=&quot;button button--is-hover&quot;&gt;Btn:hover&lt;/button&gt;
+&lt;button class=&quot;button button--is-focus button--is-active&quot;&gt;Btn:active/focus&lt;/button&gt;
+&lt;button class=&quot;button button--is-disabled&quot;&gt;Btn:Disabled&lt;/button&gt;
+&lt;button class=&quot;button button--is-hollow&quot;&gt;Btn:hollow&lt;/button&gt;
+</code>
+</pre>
+            </div><!--
+            
+         --><div class="styleguide__demo">
+                <h3 class="styleguide__demo-head">Example</h3>
+                
+                <div class="styleguide__preview">
+                    <button class="button">Btn</button>
+                    <button class="button button--is-hover">Btn:hover</button>
+                    <button class="button button--is-focus button--is-active">Btn:active/focus</button>
+                    <button class="button button--is-disabled">Btn:Disabled</button>
+                    <button class="button button--is-hollow">Btn:hollow</button>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    
+    
+    
+</article>
 
 
 
 
+<!--
+<article class="atoms">
 
 
 <div>
@@ -49,8 +132,8 @@ layout: default
             
             <hr class="module__divider" />
             
-            <button class="module__button">Button</button>
-            <button class="module__button module__button--is-hollow">Hollow</button>
+            <button class="button">Button</button>
+            <button class="button button--is-hollow">Hollow</button>
         </div>
         
         <footer class="module__foot">
@@ -132,7 +215,7 @@ layout: default
         <div class="module__body">
             <p>Graphic designer and teacher. Still walking with earphones in his ears. Design addict.</p>
             
-            <button class="module__button">Profile</button>
+            <button class="button">Profile</button>
         </div>
     </div>
 </div>
@@ -147,6 +230,7 @@ layout: default
 
 
 </article>
+-->
 
 
 

@@ -137,35 +137,6 @@ $breakpoint--desk: $desk;
 
 $grid--columns: 3;
 
-
-@import url(http://fonts.googleapis.com/css?family=Bevan);
-@import url(http://fonts.googleapis.com/css?family=Lobster+Two&text=%26);
-
-@import 'mixins';
-
-@import 'base';
-@import '../../bower_components/csswizardry-grids/csswizardry-grids';
-@import 'icons';
-// @import 'type';
-// @import 'o-page-head';
-// @import 'o-primary-nav';
-// @import 'o-page-foot';
-// @import 'o-artists';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 $size--border-radius: 4px;
 
 $type--large: em(18px);
@@ -183,38 +154,40 @@ $color--primary: #4D97CF;
 $color--primary-light: #5AAFEE;
 $color--primary-dark: #124266;
 
+
+
+@import url(http://fonts.googleapis.com/css?family=Bevan);
+@import url(http://fonts.googleapis.com/css?family=Lobster+Two&text=%26);
+
+@import 'mixins';
+
+@import 'base';
+@import '../../bower_components/csswizardry-grids/csswizardry-grids';
+@import 'icons';
+@import 'type';
+
+@import 'm-tag';
+@import 'm-button';
+
+// @import 'o-page-head';
+// @import 'o-primary-nav';
+// @import 'o-page-foot';
+// @import 'o-artists';
+@import 'styleguide';
+
+
+
+
+
+
+
+
+
+
+
 // temporary
+/*
 
-
-
-
-.atoms {
-    font-family: 'Lato', sans-serif;
-    max-width: 400px;
-    
-    .module {
-        margin: $gutter--normal;
-    }
-    
-    p {
-        margin: 0;
-        padding: 0;
-        line-height: 1.5;
-        font-size: $type--base;
-    }
-    
-    a {
-        color: $color--primary;
-        
-        &:hover {
-            color: $color--primary-light;
-        }
-        
-        &:focus, &:active {
-            color: $color--primary-dark;
-        }
-    }
-}
 
 
 .module  {
@@ -282,50 +255,7 @@ $color--primary-dark: #124266;
     }
 
 
-    .module__button {
-        display: block;
-        width: 100%;
-        margin: $gutter--skinny 0;
-        border-radius: $size--border-radius;
-        border: none;
-        background-color: $color--primary;
-        padding-left:  $gutter--normal;
-        padding-right:  $gutter--normal;
-        line-height: $size--touch-target;
-        color: $color--white;
-        
-        &--is-hover, &:hover {
-            background-color: $color--primary-light;
-        }
-        
-        &--is-focus, &:focus,
-        &--is-active, &:active {
-            background-color: $color--primary-dark;
-        }
-        
-        &--is-disabled {
-            background-color: $color--gray-light;
-            cursor: default;
-            
-            &:hover,
-            &:active {
-                background-color: $color--gray-light;
-            }
-        }
-        
-        &--is-hollow {
-            background-color: transparent;
-            border: 2px solid $color--white;
-            
-            &:hover {
-                background-color: rgba(255,255,255,0.1);
-            }
-            
-            &:active {
-                background-color: rgba(0,0,0,0.1);
-            }
-        }
-    }
+    
 
 
     .module__tab {
@@ -438,47 +368,10 @@ $color--primary-dark: #124266;
 
 
 
-.tag {
-    background-color: $color--primary;
-    border: 1px solid $color--primary;
-    border-radius: $size--border-radius;
-    color: $color--white !important;
-    display: inline-block;
-    padding-right: $gutter--narrow;
-    font-size: $type--small;
-    text-transform: uppercase;
-    
-    &--genre {
-        
-    }
-}
 
-    .tag__count {
-        background-color: $color--primary-dark;
-        border-top-right-radius: $size--border-radius * .75;
-        border-bottom-right-radius: $size--border-radius * .75;
-        padding: 0 10px;
-        line-height: $gutter--normal;
-        display: inline-block;
-        margin-right: $gutter--skinny;
-        position: relative;
-        
-        &:before {
-            position: absolute;
-            top: 50%;
-            left: 100%;
-            content: ' ';
-            display: inline-block;
-            background-color: $color--primary-dark;
-            width: $gutter--skinny;
-            height: $gutter--skinny;
-            transform: translateX(-50%)
-                       translateY(-50%)
-                       rotate(45deg);
-        }
-    }
     
     
+*/
 
 
 
@@ -504,3 +397,35 @@ $color--primary-dark: #124266;
 
 
 
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    

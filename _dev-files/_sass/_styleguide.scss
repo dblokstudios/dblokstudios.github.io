@@ -1,0 +1,127 @@
+.styleguide {
+    @extend %container;
+    @extend %grid--full;
+    
+}
+
+    .styleguide__atoms,
+    .styleguide__molecules,
+    .styleguide__organisms {
+        @extend %grid__item;
+        @extend %one-whole;
+        
+        border: 1px solid $color--border;
+        margin: $gutter--normal 0 0;
+        border-radius: $size--border-radius;
+       
+    }
+    
+    .styleguide__atoms {
+        
+    }
+    
+    .styleguide__molecules {
+        
+    }
+    
+    .styleguide__organisms {
+        
+    }
+    
+        .styleguide__section-title {
+            background-color: $color--grey-dark;
+            margin: 0;
+            padding: 0;
+            line-height: $size--touch-target;
+            border-bottom: 1px solid $color--border;
+            padding-left: $gutter--normal;
+            
+            
+        }
+    
+        .styleguide__atom,
+        .styleguide__molecule,
+        .styleguide__organism {
+            @extend %grid--full;
+            
+            margin: $gutter--normal;
+            border: 1px solid $color--border;
+            border-radius: $size--border-radius;
+        }
+        
+            .styleguide__atom-title,
+            .styleguide__molecule-title,
+            .styleguide__organism-title {
+                background-color: $color--grey-dark;
+                margin: 0;
+                padding: 0;
+                line-height: $size--touch-target;
+                border-bottom: 1px solid $color--border;
+                padding-left: $gutter--normal;
+                font-weight: 400;
+                text-transform: capitalize;
+            }
+            
+            .styleguide__description {
+                border-bottom: 1px solid $color--border;
+                padding: $gutter--narrow $gutter--normal;
+            }
+            
+            
+            .styleguide__code {
+                @extend %grid__item;
+                @extend %one-half;
+                
+                border-right: 1px solid $color--border;
+            }
+            
+                .styleguide__code-head {
+                    background-color: $color--grey-dark;
+                    margin: 0;
+                    padding: 0;
+                    line-height: $size--touch-target;
+                    border-bottom: 1px solid $color--border;
+                    padding-left: $gutter--normal;
+                    font-weight: 400;
+                    font-style: normal;
+                }
+                
+                
+                .styleguide__code-pre {
+                    margin: 0;
+                    background-color: $color--black;
+                    padding: 0 $gutter--narrow;
+                }
+
+                    .styleguide__code-area {
+                        
+                        
+                    }
+                
+                                
+            
+            .styleguide__demo {
+                @extend %grid__item;
+                @extend %one-half;
+            }
+            
+                .styleguide__demo-head {
+                    background-color: $color--grey-dark;
+                    margin: 0;
+                    padding: 0;
+                    line-height: $size--touch-target;
+                    border-bottom: 1px solid $color--border;
+                    padding-left: $gutter--normal;
+                    font-weight: 400;
+                    font-style: normal;
+                }
+                
+                .styleguide__preview {
+                    padding: $gutter--normal;
+                }
+                
+                
+            
+
+
+        
