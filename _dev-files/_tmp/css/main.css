@@ -4,17 +4,6 @@
 /* ---- Custom */
 @import url(http://fonts.googleapis.com/css?family=Bevan);
 @import url(http://fonts.googleapis.com/css?family=Lobster+Two&text=%26);
-.section, .post, .page-foot, .artists, .artist-page {
-  padding-right: 1.25%;
-  padding-left: 1.25%; }
-
-.post .post__details-list, .post .post__tags-list, .post .post__category-list, .page-foot .fine-print-nav__list, .artists__list, .artist__genres, .artist-page .artist__social-list, h2, p, .page-head__logo {
-  padding: 0;
-  margin: 0; }
-
-.post .post__details-list, .post .post__tags-list, .post .post__category-list, .page-foot .fine-print-nav__list, .artists__list, .artist__genres, .artist-page .artist__social-list {
-  list-style: none; }
-
 /*
  * Hide visually and from screen readers: h5bp.com/u
  */
@@ -39,12 +28,12 @@
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-.post .post__details-list:after, .post .post__tags-list:after, .post .post__category-list:after, .post .post__details-list:before, .post .post__tags-list:before, .post .post__category-list:before {
+.profile__head:after, .profile__head:before {
   content: " ";
   /* 1 */
   display: table;
   /* 2 */ }
-.post .post__details-list:before, .post .post__tags-list:before, .post .post__category-list:before {
+.profile__head:before {
   clear: both; }
 
 /**************\
@@ -143,7 +132,7 @@ a {
     text-align: center; }
   a:after {
     font-size: 9px;
-    padding-left: 6px; }
+    padding-left: 5.5px; }
 
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
@@ -479,20 +468,6 @@ th {
  * 4. Full-width unless told to behave otherwise.
  * 5. Required to combine fluid widths and fixed gutters.
  */
-.page-nav__list, .social-nav__list, .page-nav__item, .social-nav__item, .artists__artist, .artist-page .artist__headshot, .artist-page .artist__head-wrapper {
-  display: inline-block;
-  /* [1] */
-  padding-left: 20px;
-  /* [2] */
-  vertical-align: top;
-  /* [3] */
-  width: 100%;
-  /* [4] */
-  /* [5] */
-  /* [5] */
-  box-sizing: border-box;
-  /* [5] */ }
-
 /**
  * Reversed grids allow you to structure your source in the opposite order to
  * how your rendered layout will appear. Extends `.grid`.
@@ -501,11 +476,6 @@ th {
  * Gutterless grids have all the properties of regular grids, minus any spacing.
  * Extends `.grid`.
  */
-.primary-nav, .page-nav__list, .social-nav__list, .artists__list, .artist-page .artist__header {
-  margin-left: 0; }
-  .primary-nav > .page-nav__list, .page-nav__list > .page-nav__list, .social-nav__list > .page-nav__list, .artists__list > .page-nav__list, .artist-page .artist__header > .page-nav__list, .primary-nav > .social-nav__list, .page-nav__list > .social-nav__list, .social-nav__list > .social-nav__list, .artists__list > .social-nav__list, .artist-page .artist__header > .social-nav__list, .primary-nav > .page-nav__item, .page-nav__list > .page-nav__item, .social-nav__list > .page-nav__item, .artists__list > .page-nav__item, .artist-page .artist__header > .page-nav__item, .primary-nav > .social-nav__item, .page-nav__list > .social-nav__item, .social-nav__list > .social-nav__item, .artists__list > .social-nav__item, .artist-page .artist__header > .social-nav__item, .primary-nav > .artists__artist, .page-nav__list > .artists__artist, .social-nav__list > .artists__artist, .artists__list > .artists__artist, .artist-page .artist__header > .artists__artist, .artist-page .primary-nav > .artist__headshot, .artist-page .page-nav__list > .artist__headshot, .artist-page .social-nav__list > .artist__headshot, .artist-page .artists__list > .artist__headshot, .artist-page .artist__header > .artist__headshot, .artist-page .primary-nav > .artist__head-wrapper, .artist-page .page-nav__list > .artist__head-wrapper, .artist-page .social-nav__list > .artist__head-wrapper, .artist-page .artists__list > .artist__head-wrapper, .artist-page .artist__header > .artist__head-wrapper {
-    padding-left: 0; }
-
 /**
  * Align the entire grid to the right. Extends `.grid`.
  */
@@ -535,15 +505,9 @@ th {
 /**
  * Whole
  */
-.artist-page .artist__headshot, .artist-page .artist__head-wrapper {
-  width: 100%; }
-
 /**
  * Halves
  */
-.artists__artist {
-  width: 50%; }
-
 /**
  * Thirds
  */
@@ -603,9 +567,6 @@ th {
   /**
    * Halves
    */
-  .artist-page .artist__headshot, .artist-page .artist__head-wrapper {
-    width: 50%; }
-
   /**
    * Thirds
    */
@@ -637,9 +598,6 @@ th {
   /**
    * Thirds
    */
-  .artists__artist {
-    width: 33.333%; }
-
   /**
    * Quarters
    */
@@ -668,21 +626,12 @@ th {
   /**
    * Thirds
    */
-  .social-nav__item {
-    width: 33.333%; }
-
   /**
    * Quarters
    */
   /**
    * Fifths
    */
-  .social-nav__list, .page-nav__item {
-    width: 20%; }
-
-  .page-nav__list {
-    width: 80%; }
-
   /**
    * Sixths
    */
@@ -736,9 +685,6 @@ th {
   /**
    * Quarters
    */
-  .artists__artist {
-    width: 25%; }
-
   /**
    * Fifths
    */
@@ -929,7 +875,7 @@ th {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding-right: 6px; }
+  padding-right: 5.5px; }
 
 [href^="http"]:not([href*='127.0.0.1:8005']):after,
 [href^="https"]:not([href*='127.0.0.1:8005']):after {
@@ -980,433 +926,194 @@ th {
 .page-nav__link--events:before {
   content: "\f073"; }
 
-/**
- * 1. Set default font family to sans-serif.
- * 2. Prevent iOS text size adjust after orientation change, without disabling
- *    user zoom.
- */
-body {
-  line-height: 1.5;
-  font-size: 16px;
+.atoms {
+  font-family: 'Lato', sans-serif;
+  max-width: 400px; }
+  .atoms .module {
+    margin: 22px; }
+  .atoms p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-size: 0.875em; }
+  .atoms a {
+    color: #4d97cf; }
+    .atoms a:hover {
+      color: #5aafee; }
+    .atoms a:focus, .atoms a:active {
+      color: #124266; }
+
+.module {
+  border-radius: 4px;
+  border: 1px solid #20272d;
+  background-color: #35414a;
+  color: white;
   font-weight: 200;
-  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
-  /* 1 */
-  -ms-text-size-adjust: 100%;
-  /* 2 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */ }
+  max-width: 400px; }
 
-/**
- * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
- */
-abbr[title] {
-  border-bottom: 1px dotted; }
+.module__head {
+  border-bottom: 1px solid #20272d;
+  text-transform: uppercase; }
 
-/**
- * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
- */
-b,
-strong {
-  font-weight: bold; }
-
-/**
- * Address variable `h1` font-size and margin within `section` and `article`
- * contexts in Firefox 4+, Safari, and Chrome.
- */
-h1 {
-  margin: 0.67em 0; }
-
-h2 {
-  font-size: 28.424px;
-  font-weight: 200; }
-
-h3 {
-  font-style: italic;
-  margin-bottom: 10px;
+.module__title {
+  font-size: inherit;
+  margin: 0;
   padding: 0; }
 
-/**
- * Address styling not present in Safari and Chrome.
- */
-dfn {
-  font-style: italic; }
+.module__body {
+  padding: 11px;
+  font-size: 0.875em; }
 
-/**
- * Address styling not present in IE 8/9.
- */
-mark {
-  background: #ff0;
-  color: #000; }
+.module__section-title {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1em; }
 
-/**
- * Address inconsistent and variable font size in all browsers.
- */
-small {
-  font-size: 80%; }
+.module__divider {
+  border: none;
+  border-top: 1px solid #20272d;
+  margin: 11px 0; }
 
-/**
- * Prevent `sub` and `sup` affecting `line-height` in all browsers.
- */
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline; }
+.module__body p {
+  line-height: 20px;
+  margin-bottom: 10px; }
 
-sup {
-  top: -0.5em; }
+.module__foot {
+  border-top: 1px solid #20272d;
+  color: #86919a;
+  font-size: 0.875em;
+  line-height: 20px; }
 
-sub {
-  bottom: -0.25em; }
+.module__foot p {
+  line-height: inherit; }
 
-/*------------------------------------*\
-    #SECTION
-\*------------------------------------*/
-.section {
-  padding-top: 24px;
-  padding-bottom: 24px; }
-
-.post {
-  margin: 0 auto;
-  max-width: 36em; }
-  .post .post__header {
-    text-align: center; }
-  .post .post__title {
-    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
-    font-size: 2.747em;
-    margin: 0;
-    line-height: 1.1;
-    text-transform: uppercase;
-    color: #27272E;
-    border-bottom: 1px solid darkgrey;
-    padding-bottom: 20px; }
-  .post .post__title--alternate {
-    font-family: "Source Serif Pro", Georgia, "Times New Roman", Times, serif;
-    font-style: italic;
-    font-size: 0.63em;
-    display: block;
-    margin: 1em auto 0 auto;
-    text-transform: none; }
-  .post .post__author {
-    text-transform: uppercase;
-    font-size: .874em;
-    text-align: center;
-    line-height: 1;
-    background: white;
-    position: relative;
-    padding: 0 5%;
-    display: inline;
-    top: -1em; }
-  .post .post__detail {
-    display: inline-block;
-    text-align: center;
-    float: left; }
-  .post p {
-    margin: 0 0 1.5em 0; }
-  .post li:nth-child(3n+1):nth-last-child(1) {
-    width: 100%; }
-    .post li:nth-child(3n+1):nth-last-child(1) ~ li {
-      width: 100%; }
-  .post li:nth-child(3n+1):nth-last-child(2) {
-    width: 50%; }
-    .post li:nth-child(3n+1):nth-last-child(2) ~ li {
-      width: 50%; }
-  .post li:nth-child(3n+1):nth-last-child(3) {
-    width: 33.33333%; }
-    .post li:nth-child(3n+1):nth-last-child(3) ~ li {
-      width: 33.33333%; }
-
-/*------------------------------------*\
-    #page-head
-\*------------------------------------*/
-.page-head {
-  display: block;
-  height: 75vw;
-  min-height: 150px;
-  max-height: 300px;
+.module__head,
+.module__foot {
   text-align: center;
-  position: relative;
-  border-bottom: 1px solid red; }
-  @media screen and (min-width: 48em) {
-    .page-head {
-      margin-top: 44px; } }
+  line-height: 44px;
+  background-color: #2d3840; }
 
-.page-head__logo {
+.module__button {
+  display: block;
+  width: 100%;
+  margin: 5.5px 0;
+  border-radius: 4px;
+  border: none;
+  background-color: #4d97cf;
+  padding-left: 22px;
+  padding-right: 22px;
+  line-height: 44px;
+  color: white; }
+  .module__button--is-hover, .module__button:hover {
+    background-color: #5aafee; }
+  .module__button--is-focus, .module__button:focus, .module__button--is-active, .module__button:active {
+    background-color: #124266; }
+  .module__button--is-disabled {
+    background-color: #999999;
+    cursor: default; }
+    .module__button--is-disabled:hover, .module__button--is-disabled:active {
+      background-color: #999999; }
+  .module__button--is-hollow {
+    background-color: transparent;
+    border: 2px solid white; }
+    .module__button--is-hollow:hover {
+      background-color: rgba(255, 255, 255, 0.1); }
+    .module__button--is-hollow:active {
+      background-color: rgba(0, 0, 0, 0.1); }
+
+.module__tab {
+  border-bottom: 1px solid #20272d;
+  max-height: 44px;
+  overflow: hidden; }
+  .module__tab:last-child {
+    border-bottom: none; }
+  .module__tab--open {
+    max-height: inherit; }
+  .module__tab--is-hover, .module__tab:hover {
+    background-color: #3c4952; }
+
+.module__tab-title {
+  font-size: 0.875em;
+  line-height: 44px;
+  margin: 0;
+  padding: 0 11px; }
+  .module__tab--open .module__tab-title {
+    color: #4d97cf; }
+
+.module__tab-body {
+  padding: 11px; }
+
+.module--profile .module__head {
+  position: relative;
+  background-image: url(//lorempixel.com/500/200/cats);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+  margin-bottom: 50px; }
+.module--profile .profile__headshot {
   position: absolute;
-  top: 50%;
+  top: 100%;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-  width: 100%;
-  text-indent: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  height: 100%;
-  background-color: #206396;
-  border-bottom: 1px solid red; }
-
-.page-head__tagline {
-  font-size: 12px;
-  display: block; }
-
-/*------------------------------------*\
-    #primary-nav
-\*------------------------------------*/
-.primary-nav {
-  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
-  background-color: blue;
+  left: 11px;
+  border: 2px solid #35414a; }
+.module--profile .profile__name {
+  margin: 0;
+  padding-top: 11px;
   position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 44px;
-  height: 44px;
-  overflow: hidden;
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none; }
-  @media screen and (min-width: 48em) {
-    .primary-nav {
-      height: auto;
-      background-color: #5d9632;
-      overflow: visible; } }
-  .primary-nav:before {
-    color: #206396;
-    content: "☰";
-    font-size: 16px;
-    text-align: center;
-    position: absolute;
-    width: 44px;
-    height: 44px;
-    line-height: 44px; }
-    @media screen and (min-width: 48em) {
-      .primary-nav:before {
-        content: normal;
-        content: none; } }
-  .primary-nav--open {
-    overflow: visible;
-    height: auto; }
-    .primary-nav--open:before {
-      content: "✕";
-      display: block;
-      color: white;
-      background-color: #226aa1; }
-      @media screen and (min-width: 48em) {
-        .primary-nav--open:before {
-          content: normal;
-          content: none; } }
-    .primary-nav--open .page-nav__list {
-      padding-top: 44px;
-      background-color: #206396; }
-  .primary-nav .page-nav__list,
-  .primary-nav .social-nav__list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    z-index: -1;
-    overflow: hidden; }
-    @media screen and (min-width: 48em) {
-      .primary-nav .page-nav__list,
-      .primary-nav .social-nav__list {
-        padding-top: 0; } }
-    .primary-nav .page-nav__list:first-child,
-    .primary-nav .social-nav__list:first-child {
-      padding-top: 44px; }
-      @media screen and (min-width: 48em) {
-        .primary-nav .page-nav__list:first-child,
-        .primary-nav .social-nav__list:first-child {
-          padding-top: 0; } }
-  .primary-nav .page-nav__link,
-  .primary-nav .social-nav__link {
-    padding-right: 34px;
-    border-top: 1px solid #2471ab;
-    background-color: #206396;
-    color: white;
-    display: block;
-    white-space: nowrap;
-    line-height: 44px;
-    text-decoration: none; }
-    .primary-nav .page-nav__link:hover, .primary-nav .page-nav__link:hover:before,
-    .primary-nav .social-nav__link:hover,
-    .primary-nav .social-nav__link:hover:before {
-      background-color: #ff851b;
-      border-top-color: #ff9335; }
-    .primary-nav .page-nav__link:before,
-    .primary-nav .social-nav__link:before {
-      width: 44px;
-      height: 44px;
-      line-height: 44px;
-      text-align: center;
-      padding: 0;
-      background-color: #226aa1;
-      margin-right: 12px; }
-  .primary-nav .social-nav__link {
-    border-top-color: #308cd3;
-    background-color: #297fc0; }
-    .primary-nav .social-nav__link:before {
-      background-color: #2b86cb; }
+  top: 100%;
+  left: 122px;
+  text-transform: none; }
+.module--profile .profile__role {
+  margin: 0; }
 
-.primary-nav {
-  width: 100%; }
+.profile__headshot {
+  float: left;
+  margin-right: 11px;
+  border-radius: 50%; }
 
-.page-nav__list {
-  width: 44px; }
-
-.social-nav__item {
-  max-width: 44px;
-  overflow: hidden; }
-
-/****************************\
-    #PAGE-FOOT
-\****************************/
-.page-foot {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background-color: #206396;
-  /*
-      .social-nav {
-          width: 102.5%;
-          margin-left: -1.25%;
-      }
-      
-          .social-nav__list {
-              @extend %reset-list;
-              @extend %grid--full;
-          }
-          
-              .social-nav__item {
-                  @extend %one-third;
-                  
-                  display: inline-block;
-                  border-right: 1px solid lighten($color--primary, 5%);
-                  
-                  &:last-child {
-                      border-right: none;
-                  }
-              }
-              
-                  .social-nav__link {
-                      color: $color--white;
-                      display: block;
-                      background-color: lighten($color--primary, 2.5%);
-                      padding-right: $size--touch-target / 2;
-                      text-align: center;
-                      text-decoration: none;
-                      line-height: $size--touch-target;
-                  }
-  */ }
-  .page-foot .copyright {
-    float: left;
-    color: #6fafe0;
-    padding-top: 12px;
-    padding-bottom: 6px; }
-  .page-foot .fine-print-nav {
-    float: right;
-    padding-top: 12px;
-    padding-bottom: 6px; }
-  .page-foot .fine-print-nav__list {
-    text-align: center; }
-  .page-foot .fine-print-nav__item {
-    display: inline-block; }
-  .page-foot .fine-print-nav__link {
-    color: white;
-    font-size: 12px;
-    text-decoration: none;
-    color: #6fafe0;
-    margin: 0 12px; }
-
-/*------------------------------------*\
-    #ARTISTS
-\*------------------------------------*/
-.artists__artist {
-  text-align: center;
-  padding: 6px 12px; }
-
-.artist__headshot {
-  overflow: hidden;
-  border-radius: 50%;
-  display: block;
-  width: 50%;
-  text-align: center;
-  position: relative;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
-  border: 2px solid #206396; }
-
-.artist__title {
-  font-size: 21px; }
-
-.artist__location {
-  color: #999999;
-  font-size: 12px;
-  line-height: 1; }
-
-.artist__genres {
-  color: #999999;
+.profile__name {
+  font-size: 0.875em;
   line-height: 1;
-  text-align: center; }
-
-.genres__genre {
-  font-size: 12px;
-  line-height: 1;
-  display: inline-block;
-  margin: 0 2px;
-  background-color: #999999;
-  border: 1px solid gray;
-  padding: 2px 12px;
-  border-radius: 6px;
-  color: white; }
-
-/*------------------------------------*\
-    #ARTIST
-\*------------------------------------*/
-.artist-page .artist {
-  max-width: 36em;
-  margin: 0 auto; }
-.artist-page .artist__headshot {
-  max-width: 200px;
-  margin-right: 24px; }
-  @media screen and (min-width: 30em) {
-    .artist-page .artist__headshot {
-      left: 0;
-      -webkit-transform: none;
-          -ms-transform: none;
-              transform: none; } }
-.artist-page .artist__title {
-  text-align: center;
-  font-size: 28.424px; }
-  @media screen and (min-width: 30em) {
-    .artist-page .artist__title {
-      text-align: left; } }
-.artist-page .artist__location {
-  display: block;
   text-align: left; }
-.artist-page .genres__genre {
-  text-align: center; }
-.artist-page .artist__social-list {
+
+.profile__role {
+  font-size: 0.75em;
+  color: #4d97cf;
+  font-weight: 200;
   display: block;
-  padding-top: 12px;
-  text-align: center; }
-.artist-page .artist__social-item {
-  display: inline;
-  padding-bottom: 6px; }
-.artist-page .artist__social-link {
+  padding-top: 5.5px; }
+
+.tag {
+  background-color: #4d97cf;
+  border: 1px solid #4d97cf;
+  border-radius: 4px;
+  color: white !important;
   display: inline-block;
-  background-color: #206396;
-  color: white;
-  text-transform: uppercase;
-  font-size: 12px;
-  padding-right: 6px; }
-  .artist-page .artist__social-link:before {
-    background-color: #297fc0;
-    padding: 6px 0;
-    margin-right: 6px; }
-.artist-page .artist__bio {
-  padding-top: 12px;
-  clear: both; }
+  padding-right: 11px;
+  font-size: 0.75em;
+  text-transform: uppercase; }
+
+.tag__count {
+  background-color: #124266;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  padding: 0 10px;
+  line-height: 22px;
+  display: inline-block;
+  margin-right: 5.5px;
+  position: relative; }
+  .tag__count:before {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    content: ' ';
+    display: inline-block;
+    background-color: #124266;
+    width: 5.5px;
+    height: 5.5px;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+        -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+            transform: translateX(-50%) translateY(-50%) rotate(45deg); }
