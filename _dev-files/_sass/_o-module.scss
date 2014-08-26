@@ -1,0 +1,172 @@
+.module  {
+    border-radius: $size--border-radius;
+    border: 1px solid $color--border;
+    background-color: $color--grey;
+    color: $color--white;
+    font-weight: 200;
+    max-width: 400px;
+}
+    
+    .module__head {
+        border-bottom: 1px solid $color--border;
+        text-transform: uppercase;
+    }
+
+        .module__title {
+            font-size: inherit;
+            margin: 0;
+            padding: 0;
+        }
+
+    .module__body {
+        padding: $gutter--narrow;
+        font-size: $type--base;
+        
+    }
+    
+        .module__section-title {
+            font-weight: 400;
+            font-style: normal;
+            font-size: $type--title;
+        }
+        
+        .module__divider {
+            border: none;
+            border-top: 1px solid $color--border;
+            margin: $gutter--narrow 0;
+        }
+        
+        .module__body p {
+            line-height: 20px;
+            margin-bottom: 10px;
+        }
+        
+        
+
+    .module__foot {
+        border-top: 1px solid $color--border;
+        color: $color--grey-light;
+        font-size: $type--base;
+        line-height: 20px;
+    }
+    
+        .module__foot p {
+            line-height: inherit;
+        }
+    
+    
+    .module__head,
+    .module__foot {
+        text-align: center;
+        line-height: $size--touch-target;
+        background-color: $color--grey-dark;
+    }
+
+
+    
+
+
+    .module__tab {
+        border-bottom: 1px solid $color--border;
+        max-height: $size--touch-target;
+        overflow: hidden;
+        
+        &:last-child {
+            border-bottom: none;
+        }
+        
+        &--open {
+            max-height: inherit;
+        }
+        
+        &--is-hover, &:hover {
+            background-color: $color--grey-medium;
+        }
+        
+    }
+    
+        .module__tab-title {
+            font-size: $type--base;
+            line-height: $size--touch-target;
+            margin: 0;
+            padding: 0 $gutter--narrow;
+            
+            .module__tab--open & {
+                color: $color--primary;
+            }
+            
+        }
+        
+        .module__tab-body {
+            padding: $gutter--narrow;
+        }
+        
+        
+        
+        
+    .module--profile {
+        
+        .module__head {
+            position: relative;
+            background-image: url(//lorempixel.com/500/200/cats);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100px;
+            margin-bottom: 50px;
+        }
+        
+        .profile__headshot {
+            position: absolute;
+            top: 100%;
+            transform: translateY(-50%);
+            left: $gutter--narrow;
+            border: 2px solid $color--grey;
+        }
+        
+        .profile__name {
+            margin: 0;
+            padding-top: $gutter--narrow;
+            position: absolute;
+            top: 100%;
+            left: $gutter--normal + 100px;
+            text-transform: none;
+        }
+        
+        .profile__role {
+            margin: 0;
+        }
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    .profile__head {
+        @extend %clearfix;
+    }
+    
+        .profile__headshot {
+            float: left;
+            margin-right: $gutter--narrow;
+            border-radius: 50%;
+        }
+        
+        .profile__name {
+            font-size: $type--base;
+            line-height: 1;
+            text-align: left;
+        }
+        
+            .profile__role {
+                font-size: $type--small;
+                color: $color--primary;
+                font-weight: 200;
+                display: block;
+                padding-top: $gutter--skinny;
+            }
+

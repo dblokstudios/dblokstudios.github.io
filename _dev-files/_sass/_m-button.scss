@@ -1,10 +1,11 @@
 .button {
-    display: block;
-    width: 100%;
+    display: inline-block;
     margin: $gutter--skinny 0;
     border-radius: $size--border-radius;
     border: none;
     background-color: $color--primary;
+    padding-top: 0;
+    padding-bottom: 0;
     padding-left:  $gutter--normal;
     padding-right:  $gutter--normal;
     line-height: $size--touch-target;
@@ -12,6 +13,7 @@
     
     &--is-hover, &:hover {
         background-color: $color--primary-light;
+        
     }
     
     &--is-focus, &:focus,
@@ -32,6 +34,7 @@
     &--is-hollow {
         background-color: transparent;
         border: 2px solid $color--white;
+        line-height: $size--touch-target - 4px;
         
         &:hover {
             background-color: rgba(255,255,255,0.1);

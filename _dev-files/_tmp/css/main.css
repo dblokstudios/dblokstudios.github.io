@@ -39,12 +39,12 @@
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-.post .post__details-list:after, .post .post__tags-list:after, .post .post__category-list:after, .post .post__details-list:before, .post .post__tags-list:before, .post .post__category-list:before {
+.post .post__details-list:after, .post .post__tags-list:after, .post .post__category-list:after, .profile__head:after, .post .post__details-list:before, .post .post__tags-list:before, .post .post__category-list:before, .profile__head:before {
   content: " ";
   /* 1 */
   display: table;
   /* 2 */ }
-.post .post__details-list:before, .post .post__tags-list:before, .post .post__category-list:before {
+.post .post__details-list:before, .post .post__tags-list:before, .post .post__category-list:before, .profile__head:before {
   clear: both; }
 
 /**************\
@@ -1159,12 +1159,13 @@ sub {
             transform: translateX(-50%) translateY(-50%) rotate(45deg); }
 
 .button {
-  display: block;
-  width: 100%;
+  display: inline-block;
   margin: 5.5px 0;
   border-radius: 4px;
   border: none;
   background-color: #4d97cf;
+  padding-top: 0;
+  padding-bottom: 0;
   padding-left: 22px;
   padding-right: 22px;
   line-height: 44px;
@@ -1180,11 +1181,127 @@ sub {
       background-color: #999999; }
   .button--is-hollow {
     background-color: transparent;
-    border: 2px solid white; }
+    border: 2px solid white;
+    line-height: 40px; }
     .button--is-hollow:hover {
       background-color: rgba(255, 255, 255, 0.1); }
     .button--is-hollow:active {
       background-color: rgba(0, 0, 0, 0.1); }
+
+.module {
+  border-radius: 4px;
+  border: 1px solid #20272d;
+  background-color: #35414a;
+  color: white;
+  font-weight: 200;
+  max-width: 400px; }
+
+.module__head {
+  border-bottom: 1px solid #20272d;
+  text-transform: uppercase; }
+
+.module__title {
+  font-size: inherit;
+  margin: 0;
+  padding: 0; }
+
+.module__body {
+  padding: 11px;
+  font-size: 0.875em; }
+
+.module__section-title {
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1em; }
+
+.module__divider {
+  border: none;
+  border-top: 1px solid #20272d;
+  margin: 11px 0; }
+
+.module__body p {
+  line-height: 20px;
+  margin-bottom: 10px; }
+
+.module__foot {
+  border-top: 1px solid #20272d;
+  color: #86919a;
+  font-size: 0.875em;
+  line-height: 20px; }
+
+.module__foot p {
+  line-height: inherit; }
+
+.module__head,
+.module__foot {
+  text-align: center;
+  line-height: 44px;
+  background-color: #2d3840; }
+
+.module__tab {
+  border-bottom: 1px solid #20272d;
+  max-height: 44px;
+  overflow: hidden; }
+  .module__tab:last-child {
+    border-bottom: none; }
+  .module__tab--open {
+    max-height: inherit; }
+  .module__tab--is-hover, .module__tab:hover {
+    background-color: #3c4952; }
+
+.module__tab-title {
+  font-size: 0.875em;
+  line-height: 44px;
+  margin: 0;
+  padding: 0 11px; }
+  .module__tab--open .module__tab-title {
+    color: #4d97cf; }
+
+.module__tab-body {
+  padding: 11px; }
+
+.module--profile .module__head {
+  position: relative;
+  background-image: url(//lorempixel.com/500/200/cats);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+  margin-bottom: 50px; }
+.module--profile .profile__headshot {
+  position: absolute;
+  top: 100%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 11px;
+  border: 2px solid #35414a; }
+.module--profile .profile__name {
+  margin: 0;
+  padding-top: 11px;
+  position: absolute;
+  top: 100%;
+  left: 122px;
+  text-transform: none; }
+.module--profile .profile__role {
+  margin: 0; }
+
+.profile__headshot {
+  float: left;
+  margin-right: 11px;
+  border-radius: 50%; }
+
+.profile__name {
+  font-size: 0.875em;
+  line-height: 1;
+  text-align: left; }
+
+.profile__role {
+  font-size: 0.75em;
+  color: #4d97cf;
+  font-weight: 200;
+  display: block;
+  padding-top: 5.5px; }
 
 .styleguide__atoms,
 .styleguide__molecules,
@@ -1254,190 +1371,3 @@ sub {
 
 .styleguide__preview {
   padding: 22px; }
-
-/*
-
-
-
-.module  {
-    border-radius: $size--border-radius;
-    border: 1px solid $color--border;
-    background-color: $color--grey;
-    color: $color--white;
-    font-weight: 200;
-    max-width: 400px;
-}
-    
-    .module__head {
-        border-bottom: 1px solid $color--border;
-        text-transform: uppercase;
-    }
-
-        .module__title {
-            font-size: inherit;
-            margin: 0;
-            padding: 0;
-        }
-
-    .module__body {
-        padding: $gutter--narrow;
-        font-size: $type--base;
-        
-    }
-    
-        .module__section-title {
-            font-weight: 400;
-            font-style: normal;
-            font-size: $type--title;
-        }
-        
-        .module__divider {
-            border: none;
-            border-top: 1px solid $color--border;
-            margin: $gutter--narrow 0;
-        }
-        
-        .module__body p {
-            line-height: 20px;
-            margin-bottom: 10px;
-        }
-        
-        
-
-    .module__foot {
-        border-top: 1px solid $color--border;
-        color: $color--grey-light;
-        font-size: $type--base;
-        line-height: 20px;
-    }
-    
-        .module__foot p {
-            line-height: inherit;
-        }
-    
-    
-    .module__head,
-    .module__foot {
-        text-align: center;
-        line-height: $size--touch-target;
-        background-color: $color--grey-dark;
-    }
-
-
-    
-
-
-    .module__tab {
-        border-bottom: 1px solid $color--border;
-        max-height: $size--touch-target;
-        overflow: hidden;
-        
-        &:last-child {
-            border-bottom: none;
-        }
-        
-        &--open {
-            max-height: inherit;
-        }
-        
-        &--is-hover, &:hover {
-            background-color: $color--grey-medium;
-        }
-        
-    }
-    
-        .module__tab-title {
-            font-size: $type--base;
-            line-height: $size--touch-target;
-            margin: 0;
-            padding: 0 $gutter--narrow;
-            
-            .module__tab--open & {
-                color: $color--primary;
-            }
-            
-        }
-        
-        .module__tab-body {
-            padding: $gutter--narrow;
-        }
-        
-        
-        
-        
-    .module--profile {
-        
-        .module__head {
-            position: relative;
-            background-image: url(//lorempixel.com/500/200/cats);
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 100px;
-            margin-bottom: 50px;
-        }
-        
-        .profile__headshot {
-            position: absolute;
-            top: 100%;
-            transform: translateY(-50%);
-            left: $gutter--narrow;
-            border: 2px solid $color--grey;
-        }
-        
-        .profile__name {
-            margin: 0;
-            padding-top: $gutter--narrow;
-            position: absolute;
-            top: 100%;
-            left: $gutter--normal + 100px;
-            text-transform: none;
-        }
-        
-        .profile__role {
-            margin: 0;
-        }
-        
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    .profile__head {
-        @extend %clearfix;
-    }
-    
-        .profile__headshot {
-            float: left;
-            margin-right: $gutter--narrow;
-            border-radius: 50%;
-        }
-        
-        .profile__name {
-            font-size: $type--base;
-            line-height: 1;
-            text-align: left;
-        }
-        
-            .profile__role {
-                font-size: $type--small;
-                color: $color--primary;
-                font-weight: 200;
-                display: block;
-                padding-top: $gutter--skinny;
-            }
-
-
-
-
-
-
-
-
-    
-    
-*/
