@@ -160,21 +160,23 @@ $color--primary-dark: #124266;
 @import url(http://fonts.googleapis.com/css?family=Lobster+Two&text=%26);
 
 @import 'mixins';
-
 @import 'base';
 @import '../../bower_components/csswizardry-grids/csswizardry-grids';
 @import 'icons';
 @import 'type';
 
+// Molecules
 @import 'm-tag';
 @import 'm-button';
 
+// Organisms
 @import 'o-module';
-
-// @import 'o-page-head';
-// @import 'o-primary-nav';
+@import 'o-page-head';
+@import 'o-primary-nav-new';
 // @import 'o-page-foot';
 // @import 'o-artists';
+
+// pages
 @import 'styleguide';
 
 

@@ -9,10 +9,12 @@
     max-height: 300px;
     text-align: center;
     position: relative;
-    border-bottom: 1px solid red;
+    border-bottom: 1px solid $color--border;
+    background-color: $color--grey-dark;
     
+
     @media screen and (min-width: $breakpoint--lap) {
-      margin-top: $size--touch-target;
+
     }
 }
 
@@ -27,10 +29,9 @@
         overflow: hidden;
         white-space: nowrap;
         height: 100%;
-        background-color: $color--primary;
-        border-bottom: 1px solid red;
-//         
-//         @include mask(url(/assets/img/dblok-logo.svg) 50% 50% no-repeat);
+        background-color: $color--white;
+        
+        @include mask(url(/assets/img/dblok-logo.svg) 50% 50% no-repeat);
     }
     
         .page-head__tagline {
