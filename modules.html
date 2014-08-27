@@ -78,12 +78,14 @@ a.tag.tag--genre[href=&quot;#&quot;]
                     
                 <pre class="styleguide__code-pre">
 <code class="styleguide__code-area">
-button.button {}
-button.button.button--is-hover {}
-button.button.button--is-focus {}
-button.button.button--is-active {}
-button.button.button--is-disabled {}
-button.button.button--is-hollow {}
+.button {}
+.button.button--is-hover {}
+.button.button--is-focus {}
+.button.button--is-active {}
+.button.button--is-disabled {}
+.button.button--is-hollow {}
+.button.button--is-alt {}
+.button.button--is-hollow-alt {}
 </code>
 </pre>
             </div><!--
@@ -107,6 +109,12 @@ button.button.button--is-hollow {}
                     
                     <a class="button  button--is-hollow">a:hollow</a>
                     <button class="button button--is-hollow">button:hollow</button>
+                    
+                    <a class="button  button--is-alt">a:hollow</a>
+                    <button class="button button--is-alt">button:hollow</button>
+                    
+                    <a class="button  button--is-hollow-alt">a:hollow</a>
+                    <button class="button button--is-hollow-alt">button:hollow</button>
                 </div>
             </div>
         </div>
@@ -135,11 +143,27 @@ button.button.button--is-hollow {}
             <div class="styleguide__code">
                 <h3 class="styleguide__code-head">Usage</h3>
                     
-                <pre class="styleguide__code-pre">
-<code class="styleguide__code-area">
-
-</code>
-</pre>
+                <pre class="styleguide__code-pre"><!--
+                 --><code class="styleguide__code-area">
+.module
+  .module__head
+    .module__title
+    
+  .module__body
+    .module__section-title
+    
+    p
+    
+    .module__divider
+    
+    .button
+    .button.button--is-hollow
+    
+  .module__foot
+    p
+      a                    
+                    </code><!--
+             --></pre>
             </div><!--
             
          --><div class="styleguide__demo">
@@ -154,7 +178,7 @@ button.button.button--is-hollow {}
                         <div class="module__body">
                             <h3 class="module__section-title">Section Title</h3>
                             
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                             
                             <hr class="module__divider" />
                             
@@ -186,11 +210,20 @@ button.button.button--is-hollow {}
             <div class="styleguide__code">
                 <h3 class="styleguide__code-head">Usage</h3>
                     
-                <pre class="styleguide__code-pre">
-<code class="styleguide__code-area">
+                <pre class="styleguide__code-pre"><!--
+                 --><code class="styleguide__code-area">
+.module[.module--tabbed]
+  .module__tab[.module__tab--open]
+    .module__tab-title
+    
+    .module__tab-body
+      [content]
+    
+  .module_tab[.module__tab--is-hover]
+  .module_tab
 
-</code>
-</pre>
+                    </code><!--
+             --></pre>
             </div><!--
             
          --><div class="styleguide__demo">
@@ -273,11 +306,18 @@ button.button.button--is-hollow {}
             <div class="styleguide__code">
                 <h3 class="styleguide__code-head">Usage</h3>
                     
-                <pre class="styleguide__code-pre">
-<code class="styleguide__code-area">
+                <pre class="styleguide__code-pre"><!--
+                 --><code class="styleguide__code-area">
+.module[.module--profile]
+    .module__head
+        [content]
+    
+    .module_body
+        [content]
+        
 
-</code>
-</pre>
+                    </code><!--
+             --></pre>
             </div><!--
             
          --><div class="styleguide__demo">
@@ -307,35 +347,6 @@ button.button.button--is-hollow {}
 
     
 </article>
-
-
-
-
-<!--
-
-
-
-    
-    <h2>Module -- Tabbed </h2>
-    
-    
-    
-    
-    
-
-   
-
-
-
-
-
-
-
-
-
-
-</article>
--->
 
 
 

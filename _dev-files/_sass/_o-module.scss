@@ -108,7 +108,7 @@
         
         .module__head {
             position: relative;
-            background-image: url(//lorempixel.com/500/200/cats);
+            
             background-position: center center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -119,6 +119,8 @@
         .profile__headshot {
             position: absolute;
             top: 100%;
+            width: 100px;
+            height: auto;
             transform: translateY(-50%);
             left: $gutter--narrow;
             border: 2px solid $color--grey;

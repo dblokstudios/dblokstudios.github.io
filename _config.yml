@@ -68,6 +68,13 @@ collections:
     output: true
   shows:
     output: true
+  shows:
+    output: true
+  executives:
+    output: false
+  staff:
+    output: false
+  
 defaults:
   -
     scope:

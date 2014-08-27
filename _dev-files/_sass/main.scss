@@ -14,14 +14,12 @@ $push:                  true;
 $pull:                  false;
 $use-markup-fix:        true;
 $breakpoints: (
-    'palm' '(min-width: 320px) and (max-width: 480px)',
-    'palm-wide' '(min-width: 480px)',
-    'lap' '(min-width: 481px) and (max-width: 1023px)',
-    'breakpoint-lap' '(min-width: em(768px))',
-    'portable' '(max-width: 1023px)',
-    'desk' '(min-width: 1024px)'
+    'palm' '(max-width: ' + em(767px) + ')',
+    'lap' '(min-width: ' + em(768px) + ') and (max-width: ' + em(1023px) + ')',
+    'portable' '(max-width: ' + em(1023px) + ')',
+    'desk' '(min-width: ' + em(1024px) + ')'
 );
-$breakpoint-has-widths: ('palm', 'palm-wide', 'lap', 'breakpoint-lap', 'portable', 'desk');
+$breakpoint-has-widths: ('palm', 'lap', 'portable', 'desk');
 $breakpoint-has-push:   ('palm', 'lap', 'portable', 'desk');
 $breakpoint-has-pull:   ('palm', 'lap', 'portable', 'desk');
 
@@ -154,6 +152,10 @@ $color--primary: #4D97CF;
 $color--primary-light: #5AAFEE;
 $color--primary-dark: #124266;
 
+$color--secondary: #fd8524;
+$color--secondary-light: #fc923c;
+$color--secondary-dark: #e28436;
+
 
 
 @import url(http://fonts.googleapis.com/css?family=Bevan);
@@ -191,18 +193,11 @@ $color--primary-dark: #124266;
 
 
 
+
+
+
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     
     
     

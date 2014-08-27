@@ -8,7 +8,6 @@
     .styleguide__molecules,
     .styleguide__organisms {
         @extend %grid__item;
-        @extend %one-whole;
         
         border: 1px solid $color--border;
         margin: $gutter--normal 0 0;
@@ -65,14 +64,16 @@
             .styleguide__description {
                 border-bottom: 1px solid $color--border;
                 padding: $gutter--narrow $gutter--normal;
+                background-color: $color--grey-medium;
             }
             
             
             .styleguide__code {
                 @extend %grid__item;
-                @extend %one-half;
+                @extend %lap--one-half;
+                @extend %desk--one-half;
                 
-                border-right: 1px solid $color--border;
+                background-color: red;
             }
             
                 .styleguide__code-head {
@@ -104,7 +105,8 @@
             
             .styleguide__demo {
                 @extend %grid__item;
-                @extend %one-half;
+                @extend %lap--one-half;
+                @extend %desk--one-half;
             }
             
                 .styleguide__demo-head {

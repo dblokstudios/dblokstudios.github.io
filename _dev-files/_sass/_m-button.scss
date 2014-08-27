@@ -10,10 +10,12 @@
     padding-right:  $gutter--normal;
     line-height: $size--touch-target;
     color: $color--white;
+    width: 100%;
+    text-align: center;
     
     &--is-hover, &:hover {
         background-color: $color--primary-light;
-        
+        color: $color--white;
     }
     
     &--is-focus, &:focus,
@@ -44,4 +46,31 @@
             background-color: rgba(0,0,0,0.1);
         }
     }
+    
+    &--is-alt {
+        background-color: $color--secondary;
+        
+        &:hover {
+            background-color: $color--secondary-light;
+        }
+        
+        &:focus,
+        &:active {
+            background-color: $color--secondary-dark;
+        }
+    }
+    
+    &--is-hollow-alt {
+        @extend .button--is-hollow;
+        
+        border-color: $color--grey-dark;
+        color: $color--grey-dark;
+        
+        &:hover {
+            border-color: $color--grey-light;
+            color: $color--grey-light;
+        }
+    }
+    
 }
+
