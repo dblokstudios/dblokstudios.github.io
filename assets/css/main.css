@@ -8,13 +8,13 @@
   padding-right: 1.25%;
   padding-left: 1.25%; }
 
-.post .post__details-list, .post .post__tags-list, .post .post__category-list, .primary-nav .page-nav__list,
-.primary-nav .social-nav__list, h2, p, .page-head__logo {
+.post .post__details-list, .post .post__tags-list, .post .post__category-list, .tag-list, .primary-nav .page-nav__list,
+.primary-nav .social-nav__list, .module--release .release__track-list, h2, p, .page-head__logo {
   padding: 0;
   margin: 0; }
 
-.post .post__details-list, .post .post__tags-list, .post .post__category-list, .primary-nav .page-nav__list,
-.primary-nav .social-nav__list {
+.post .post__details-list, .post .post__tags-list, .post .post__category-list, .tag-list, .primary-nav .page-nav__list,
+.primary-nav .social-nav__list, .module--release .release__track-list {
   list-style: none; }
 
 /*
@@ -489,7 +489,7 @@ th {
  */
 .primary-nav .page-nav__list, .primary-nav .page-nav__item, .primary-nav .social-nav__item, .styleguide__atoms,
 .styleguide__molecules,
-.styleguide__organisms, .styleguide__code, .styleguide__demo {
+.styleguide__organisms, .styleguide__code, .styleguide__demo, .module--release .track__title, .module--release .track__time {
   display: inline-block;
   /* [1] */
   padding-left: 20px;
@@ -513,17 +513,17 @@ th {
  */
 .primary-nav, .primary-nav .page-nav__list, .primary-nav .social-nav__list, .styleguide, .styleguide__atom,
 .styleguide__molecule,
-.styleguide__organism {
+.styleguide__organism, .module--release .release__track {
   margin-left: 0; }
   .primary-nav > .page-nav__list, .primary-nav .page-nav__list > .page-nav__list, .primary-nav .social-nav__list > .page-nav__list, .primary-nav .styleguide > .page-nav__list, .primary-nav .styleguide__atom > .page-nav__list,
   .primary-nav .styleguide__molecule > .page-nav__list,
-  .primary-nav .styleguide__organism > .page-nav__list, .primary-nav > .page-nav__item, .primary-nav .page-nav__list > .page-nav__item, .primary-nav .social-nav__list > .page-nav__item, .primary-nav .styleguide > .page-nav__item, .primary-nav .styleguide__atom > .page-nav__item,
+  .primary-nav .styleguide__organism > .page-nav__list, .module--release .primary-nav .release__track > .page-nav__list, .primary-nav .module--release .release__track > .page-nav__list, .primary-nav > .page-nav__item, .primary-nav .page-nav__list > .page-nav__item, .primary-nav .social-nav__list > .page-nav__item, .primary-nav .styleguide > .page-nav__item, .primary-nav .styleguide__atom > .page-nav__item,
   .primary-nav .styleguide__molecule > .page-nav__item,
-  .primary-nav .styleguide__organism > .page-nav__item, .primary-nav > .social-nav__item, .primary-nav .page-nav__list > .social-nav__item, .primary-nav .social-nav__list > .social-nav__item, .primary-nav .styleguide > .social-nav__item, .primary-nav .styleguide__atom > .social-nav__item,
+  .primary-nav .styleguide__organism > .page-nav__item, .module--release .primary-nav .release__track > .page-nav__item, .primary-nav .module--release .release__track > .page-nav__item, .primary-nav > .social-nav__item, .primary-nav .page-nav__list > .social-nav__item, .primary-nav .social-nav__list > .social-nav__item, .primary-nav .styleguide > .social-nav__item, .primary-nav .styleguide__atom > .social-nav__item,
   .primary-nav .styleguide__molecule > .social-nav__item,
-  .primary-nav .styleguide__organism > .social-nav__item, .primary-nav > .styleguide__atoms, .primary-nav .page-nav__list > .styleguide__atoms, .primary-nav .social-nav__list > .styleguide__atoms, .styleguide > .styleguide__atoms, .styleguide__atom > .styleguide__atoms,
+  .primary-nav .styleguide__organism > .social-nav__item, .module--release .primary-nav .release__track > .social-nav__item, .primary-nav .module--release .release__track > .social-nav__item, .primary-nav > .styleguide__atoms, .primary-nav .page-nav__list > .styleguide__atoms, .primary-nav .social-nav__list > .styleguide__atoms, .styleguide > .styleguide__atoms, .styleguide__atom > .styleguide__atoms,
   .styleguide__molecule > .styleguide__atoms,
-  .styleguide__organism > .styleguide__atoms,
+  .styleguide__organism > .styleguide__atoms, .module--release .release__track > .styleguide__atoms,
   .primary-nav > .styleguide__molecules,
   .primary-nav .page-nav__list > .styleguide__molecules,
   .primary-nav .social-nav__list > .styleguide__molecules,
@@ -531,17 +531,23 @@ th {
   .styleguide__atom > .styleguide__molecules,
   .styleguide__molecule > .styleguide__molecules,
   .styleguide__organism > .styleguide__molecules,
+  .module--release .release__track > .styleguide__molecules,
   .primary-nav > .styleguide__organisms,
   .primary-nav .page-nav__list > .styleguide__organisms,
   .primary-nav .social-nav__list > .styleguide__organisms,
   .styleguide > .styleguide__organisms,
   .styleguide__atom > .styleguide__organisms,
   .styleguide__molecule > .styleguide__organisms,
-  .styleguide__organism > .styleguide__organisms, .primary-nav > .styleguide__code, .primary-nav .page-nav__list > .styleguide__code, .primary-nav .social-nav__list > .styleguide__code, .styleguide > .styleguide__code, .styleguide__atom > .styleguide__code,
+  .styleguide__organism > .styleguide__organisms,
+  .module--release .release__track > .styleguide__organisms, .primary-nav > .styleguide__code, .primary-nav .page-nav__list > .styleguide__code, .primary-nav .social-nav__list > .styleguide__code, .styleguide > .styleguide__code, .styleguide__atom > .styleguide__code,
   .styleguide__molecule > .styleguide__code,
-  .styleguide__organism > .styleguide__code, .primary-nav > .styleguide__demo, .primary-nav .page-nav__list > .styleguide__demo, .primary-nav .social-nav__list > .styleguide__demo, .styleguide > .styleguide__demo, .styleguide__atom > .styleguide__demo,
+  .styleguide__organism > .styleguide__code, .module--release .release__track > .styleguide__code, .primary-nav > .styleguide__demo, .primary-nav .page-nav__list > .styleguide__demo, .primary-nav .social-nav__list > .styleguide__demo, .styleguide > .styleguide__demo, .styleguide__atom > .styleguide__demo,
   .styleguide__molecule > .styleguide__demo,
-  .styleguide__organism > .styleguide__demo {
+  .styleguide__organism > .styleguide__demo, .module--release .release__track > .styleguide__demo, .module--release .primary-nav > .track__title, .primary-nav .module--release .page-nav__list > .track__title, .module--release .primary-nav .page-nav__list > .track__title, .primary-nav .module--release .social-nav__list > .track__title, .module--release .primary-nav .social-nav__list > .track__title, .module--release .styleguide > .track__title, .module--release .styleguide__atom > .track__title,
+  .module--release .styleguide__molecule > .track__title,
+  .module--release .styleguide__organism > .track__title, .module--release .release__track > .track__title, .module--release .primary-nav > .track__time, .primary-nav .module--release .page-nav__list > .track__time, .module--release .primary-nav .page-nav__list > .track__time, .primary-nav .module--release .social-nav__list > .track__time, .module--release .primary-nav .social-nav__list > .track__time, .module--release .styleguide > .track__time, .module--release .styleguide__atom > .track__time,
+  .module--release .styleguide__molecule > .track__time,
+  .module--release .styleguide__organism > .track__time, .module--release .release__track > .track__time {
     padding-left: 0; }
 
 /**
@@ -594,8 +600,11 @@ th {
 /**
  * Sixths
  */
-.primary-nav .page-nav__item {
+.primary-nav .page-nav__item, .module--release .track__time {
   width: 16.666%; }
+
+.module--release .track__title {
+  width: 83.333%; }
 
 /**
  * Eighths
@@ -1090,38 +1099,100 @@ sub {
     .post li:nth-child(3n+1):nth-last-child(3) ~ li {
       width: 33.33333%; }
 
-.tag {
-  background-color: #4D97CF;
-  border: 1px solid #4D97CF;
-  border-radius: 4px;
-  color: #ffffff !important;
+.tag-list__item {
   display: inline-block;
-  padding-right: 11px;
-  font-size: 0.75em;
-  text-transform: uppercase;
-  /* Prevent background color leak outs */
-  background-clip: padding-box; }
+  margin: 2.75px; }
 
-.tag__count {
-  background-color: #124266;
-  border-radius: 3px;
-  padding: 0 10px;
-  line-height: 22px;
+.tag {
+  background-color: #20272D;
+  color: #ffffff;
+  border-radius: 4px;
   display: inline-block;
-  margin-right: 5.5px;
-  position: relative; }
-  .tag__count:before {
-    position: absolute;
-    top: 50%;
-    left: 100%;
-    content: ' ';
-    display: inline-block;
-    background-color: #124266;
-    width: 5.5px;
-    height: 5.5px;
-    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
-        -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
-            transform: translateX(-50%) translateY(-50%) rotate(45deg); }
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  line-height: 22px;
+  font-size: 0.75em; }
+  .tag--is-slim i {
+    display: none; }
+  .tag--is-icon span {
+    display: none; }
+  .tag:hover {
+    color: #ffffff; }
+    .tag:hover:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 2;
+      background-color: rgba(255, 255, 255, 0.1); }
+  .tag:active:after {
+    background-color: rgba(0, 0, 0, 0.1); }
+  .tag span {
+    padding: 0 5.5px; }
+
+.tag i:before {
+  background-color: rgba(255, 255, 255, 0.5);
+  display: inline-block;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #4D97CF;
+  text-align: center;
+  width: 22px; }
+
+.tag--facebook {
+  background-color: #3b5998; }
+  .tag--facebook i:before {
+    color: #3b5998;
+    content: "\f09a"; }
+
+.tag--twitter {
+  background-color: #00aced; }
+  .tag--twitter i:before {
+    color: #00aced;
+    content: "\f099"; }
+
+.tag--soundcloud {
+  background-color: #ff3a00; }
+  .tag--soundcloud i:before {
+    color: #ff3a00;
+    content: "\f1be"; }
+
+.tag--mixcloud {
+  background-color: #5d9632; }
+  .tag--mixcloud i:before {
+    color: #5d9632;
+    content: "\f0c2"; }
+
+.tag--itunes {
+  background-color: #a086d3; }
+  .tag--itunes i:before {
+    color: #a086d3;
+    content: "\f001"; }
+
+.tag--shopify {
+  background-color: #96bf48;
+      /*
+i:before {
+        color: $color--shopify;
+        content: "\f0c2";
+      }
+*/ }
+
+.tag--amazon {
+  background-color: #ff9900;
+      /*
+i:before {
+        color: $color--amazon;
+        content: "\f0c2";
+      }
+*/ }
 
 .button {
   display: inline-block;
@@ -1174,7 +1245,8 @@ sub {
   background-color: #35414a;
   color: #ffffff;
   font-weight: 200;
-  max-width: 400px; }
+  max-width: 400px;
+  overflow: hidden; }
 
 .module__head {
   border-bottom: 1px solid #20272D;
@@ -1183,7 +1255,8 @@ sub {
 .module__title {
   font-size: inherit;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  line-height: 44px; }
 
 .module__body {
   padding: 11px;
@@ -1206,8 +1279,8 @@ sub {
 .module__foot {
   border-top: 1px solid #20272D;
   color: #86919a;
-  font-size: 0.875em;
-  line-height: 20px; }
+  padding: 11px 0;
+  font-size: 0.875em; }
 
 .module__foot p {
   line-height: inherit; }
@@ -1215,7 +1288,6 @@ sub {
 .module__head,
 .module__foot {
   text-align: center;
-  line-height: 44px;
   background-color: #2D3840; }
 
 .module__tab {
@@ -1416,3 +1488,40 @@ sub {
 
 .styleguide__preview {
   padding: 22px; }
+
+.module--release .module__head {
+  position: relative;
+  line-height: 0; }
+.module--release .release__artwork {
+  width: 100%;
+  height: auto; }
+.module--release .release__title {
+  position: absolute;
+  bottom: 22px;
+  left: 22px;
+  text-align: left;
+  line-height: 1;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); }
+.module--release .release__artist {
+  font-size: 0.875em;
+  font-weight: normal;
+  font-style: normal;
+  margin: 0; }
+.module--release .release__name {
+  margin: 0; }
+.module--release .release__track-list {
+  margin-top: 11px;
+  margin-left: -11px;
+  margin-right: -11px;
+  border: 1px solid #20272D;
+  border-left: none;
+  border-right: none; }
+.module--release .release__track {
+  background-color: #3c4952;
+  padding-left: 11px;
+  padding-right: 11px;
+  line-height: 1.5; }
+  .module--release .release__track:nth-of-type(2n) {
+    background-color: #35414a; }
+.module--release .track__time {
+  text-align: right; }

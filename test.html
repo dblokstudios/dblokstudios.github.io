@@ -1,64 +1,36 @@
 ---
-layout: default
+layout: blank
 ---
 
-{{ content }}
 
-<h2>Executives</h2>
 
-{% for person in site.executives %}
-  <div class="module  module--profile">
-    
-    <header class="module__head"
-            style="background-image: url({{person.cover}});">
-      <img class="profile__headshot" src="{{ person.headshot }}" />
-      <h2 class="profile__name">{{ person.name }}
-        <small class="profile__role">{{ person.title }}</small>
-      </h2>
-    </header>
-    
-    <div class="module__body">
-      <p>{{ person.short-bio }}</p>
-      
-      {% if person.roles %}
-      <ul class="profile__roles">
-        {% for role in person.roles %}
-        <li class="profile__role">{{role}}</li>
-        {% endfor %}
-      </ul>
-      {% endif %}
-      
-    </div>
+<div class="module  module--release  module--is-small">
+  <header class="module__head"><!--
+ --><img class="release__artwork" src="//placehold.it/500x500" /><!--
+ --><hgroup class="release__title"><!--
+   --><h3 class="release__artist">Empire</h3><!--
+   --><h2 class="release__name">Strike Back</h2><!--
+ --></hgroup>
+--></header>
+
+  <div class="module__body">
+
   </div>
 
-{% endfor %}
+  <footer class="module__foot">
 
-<h2>Staff</h2>
-{% for person in site.staff %}
-  <div class="module  module--profile">
-    
-    <header class="module__head"
-            style="background-image: url({{person.cover}});">
-      <img class="profile__headshot" src="{{ person.headshot }}" />
-      <h2 class="profile__name">{{ person.name }}
-        <small class="profile__role">{{ person.title }}</small>
-      </h2>
-    </header>
-    
-    <div class="module__body">
-      <p>{{ person.short-bio }}</p>
-      
-      {% if person.roles %}
-      <ul class="profile__roles">
-        {% for role in person.roles %}
-        <li class="profile__role">{{role}}</li>
-        {% endfor %}
-      </ul>
-      {% endif %}
-      
-    </div>
-  </div>
-
-{% endfor %}
+    <ul class="tag-list">
+      <li class="tag-list__item">
+        <a class="tag  tag--itunes"><i></i><span>iTunes</span></a>
+      </li>
+      <li class="tag-list__item">
+        <a class="tag  tag--amazon"><i></i><span>Amazon</span></a>
+      </li>
+      <li class="tag-list__item">
+        <a class="tag  tag--shopify"><i></i><span>Shopify</span></a>
+      </li>
+    </ul>
 
 
+  </footer>
+</div>
