@@ -32,6 +32,7 @@
 
       &:hover {
         color: $color--white;
+        cursor: pointer;
 
         &:after {
           content: '';
@@ -46,25 +47,30 @@
         }
       }
 
-      &:active {
-        &:after {
-          background-color: rgba(0,0,0,0.1);
-        }
+      &:active:after {
+        background-color: rgba(0,0,0,0.1);
       }
 
       span {
         padding: 0 $gutter--skinny;
       }
+
     }
+
     .tag i:before {
+      font-family:"icons";
+    	display:inline-block;
+    	font-weight:normal;
+    	font-style:normal;
+    	speak:none;
+    	text-decoration:inherit;
+    	text-transform:none;
+    	text-rendering:optimizeLegibility;
+    	-webkit-font-smoothing:antialiased;
+    	-moz-osx-font-smoothing:grayscale;
+
+      padding-bottom: 1px;
       background-color: rgba(255,255,255,0.5);
-      display: inline-block;
-      font-family: FontAwesome;
-      font-style: normal;
-      font-weight: normal;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      color: $color--primary;
       text-align: center;
       width: $gutter--normal;
     }
@@ -73,53 +79,48 @@
       background-color: $color--facebook;
       i:before {
         color: $color--facebook;
-        content: "\f09a";
+        @extend .icon--facebook;
       }
     }
     .tag--twitter {
       background-color: $color--twitter;
       i:before {
-
         color: $color--twitter;
-        content: "\f099";
+        @extend .icon--twitter;
       }
     }
     .tag--soundcloud {
       background-color: $color--soundcloud;
       i:before {
         color: $color--soundcloud;
-        content: "\f1be";
+        @extend .icon--soundcloud;
       }
     }
     .tag--mixcloud {
       background-color: $color--mixcloud;
       i:before {
         color: $color--mixcloud;
-        content: "\f0c2";
+        @extend .icon--cloud;
       }
     }
     .tag--itunes {
       background-color: $color--itunes;
       i:before {
         color: $color--itunes;
-        content: "\f001";
+        @extend .icon--apple;
       }
     }
     .tag--shopify {
       background-color: $color--shopify;
-      /*
-i:before {
+      i:before {
         color: $color--shopify;
-        content: "\f0c2";
+        @extend .icon--shopify;
       }
-*/
     }
     .tag--amazon {
       background-color: $color--amazon;
-      /*
-i:before {
+      i:before {
         color: $color--amazon;
-        content: "\f0c2";
+        @extend .icon--amazon;
       }
-*/
     }

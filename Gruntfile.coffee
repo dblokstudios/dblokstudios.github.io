@@ -12,12 +12,19 @@ module.exports = (grunt) ->
         tmp: '_dev-files/_tmp/css'
         build: 'assets/css'
       img:  'assets/img'
-      js:   
+      js:
         coffee: '_dev-files/_coffee'
         js: '_dev-files/_js'
         tmp: '_dev-files/_tmp/js'
         build: 'assets/js'
-      layout: 
+      icons:
+        dev: '_dev-files/_icons/_svg'
+        tmp: '_dev-files/_tmp/svg'
+        build: 'assets/icons'
+      fonts:
+        build: 'assets/fonts'
+
+      layout:
         dev: '_dev-files/_layouts'
         tmp: '_dev-files/_tmp/layouts'
         build: '_layouts'
@@ -38,7 +45,7 @@ module.exports = (grunt) ->
         cwd:  '<%= globalConfig.css.tmp %>'
         src:  '**/*.css'
         dest: '<%= globalConfig.css.tmp %>'
-        
+
     copy:
       css_tmp:
         cwd: '<%= globalConfig.css.css %>'
@@ -70,12 +77,13 @@ module.exports = (grunt) ->
         src: '**/*.html'
         dest: '<%= globalConfig.layout.build %>'
         expand: true
-        
+
     clean:
       temp: '<%= globalConfig.tmp %>'
       css: '<%= globalConfig.css.build %>'
       js: '<%= globalConfig.js.build %>'
-      
+      font: '<%= globalConfig.fonts.build %>'
+
 
     cssmin:
       build:
@@ -87,7 +95,7 @@ module.exports = (grunt) ->
 
         options:
           report: 'gzip'
-          
+
     coffee:
       build:
         expand: true
@@ -95,7 +103,7 @@ module.exports = (grunt) ->
         src: '**/*.coffee'
         dest: '<%= globalConfig.js.tmp %>'
         ext: '.js'
-        
+
     uglify:
       build:
         expand: true
@@ -103,15 +111,15 @@ module.exports = (grunt) ->
         src: '**/*.js'
         dest: '<%= globalConfig.js.tmp %>'
         ext: '.min.js'
-        
-    
+
+
     processhtml:
       deploy:
         expand: true
         cwd: '<%= globalConfig.layout.dev %>'
         src: '**/*.html'
         dest: '<%= globalConfig.layout.build %>'
-        
+
     watch:
       sass:
         files: '<%= globalConfig.css.sass %>/**/*.scss'
@@ -129,9 +137,30 @@ module.exports = (grunt) ->
         files: '<%= globalConfig.layout.dev %>/**/*.html'
         tasks: ['layout']
 
-      
+    svgmin:
+      build:
+        expand: true
+        cwd: '<%= globalConfig.icons.dev %>'
+        src: ['**/*.svg']
+        dest: '<%= globalConfig.icons.tmp %>'
+        ext: '.svg'
 
-        
+    webfont:
+      icons:
+        src: '<%= globalConfig.icons.tmp %>/**/*.svg'
+        dest: '<%= globalConfig.fonts.build %>'
+        options:
+          stylesheet: 'scss'
+          font: 'icons'
+          relativeFontPath: '/assets/fonts'
+          syntax: 'bem'
+          templateOptions:
+            baseClass: 'icon'
+            classPrefix: 'icon--'
+
+
+
+
 
 
 
@@ -144,7 +173,7 @@ module.exports = (grunt) ->
     'autoprefixer'
     'copy:css'
   ]
-  
+
   grunt.registerTask 'css-deploy', [
     'clean:css'
     'sass'
@@ -153,13 +182,13 @@ module.exports = (grunt) ->
     'cssmin'
     'copy:css'
   ]
-  
+
   grunt.registerTask 'js', [
     'coffee'
     'copy:js_tmp'
     'copy:js'
   ]
-  
+
   grunt.registerTask 'js-deploy', [
     'clean:js'
     'coffee'
@@ -167,39 +196,54 @@ module.exports = (grunt) ->
     'uglify'
     'copy:js'
   ]
-  
+
+  grunt.registerTask 'icons', [
+    'svgmin'
+    'webfont'
+  ]
+
+  grunt.registerTask 'icons-deploy', [
+    'clean:font'
+    'svgmin'
+    'webfont'
+  ]
+
   grunt.registerTask 'layout', [
     'copy:layout_tmp'
     'copy:layout'
   ]
-  
+
   grunt.registerTask 'layout-deploy', [
     'processhtml:deploy'
     'copy:layout'
   ]
-  
+
 
   grunt.registerTask 'default', [
+    'icons'
+
     'css'
-    
+
     'js'
-    
+
     'layout'
-    
+
     'watch'
   ]
-  
-  
-  
+
+
+
   grunt.registerTask 'deploy', [
     'clean:temp'
-    
+
+    'icons-deploy'
+
     'css-deploy'
-    
+
     'js-deploy'
-    
+
     'layout-deploy'
-    
+
     'clean:temp'
   ]
 
