@@ -340,13 +340,21 @@ legend {
 
 label {
     display: block;
-    
+
     /**
      * Required Notation
      */
     abbr[title] {
         border-bottom: none;
         text-decoration: none;
+    }
+
+    &.label--is-valid {
+      color: $color--green;
+    }
+
+    &.label--is-error {
+      color: $color--red;
     }
 }
 
@@ -359,16 +367,16 @@ input {
     padding: 0 $gutter--narrow;
     color: $color--grey-dark;
     margin-bottom: $gutter--narrow;
-    
+
     /**
      * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
      */
-    
+
     &[type="search"] {
         -webkit-appearance: textfield; /* 1 */
-        
+
         /**
-         * 1. Remove inner padding and search cancel button in Safari and Chrome 
+         * 1. Remove inner padding and search cancel button in Safari and Chrome
          *    on OS X. Safari (but not Chrome) clips the cancel button when the
          *    search input has padding (and `textfield` appearance).
          */
@@ -377,9 +385,17 @@ input {
             -webkit-appearance: none; /* 1 */
         }
     }
-    
+
     &:focus {
         outline: 3px solid $color--selection;
+    }
+
+    &.field--is-valid {
+      color: $color--green;
+    }
+
+    &.field--is-error {
+      color: $color--red;
     }
 }
 
@@ -391,7 +407,13 @@ input {
 textarea {
     overflow: auto; /* 1 */
     margin-bottom: $gutter--narrow;
-    
+    width: 100%;
+    border-radius: $size--border-radius;
+    line-height: 1.5;
+    border: 1px solid $color--border;
+    padding: $gutter--narrow;
+    color: $color--grey-dark;
+
     &:focus {
         outline: 3px solid $color--selection;
     }

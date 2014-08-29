@@ -690,6 +690,10 @@ label {
   label abbr[title] {
     border-bottom: none;
     text-decoration: none; }
+  label.label--is-valid {
+    color: #5d9632; }
+  label.label--is-error {
+    color: #ff4136; }
 
 input {
   width: 100%;
@@ -707,7 +711,7 @@ input {
     -webkit-appearance: textfield;
     /* 1 */
     /**
-     * 1. Remove inner padding and search cancel button in Safari and Chrome 
+     * 1. Remove inner padding and search cancel button in Safari and Chrome
      *    on OS X. Safari (but not Chrome) clips the cancel button when the
      *    search input has padding (and `textfield` appearance).
      */ }
@@ -716,6 +720,10 @@ input {
       /* 1 */ }
   input:focus {
     outline: 3px solid rgba(253, 133, 47, 0.7); }
+  input.field--is-valid {
+    color: #5d9632; }
+  input.field--is-error {
+    color: #ff4136; }
 
 /**
  * Textarea
@@ -724,7 +732,13 @@ input {
 textarea {
   overflow: auto;
   /* 1 */
-  margin-bottom: 11px; }
+  margin-bottom: 11px;
+  width: 100%;
+  border-radius: 4px;
+  line-height: 1.5;
+  border: 1px solid #20272D;
+  padding: 11px;
+  color: #2D3840; }
   textarea:focus {
     outline: 3px solid rgba(253, 133, 47, 0.7); }
 
