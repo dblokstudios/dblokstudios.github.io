@@ -1,0 +1,422 @@
+/******************************************************************************\
+    # ATOMS
+\******************************************************************************/
+
+/**
+ * All Elements
+ */
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+
+/**
+ * Selection
+ **/
+
+::-moz-selection {
+    background-color: $color--selection;
+}
+::selection {
+    background-color: $color--selection;
+}
+
+
+/**
+ * Body
+ */
+
+body {
+    margin: 0 auto;
+    background-color: $color--grey;
+    color: $color--white;
+    line-height: 1.5;
+    font-size: $type--base;
+    font-weight: 200;
+    font-family: $type--sans-serif; /* 1 */
+}
+
+
+/**
+ * Fonts
+ */
+
+.font-secondary {
+  font-family: $type--serif;
+}
+
+
+/**
+ * Headings
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @extend %reset-box;
+
+    line-height: 1.5;
+}
+
+h1 {
+    font-size: $type--large;
+
+}
+
+h2 {
+    font-size: $type--title;
+}
+
+h3 {
+
+    font-size: $type--base;
+}
+
+h4 {
+    font-size: $type--small;
+}
+
+h5 {
+    font-size: $type--tiny;
+}
+
+h6 {
+    font-size: $type--micro;
+}
+
+
+/**
+ * Paragraph
+ */
+
+p {
+    @extend %reset-box;
+
+    margin-top:    $gutter--skinny;
+    margin-bottom: $gutter--normal;
+
+    font-family: $type--sans-serif;
+}
+
+
+/**
+ * Block Quote
+ */
+
+blockquote {
+    border-left: 2px solid $color--border;
+    padding-left: $gutter--normal;
+    margin-left: 0;
+}
+
+
+/**
+ * Inline Elements
+ */
+
+a {
+    /**
+     * 1. Remove the gray background color from active links in IE 10.
+     * 2. Improve readability when focused and also mouse hovered in all browsers.
+     */
+    background: transparent; /* 1 */
+    color: $color--primary;
+    text-decoration: none;
+
+    a:active,
+    a:hover {
+      outline: 0; /* 2 */
+    }
+
+    &:hover {
+        color: $color--primary-light;
+    }
+
+    &:focus,
+    &:active {
+        color: $color--primary-dark;
+    }
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+b {
+    font-weight: normal;
+    color: $color--grey-light;
+}
+
+i {
+    font-style: normal;
+    padding-left:  $gutter--skinny;
+    padding-right: $gutter--skinny;
+}
+
+u {
+    text-decoration: none;
+    border-bottom: 1px dashed $color--white;
+}
+
+del {
+
+}
+
+ins {
+    text-decoration: none;
+
+    &:before,
+    &:after {
+        display: inline;
+    }
+
+    &:before {
+        content: '[';
+    }
+
+    &:after {
+        content: ']';
+    }
+}
+
+s {
+
+}
+
+sub,
+sup {
+    font-size: $type--tiny;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+small {
+    font-size: $type--small;
+}
+
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+code,
+kbd,
+samp {
+    font-family: $type--mono;
+    font-size: 1em;
+}
+
+q,
+cite,
+dfn {
+    font-style: italic;
+}
+
+mark {
+    position: relative;
+    background: $color--selection;
+    color: $color--white;
+}
+
+var {
+    font-family: $type--serif;
+    font-style: normal;
+}
+
+
+/**
+ * Time
+ */
+
+time {
+
+}
+
+
+/**
+ * Preformatted Text
+ */
+
+pre {
+    font-family: $type--mono;
+    font-size: 1em;
+}
+
+
+/**
+ * Horizontal Rule
+ * 1. Address differences between Firefox and other browsers.
+ */
+
+hr {
+  -moz-box-sizing: content-box; /* 1 */
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  border: none;
+  border-top: 1px solid $color--primary;
+}
+
+
+
+
+
+/**
+ * Unordered List
+ */
+
+ul {
+    padding-left: $gutter--normal;
+}
+
+li {
+
+}
+
+
+/**
+ * Ordered List
+ */
+
+ol {
+    padding-left: $gutter--normal;
+}
+
+li {
+
+}
+
+
+/**
+ * Definition List
+ */
+
+dd {
+    padding-left: $gutter--normal - 2;
+    border-left: 2px solid $color--border;
+    margin-left: 0;
+    margin-bottom: $gutter--narrow;
+}
+
+
+
+
+
+/**
+ * Forms
+ */
+
+fieldset {
+  @extend %reset-box;
+  border: none;
+}
+
+/**
+ * Legend
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+
+legend {
+  border: 0; /* 1 */
+  padding: 0; /* 2 */
+}
+
+label {
+    display: block;
+    
+    /**
+     * Required Notation
+     */
+    abbr[title] {
+        border-bottom: none;
+        text-decoration: none;
+    }
+}
+
+input {
+    width: 100%;
+    border-radius: $size--border-radius;
+    line-height: $size--touch-target;
+    height: $size--touch-target;
+    border: 1px solid $color--border;
+    padding: 0 $gutter--narrow;
+    color: $color--grey-dark;
+    margin-bottom: $gutter--narrow;
+    
+    /**
+     * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+     */
+    
+    &[type="search"] {
+        -webkit-appearance: textfield; /* 1 */
+        
+        /**
+         * 1. Remove inner padding and search cancel button in Safari and Chrome 
+         *    on OS X. Safari (but not Chrome) clips the cancel button when the
+         *    search input has padding (and `textfield` appearance).
+         */
+        &::-webkit-search-cancel-button,
+        &::-webkit-search-decoration {
+            -webkit-appearance: none; /* 1 */
+        }
+    }
+    
+    &:focus {
+        outline: 3px solid $color--selection;
+    }
+}
+
+/**
+ * Textarea
+ * 1. Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+
+textarea {
+    overflow: auto; /* 1 */
+    margin-bottom: $gutter--narrow;
+    
+    &:focus {
+        outline: 3px solid $color--selection;
+    }
+}
+
+
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+
+button,
+select {
+  text-transform: none;
+}
+
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+input {
+  line-height: normal;
+}

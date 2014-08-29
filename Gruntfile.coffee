@@ -150,6 +150,7 @@ module.exports = (grunt) ->
         src: '<%= globalConfig.icons.tmp %>/**/*.svg'
         dest: '<%= globalConfig.fonts.build %>'
         options:
+          engine: 'node'
           stylesheet: 'scss'
           font: 'icons'
           relativeFontPath: '/assets/fonts'

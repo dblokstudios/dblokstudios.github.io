@@ -161,6 +161,76 @@
     }
 
 
+.module--release {
+
+  .module__head {
+    position: relative;
+    line-height: 0;
+  }
+
+    .release__artwork {
+      width: 100%;
+      height: auto;
+    }
+
+    .release__title {
+      position: absolute;
+      bottom: $gutter--normal;
+      left: $gutter--normal;
+      text-align: left;
+      line-height: 1;
+      text-shadow: 1px  1px 2px rgba(0,0,0,0.2);
+    }
+
+      .release__artist {
+        font-size: $type--base;
+        font-weight: normal;
+        font-style: normal;
+
+        margin: 0;
+      }
+
+      .release__name {
+        margin: 0;
+      }
+
+  .release__track-list {
+    @extend %reset-list;
+
+    margin-top: $gutter--narrow;
+    margin-left: -$gutter--narrow;
+    margin-right: -$gutter--narrow;
+    border: 1px solid $color--border;
+    border-left: none;
+    border-right: none;
+
+
+  }
+
+    .release__track {
+      @extend %grid--full;
+
+      background-color: $color--grey-medium;
+      padding-left: $gutter--narrow;
+      padding-right: $gutter--narrow;
+      line-height: 1.5;
+
+      &:nth-of-type(2n) {
+        background-color: $color--grey;
+      }
+    }
+
+      .track__title {
+        @extend %grid__item;
+        @extend %five-sixths;
+      }
+
+      .track__time {
+        @extend %grid__item;
+        @extend %one-sixth;
+        text-align: right;
+      }
+}
 
 
 

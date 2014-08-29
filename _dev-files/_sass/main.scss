@@ -7,22 +7,6 @@
 
 $site--domain: '0.0.0.0:4000';
 
-$responsive:            true;
-$mobile-first:          true;
-$gutter:                20px;
-$use-silent-classes:    true;
-$push:                  true;
-$pull:                  false;
-$use-markup-fix:        true;
-$breakpoints: (
-    'palm' '(max-width: ' + em(767px) + ')',
-    'lap' '(min-width: ' + em(768px) + ') and (max-width: ' + em(1023px) + ')',
-    'portable' '(max-width: ' + em(1023px) + ')',
-    'desk' '(min-width: ' + em(1024px) + ')'
-);
-$breakpoint-has-widths: ('palm', 'lap', 'portable', 'desk');
-$breakpoint-has-push:   ('palm', 'lap', 'portable', 'desk');
-$breakpoint-has-pull:   ('palm', 'lap', 'portable', 'desk');
 
 // -- Colors
 // ---- Cool
@@ -89,25 +73,21 @@ $text__color: #473f3f;
 
 // -- Typography
 // ---- Sizes
-$type--micro:  7px;
-$type--tiny:   9px;
-$type--small: 12px;
-$type--base:  16px;
-$type--title: 21px;
-$type--large: 28.424px;
+$type--large: em(18px);
+$type--title: em(16px);
+$type--base:  em(14px);
+$type--small: em(12px);
+$type--tiny:  em( 9px);
+$type--micro: em( 7px);
 
 // ---- Font Measurements
-$type--cutom_font_width: em(1000px); // width to load external fonts
-$type__baseline-height: 1.5em;
-$type__measure: 36em;
-
+$type--cutom-font-width: em(1000px);
+$type--baseline-height: 1.5em;
+$type--measure: 36em;
 // ---- Font Families
-$type__serif: 'Source Serif Pro', Georgia, 'Times New Roman', Times, serif;
-$type__serif--small_screen: serif;
-$type__sans-serif: 'Source Sans Pro', Helvetica, Arial, sans-serif;
-$type__sans-serif--small_screen: sans-serif;
-$type__mono: 'Source Code Pro', monospace;
-$type__mono--small_screen: monospace;
+$type--serif: 'Source Serif Pro', Georgia, 'Times New Roman', Times, serif;
+$type--sans-serif: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+$type--mono: 'Source Code Pro', monospace;
 
 // -- Sizes
 $size--touch-target: 44px;
@@ -131,17 +111,28 @@ $desk:     em(1024px);
 $breakpoint--palm: $palm;
 $breakpoint--lap: $lap;
 $breakpoint--desk: $desk;
-
-
+$responsive:            true;
+$mobile-first:          true;
+$gutter:                20px;
+$use-silent-classes:    true;
+$push:                  true;
+$pull:                  false;
+$use-markup-fix:        true;
+$breakpoints: (
+    'palm' '(max-width: ' + em(767px) + ')',
+    'lap' '(min-width: ' + em(768px) + ') and (max-width: ' + em(1023px) + ')',
+    'portable' '(max-width: ' + em(1023px) + ')',
+    'desk' '(min-width: ' + em(1024px) + ')'
+);
+$breakpoint-has-widths: ('palm', 'lap', 'portable', 'desk');
+$breakpoint-has-push:   ('palm', 'lap', 'portable', 'desk');
+$breakpoint-has-pull:   ('palm', 'lap', 'portable', 'desk');
 
 $grid--columns: 3;
 
 $size--border-radius: 4px;
 
-$type--large: em(18px);
-$type--title: em(16px);
-$type--base: em(14px);
-$type--small: em(12px);
+
 
 $color--border: #20272D;
 $color--grey-dark: #2D3840;
@@ -164,70 +155,44 @@ $color--mixcloud: $color--green;
 $color--shopify: #96bf48;
 $color--amazon: #ff9900;
 $color--itunes: #a086d3;
+$color--simpsons:  #eabf04;
 
+$color--selection: rgba(253, 133, 47, 0.70);
 
+/*
 @import url(http://fonts.googleapis.com/css?family=Bevan);
 @import url(http://fonts.googleapis.com/css?family=Lobster+Two&text=%26);
 
-@import 'mixins';
+
 @import 'base';
 @import '../../bower_components/csswizardry-grids/csswizardry-grids';
 @import '../../assets/fonts/icons';
 @import 'type';
 
+// Atoms
+@import 'atoms/a-button';
+
 // Molecules
-@import 'm-tag';
-@import 'm-button';
+@import 'molecules/m-tag';
+@import 'molecules/m-rating';
 
 // Organisms
 // -- modules
-@import 'o-module';
-@import 'o-module--release';
+@import 'organisms/o-module';
+
 // -- page elements
-@import 'o-page-head';
-@import 'o-primary-nav-new';
+@import 'organisms/o-page-head';
+@import 'organisms/o-primary-nav-new';
 // @import 'o-page-foot';
 // @import 'o-artists';
 
 // pages
 @import 'styleguide';
+*/
 
-
-
-
-
-
-.rating {
-  @extend %reset-list;
-
-  .rating__star {
-    display: inline-block;
-
-    font-family:"icons";
-  	display:inline-block;
-  	vertical-align:middle;
-  	line-height:1;
-  	font-weight:normal;
-  	font-style:normal;
-  	speak:none;
-  	text-decoration:inherit;
-  	text-transform:none;
-  	text-rendering:optimizeLegibility;
-  	-webkit-font-smoothing:antialiased;
-  	-moz-osx-font-smoothing:grayscale;
-  	color: $color--primary;
-  }
-  .rating__star--full {
-    @extend .icon--star;
-  }
-  .rating__star--half {
-    @extend .icon--star--half;
-  }
-  .rating__star--empty {
-    @extend .icon--star--outline;
-  }
-
-}
+@import 'mixins';
+@import 'normalize';
+@import 'atoms';
 
 
 
