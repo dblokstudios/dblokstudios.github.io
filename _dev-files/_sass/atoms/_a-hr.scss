@@ -1,0 +1,26 @@
+/**
+ * 1. Address differences between Firefox and other browsers.
+ */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  border: none;
+  border-top: 1px solid $color--primary;
+}
+
+
+.hr {
+
+    &--secondary {
+        border-top-color: $color--secondary;
+    }
+
+    &--dotted {
+        border-top-style: dotted;
+    }
+
+    &--dashed {
+        border-top-style: dashed;
+    }
+
+}

@@ -1,0 +1,11 @@
+blockquote {
+    border-left: 2px solid $color--border;
+    background-color: rgba(255,255,255,0.05);
+
+    padding: $gutter--narrow;
+    padding-left: $gutter--normal;
+}
+
+blockquote p:last-child {
+    margin-bottom: 0;
+}

@@ -73,12 +73,13 @@ $text__color: #473f3f;
 
 // -- Typography
 // ---- Sizes
-$type--large: em(18px);
-$type--title: em(16px);
-$type--base:  em(14px);
-$type--small: em(12px);
-$type--tiny:  em( 9px);
-$type--micro: em( 7px);
+$type--large: em(24.75px);
+$type--title: em(21.00px);
+$type--small: em(16.50px);
+$type--base:  em(14.00px);
+$type--tiny:  em( 9.30px);
+$type--micro: em( 7.00px);
+
 
 // ---- Font Measurements
 $type--cutom-font-width: em(1000px);
@@ -160,21 +161,7 @@ $color--simpsons:  #eabf04;
 $color--selection: rgba(253, 133, 47, 0.70);
 
 /*
-@import url(http://fonts.googleapis.com/css?family=Bevan);
-@import url(http://fonts.googleapis.com/css?family=Lobster+Two&text=%26);
 
-
-@import 'base';
-@import '../../bower_components/csswizardry-grids/csswizardry-grids';
-@import '../../assets/fonts/icons';
-@import 'type';
-
-// Atoms
-@import 'atoms/a-button';
-
-// Molecules
-@import 'molecules/m-tag';
-@import 'molecules/m-rating';
 
 // Organisms
 // -- modules
@@ -186,19 +173,78 @@ $color--selection: rgba(253, 133, 47, 0.70);
 // @import 'o-page-foot';
 // @import 'o-artists';
 
+*/
+@import '../../bower_components/csswizardry-grids/csswizardry-grids';
+@import '../../assets/fonts/icons';
+
 // pages
 @import 'styleguide';
-*/
 
 @import 'mixins';
 @import 'normalize';
 @import 'atoms';
+@import 'molecules';
 
 
 
 
 
+/*
 
+
+body {
+  font-size: 14px;
+  line-height: 21px;
+}
+h1 {
+  font-size: 47px;
+  line-height: 63px;
+  margin-top: 42px;
+  margin-bottom: 21px;
+}
+h2 {
+  font-size: 32px;
+  line-height: 42px;
+  margin-top: 42px;
+  margin-bottom: 21px;
+}
+h3 {
+  font-size: 21px;
+  line-height: 21px;
+  margin-top: 21px;
+  margin-bottom: 21px;
+}
+h4 {
+  font-size: 14px;
+  line-height: 21px;
+  margin-top: 21px;
+  margin-bottom: 21px;
+}
+p, ul, ol, pre, table, blockquote {
+  margin-top: 21px;
+  margin-bottom: 21px;
+}
+
+hr {
+  border: 1px solid;
+  margin: -1px 0;
+}
+ul ul, ol ol, ul ol, ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+b, strong, em, small, code {
+  line-height: 1;
+}
+sup, sub {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+}
+sub {
+  top: 0.4em;
+}
+*/
 
 
 

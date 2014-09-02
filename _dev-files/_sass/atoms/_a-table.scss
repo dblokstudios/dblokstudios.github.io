@@ -1,0 +1,34 @@
+table {
+    border: 1px solid $color--border;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: $color--grey-dark;
+    padding: $gutter--skinny $gutter--narrow;
+    border-bottom: 2px solid $color--border;
+}
+
+tbody {
+
+}
+
+tfoot {
+    padding: $gutter--skinny $gutter--narrow;
+    background-color: $color--grey-dark;
+    border-top: 2px solid $color--border;
+}
+
+th {
+
+}
+
+tr {
+
+}
+
+td,
+th {
+    border: 1px solid $color--border;
+    padding: $gutter--skinny $gutter--narrow;
+}
