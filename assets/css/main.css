@@ -1781,6 +1781,47 @@ figure {
     max-height: inherit;
     padding: 11px; }
 
+.module--is-profile .module__head {
+  position: relative;
+  height: 100px;
+  margin-bottom: 44px; }
+.module--is-profile .module__body {
+  padding-top: 11px; }
+
+.profile__cover {
+  overflow: hidden;
+  max-height: 100px;
+  margin-bottom: 0;
+  position: relative; }
+
+.profile__headshot {
+  position: absolute;
+  top: 100%;
+  width: 100px;
+  height: auto;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 11px;
+  border: 2px solid #35414a; }
+
+.profile__name {
+  font-size: 1.03125em;
+  margin: 0;
+  padding-top: 11px;
+  position: absolute;
+  top: 100%;
+  left: 122px;
+  text-transform: none;
+  text-align: left; }
+
+.profile__role {
+  margin: 0;
+  font-weight: 200;
+  font-size: 0.875em;
+  display: block;
+  color: #4D97CF; }
+
 /*
 
 
