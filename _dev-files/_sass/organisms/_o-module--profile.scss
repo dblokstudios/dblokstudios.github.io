@@ -11,47 +11,33 @@
     }
 
 
-
-}
-
-
-    .profile__cover {
-        overflow: hidden;
-        max-height: 100px;
-        margin-bottom: 0;
-        position: relative;
-    }
-
-        .profile__cover img {
-
-        }
-
-
-    .profile__headshot {
+    .headshot {
         position: absolute;
         top: 100%;
-        width: 100px;
-        height: auto;
         transform: translateY(-50%);
         left: $gutter--narrow;
-        border: 2px solid $color--grey;
     }
 
-    .profile__name {
-        font-size: $type--small;
+    .person-name {
         margin: 0;
         padding-top: $gutter--narrow;
         position: absolute;
         top: 100%;
         left: $gutter--normal + 100px;
-        text-transform: none;
+
         text-align: left;
     }
 
-        .profile__role {
+        .person-role {
             margin: 0;
-            font-weight: 200;
-            font-size: $type--base;
-            display: block;
             color: $color--primary;
         }
+
+}
+
+
+
+
+
+
+

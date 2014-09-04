@@ -152,7 +152,7 @@
  * 5. Required to combine fluid widths and fixed gutters.
  */
 .styleguide__code,
-.styleguide__demo {
+.styleguide__demo, .track__title, .track__time {
   display: inline-block;
   /* [1] */
   padding-left: 20px;
@@ -176,14 +176,19 @@
  */
 .styleguide__atom,
 .styleguide__molecule,
-.styleguide__organism {
+.styleguide__organism, .track {
   margin-left: 0; }
   .styleguide__atom > .styleguide__code,
   .styleguide__molecule > .styleguide__code,
-  .styleguide__organism > .styleguide__code,
+  .styleguide__organism > .styleguide__code, .track > .styleguide__code,
   .styleguide__atom > .styleguide__demo,
   .styleguide__molecule > .styleguide__demo,
-  .styleguide__organism > .styleguide__demo {
+  .styleguide__organism > .styleguide__demo,
+  .track > .styleguide__demo, .styleguide__atom > .track__title,
+  .styleguide__molecule > .track__title,
+  .styleguide__organism > .track__title, .track > .track__title, .styleguide__atom > .track__time,
+  .styleguide__molecule > .track__time,
+  .styleguide__organism > .track__time, .track > .track__time {
     padding-left: 0; }
 
 /**
@@ -230,6 +235,12 @@
 /**
  * Sixths
  */
+.track__time {
+  width: 16.666%; }
+
+.track__title {
+  width: 83.333%; }
+
 /**
  * Eighths
  */
@@ -720,7 +731,7 @@
   display: inline-block;
   width: auto; }
 
-.rating, .tag-list, h1,
+.rating, .tag-list, .track-list, h1,
 h2,
 h3,
 h4,
@@ -729,7 +740,7 @@ h6, p, fieldset {
   padding: 0;
   margin: 0; }
 
-.rating, .tag-list {
+.rating, .tag-list, .track-list {
   list-style: none; }
 
 /*
@@ -1707,6 +1718,50 @@ th {
   -moz-osx-font-smoothing: grayscale;
   color: #4D97CF; }
 
+/**
+ * Cover
+ */
+.cover {
+  overflow: hidden;
+  max-height: 100px;
+  height: 20vw;
+  position: relative;
+  text-align: left; }
+
+.cover img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto; }
+
+/**
+ * Headshot
+ */
+.headshot {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  border: 2px solid #20272D; }
+
+.headshot img {
+  width: 100%;
+  height: auto; }
+
+/**
+ * Person
+ */
+.person-name {
+  font-size: 1.03125em;
+  text-transform: none; }
+
+.person-role {
+  font-size: 0.875em;
+  font-weight: 200;
+  display: block; }
+
 .tag-list__item {
   display: inline-block; }
 
@@ -1787,190 +1842,59 @@ figure {
   margin-bottom: 44px; }
 .module--is-profile .module__body {
   padding-top: 11px; }
-
-.profile__cover {
-  overflow: hidden;
-  max-height: 100px;
-  margin-bottom: 0;
-  position: relative; }
-
-.profile__headshot {
+.module--is-profile .headshot {
   position: absolute;
   top: 100%;
-  width: 100px;
-  height: auto;
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-  left: 11px;
-  border: 2px solid #35414a; }
-
-.profile__name {
-  font-size: 1.03125em;
+  left: 11px; }
+.module--is-profile .person-name {
   margin: 0;
   padding-top: 11px;
   position: absolute;
   top: 100%;
   left: 122px;
-  text-transform: none;
   text-align: left; }
-
-.profile__role {
+.module--is-profile .person-role {
   margin: 0;
-  font-weight: 200;
-  font-size: 0.875em;
-  display: block;
   color: #4D97CF; }
 
-/*
+.track {
+  background-color: #3c4952;
+  padding-left: 11px;
+  padding-right: 11px;
+  line-height: 1.5; }
+  .track:nth-of-type(2n) {
+    background-color: #35414a; }
 
+.track__time {
+  text-align: right; }
 
+.track-list {
+  margin-top: 11px;
+  margin-left: -11px;
+  margin-right: -11px;
+  border: 1px solid #20272D;
+  border-left: none;
+  border-right: none; }
 
+.album__artwork,
+.album__artwork img {
+  width: 100%;
+  height: auto; }
 
+.release__title {
+  position: absolute;
+  bottom: 11px;
+  left: 11px;
+  text-align: left;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); }
 
+.module__head {
+  line-height: 0;
+  position: relative; }
 
-
-
-
-
-    .module--profile {
-
-        .module__head {
-            position: relative;
-
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 100px;
-            margin-bottom: 50px;
-        }
-
-        .profile__headshot {
-            position: absolute;
-            top: 100%;
-            width: 100px;
-            height: auto;
-            transform: translateY(-50%);
-            left: $gutter--narrow;
-            border: 2px solid $color--grey;
-        }
-
-        .profile__name {
-            margin: 0;
-            padding-top: $gutter--narrow;
-            position: absolute;
-            top: 100%;
-            left: $gutter--normal + 100px;
-            text-transform: none;
-        }
-
-        .profile__role {
-            margin: 0;
-        }
-
-    }
-
-
-.module--release {
-
-  .module__head {
-    position: relative;
-    line-height: 0;
-  }
-
-    .release__artwork {
-      width: 100%;
-      height: auto;
-    }
-
-    .release__title {
-      position: absolute;
-      bottom: $gutter--normal;
-      left: $gutter--normal;
-      text-align: left;
-      line-height: 1;
-      text-shadow: 1px  1px 2px rgba(0,0,0,0.2);
-    }
-
-      .release__artist {
-        font-size: $type--base;
-        font-weight: normal;
-        font-style: normal;
-
-        margin: 0;
-      }
-
-      .release__name {
-        margin: 0;
-      }
-
-  .release__track-list {
-    @extend %reset-list;
-
-    margin-top: $gutter--narrow;
-    margin-left: -$gutter--narrow;
-    margin-right: -$gutter--narrow;
-    border: 1px solid $color--border;
-    border-left: none;
-    border-right: none;
-
-
-  }
-
-    .release__track {
-      @extend %grid--full;
-
-      background-color: $color--grey-medium;
-      padding-left: $gutter--narrow;
-      padding-right: $gutter--narrow;
-      line-height: 1.5;
-
-      &:nth-of-type(2n) {
-        background-color: $color--grey;
-      }
-    }
-
-      .track__title {
-        @extend %grid__item;
-        @extend %five-sixths;
-      }
-
-      .track__time {
-        @extend %grid__item;
-        @extend %one-sixth;
-        text-align: right;
-      }
-}
-
-
-
-
-
-
-    .profile__head {
-        @extend %clearfix;
-    }
-
-        .profile__headshot {
-            float: left;
-            margin-right: $gutter--narrow;
-            border-radius: 50%;
-        }
-
-        .profile__name {
-            font-size: $type--base;
-            line-height: 1;
-            text-align: left;
-        }
-
-            .profile__role {
-                font-size: $type--small;
-                color: $color--primary;
-                font-weight: 200;
-                display: block;
-                padding-top: $gutter--skinny;
-            }
-*/
 .module {
   max-width: 400px; }
 

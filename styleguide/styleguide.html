@@ -1,13 +1,232 @@
 ---
-layout: default
+layout: blank
 permalink: /styleguide/index.html
+
+atoms:
+-   name: Block Quote
+    description: test
+    file: block-quote
+-   name: Button
+    file: button
+-   name: Cover Image
+    file: cover
+-   name: "Field Checkbox"
+    file: field--checkbox
+-   name: "Field Email"
+    file: field--email
+-   name: "Field Number"
+    file: field--number
+-   name: "Field Password"
+    file: field--password
+-   name: "Field Radio"
+    file: field--radio
+-   name: "Field Range"
+    file: field--range
+-   name: "Field Search"
+    file: field--search
+-   name: "Field Select"
+    file: field--select
+-   name: "Field Text"
+    file: field--text
+-   name: "Field Textarea"
+    file: field--textarea
+-   name: "Field URL"
+    file: field--url
+-   name: Font
+    file: font
+-   name: Heading
+    file: heading
+-   name: Headshot
+    file: headshot
+-   name: Horizontal Rule
+    file: horizontal-rule
+-   name: Inline Element
+    file: inline-element
+-   name: "List Definition"
+    file: list--definition
+-   name: "List Ordered"
+    file: list--ordered
+-   name: "List Unordered"
+    file: list--unordered
+-   name: Paragraph
+    file: paragraph
+-   name: "Person Name"
+    file: person-name
+-   name: "Person Role"
+    file: person-role
+-   name: Pre-formatted Text
+    file: pre-formatted-text
+-   name: Progress
+    file: progress
+-   name: Rating
+    file: rating
+-   name: Table
+    file: table
+-   name: Tag
+    file: tag
+-   name: Time
+    file: time
+
+molecules:
+-   name: Person
+    file: person
+-   name: Rating-List
+    file: rating-list
+-   name: Tag-List
+    file: tag-list
+
+organisms:
+-   name: Module
+    file: module
+-   name: Module--Tabs
+    file: module--tab
+-   name: Module--Profile
+    file: module--profile
+
 ---
 
-{% include atoms/atoms.html %}
+<ul>
+{% for atom in page.atoms %}
+    <li><a href="#atom__{{atom.file}}">{{atom.name}}</a></li>
+{% endfor %}
+</ul>
 
-{% include molecules/molecules.html %}
+<ul>
+{% for molecule in page.molecules %}
+    <li><a href="#molecule__{{molecule.file}}">{{molecule.name}}</a></li>
+{% endfor %}
+</ul>
 
-{% include organisms/organisms.html %}
+<ul>
+{% for organism in page.organisms %}
+    <li><a href="#organism__{{organism.file}}">{{organism.name}}</a></li>
+{% endfor %}
+</ul>
+
+<!--
+  - ATOMS
+  -->
+{% for atom in page.atoms %}
+    <!-- ATOM: {{ atom.name }} -->
+    {% capture file %}atoms/{{atom.file}}.html{% endcapture %}
+    {% capture code %}{% include {{file}} %}{% endcapture %}
+
+    <div class="styleguide__atom">
+        <h2 id="atom__{{ atom.file }}" class="styleguide__atom-title">{{ atom.name }}</h2>
+
+        <div class="styleguide__description">
+            {{ atom.description }}
+        </div>
+
+        <div class="styleguide__code">
+            <h3 class="styleguide__code-head">Usage</h3>
+
+            <pre class="styleguide__code-pre">
+                <code class="styleguide__code-area">
+{{ code | escape }}
+                </code>
+            </pre>
+
+        </div><!--
+
+     --><div class="styleguide__demo">
+            <h3 class="styleguide__demo-head">Example</h3>
+
+            <div class="styleguide__preview">
+                {% include {{file}} %}
+            </div>
+        </div>
+    </div> <!-- /ATOM -->
+
+{% endfor %}
+
+
+
+
+
+<!--
+  - MOLECULES
+  -->
+{% for molecule in page.molecules %}
+    <!-- MOLECULE: {{ molecule.name }} -->
+    {% capture file %}molecules/{{molecule.file}}.html{% endcapture %}
+    {% capture code %}{% include {{file}} %}{% endcapture %}
+
+    <div class="styleguide__molecule">
+        <h2 id="molecule__{{ molecule.file }}" class="styleguide__molecule-title">{{ molecule.name }}</h2>
+
+        <div class="styleguide__description">
+            {{ molecule.description }}
+        </div>
+
+        <div class="styleguide__code">
+            <h3 class="styleguide__code-head">Usage</h3>
+
+            <pre class="styleguide__code-pre">
+                <code class="styleguide__code-area">
+{{ code | escape }}
+                </code>
+            </pre>
+
+        </div><!--
+
+     --><div class="styleguide__demo">
+            <h3 class="styleguide__demo-head">Example</h3>
+
+            <div class="styleguide__preview">
+                {% include {{file}} %}
+            </div>
+        </div>
+    </div> <!-- /MOLECULE -->
+
+{% endfor %}
+
+
+
+
+
+<!--
+  - ORGANISMS
+  -->
+{% for organism in page.organisms %}
+    <!-- ORGANISM: {{ organism.name }} -->
+    {% capture file %}organisms/{{organism.file}}.html{% endcapture %}
+    {% capture code %}{% include {{file}} %}{% endcapture %}
+
+    <div class="styleguide__organism">
+        <h2 id="organism__{{ organism.file }}" class="styleguide__organism-title">{{ organism.name }}</h2>
+
+        <div class="styleguide__description">
+            {{ organism.description }}
+        </div>
+
+        <div class="styleguide__code">
+            <h3 class="styleguide__code-head">Usage</h3>
+
+            <pre class="styleguide__code-pre">
+                <code class="styleguide__code-area">
+{{ code | escape }}
+                </code>
+            </pre>
+
+        </div><!--
+
+     --><div class="styleguide__demo">
+            <h3 class="styleguide__demo-head">Example</h3>
+
+            <div class="styleguide__preview">
+                {% include {{file}} %}
+            </div>
+        </div>
+    </div> <!-- /ORGANISM -->
+
+{% endfor %}
+
+
+
+
+
+
 <!--
 <article class="styleguide">
 
