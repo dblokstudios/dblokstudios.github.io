@@ -3,349 +3,21 @@ layout: default
 permalink: /styleguide/index.html
 ---
 
+{% include atoms/atoms.html %}
 
+{% include molecules/molecules.html %}
+
+{% include organisms/organisms.html %}
+<!--
 <article class="styleguide">
-
-    <section class="styleguide__molecules">
-        <h1 class="styleguide__section-title">Molecules</h1>
-
-        <!--
-          - MOLECULE: Tag
-          -
-          -->
-        <div class="styleguide__molecule">
-            <h2 class="styleguide__molecule-title">Tag</h2>
-
-            <div class="styleguide__description">
-                <p>Denote the genre of music with a count of how many other artists play or produce the same genre.
-
-                <p><em>Click</em>: Links to genre page with references to genre
-            </div>
-
-            <div class="styleguide__code">
-                <h3 class="styleguide__code-head">Usage</h3>
-
-                <pre class="styleguide__code-pre">
-<code class="styleguide__code-area">
-.tag[.tag--genre
-         --facebook
-         --soundcloud
-         --mixcloud
-         --twitter
-         --itunes
-         --amazon
-         --shopify
-         --is-slim
-         --is-icon]
-</code>
-</pre>
-            </div><!--
-
-         --><div class="styleguide__demo">
-                <h3 class="styleguide__demo-head">Example</h3>
-
-                <div class="styleguide__preview">
-                  <a class="tag" href="#"><i></i><span>Tag</span></a>
-                  <a class="tag  tag--facebook" href="#"><i></i><span>Facebook</span></a>
-                  <a class="tag  tag--twitter" href="#"><i></i><span>Twitter</span></a>
-                  <a class="tag  tag--soundcloud" href="#"><i></i><span>Soundcloud</span></a>
-                  <a class="tag  tag--mixcloud" href="#"><i></i><span>Mixcloud</span></a>
-                  <a class="tag  tag--genre" href="#"><i></i><span>Genre</span></a>
-                  <a class="tag  tag--itunes"><i></i><span>iTunes</span></a>
-                  <a class="tag  tag--amazon"><i></i><span>Amazon</span></a>
-                  <a class="tag  tag--shopify"><i></i><span>Shopify</span></a>
-
-                  <a class="tag  tag--is-slim  tag--facebook" href="#"><i></i><span>Facebook</span></a>
-                  <a class="tag  tag--is-icon  tag--twitter" href="#"><i></i><span>Twitter</span></a>
-
-                </div>
-            </div>
-        </div>
-
-
-
-
-
-        <!--
-          - MOLECULE: Button
-          -
-          -->
-        <div class="styleguide__molecule">
-            <h2 class="styleguide__molecule-title">button</h2>
-
-            <div class="styleguide__description">
-                <p>Everyday buttons</p>
-            </div>
-
-            <div class="styleguide__code">
-                <h3 class="styleguide__code-head">Usage</h3>
-
-                <pre class="styleguide__code-pre">
-<code class="styleguide__code-area">
-.button {}
-.button.button--is-hover {}
-.button.button--is-focus {}
-.button.button--is-active {}
-.button.button--is-disabled {}
-.button.button--is-hollow {}
-.button.button--is-alt {}
-.button.button--is-hollow-alt {}
-</code>
-</pre>
-            </div><!--
-
-         --><div class="styleguide__demo">
-                <h3 class="styleguide__demo-head">Example</h3>
-
-                <div class="styleguide__preview">
-
-                    <a class="button">a</a>
-                    <button class="button">button</button>
-
-                    <a class="button  button--is-hover">a:hover</a>
-                    <button class="button button--is-hover">button:hover</button>
-
-                    <a class="button  button--is-focus">a:focus</a>
-                    <button class="button button--is-focus button--is-active">button:active/focus</button>
-
-                    <a class="button  button--is-disabled">a:disabled</a>
-                    <button class="button button--is-disabled">button:disabled</button>
-
-                    <a class="button  button--is-hollow">a:hollow</a>
-                    <button class="button button--is-hollow">button:hollow</button>
-
-                    <a class="button  button--is-alt">a:hollow</a>
-                    <button class="button button--is-alt">button:hollow</button>
-
-                    <a class="button  button--is-hollow-alt">a:hollow</a>
-                    <button class="button button--is-hollow-alt">button:hollow</button>
-                </div>
-            </div>
-        </div>
-
-
-
-
-
-        <!--
-          - MOLECULE: Rating
-          -
-          -->
-        <div class="styleguide__molecule">
-            <h2 class="styleguide__molecule-title">button</h2>
-
-            <div class="styleguide__description">
-                <p>Everyday buttons</p>
-            </div>
-
-            <div class="styleguide__code">
-                <h3 class="styleguide__code-head">Usage</h3>
-
-                <pre class="styleguide__code-pre">
-<code class="styleguide__code-area">
-.rating
-  .rating__star[.rating__star--full
-                             --half
-                             --empty]
-</code>
-</pre>
-            </div><!--
-
-         --><div class="styleguide__demo">
-                <h3 class="styleguide__demo-head">Example</h3>
-
-                <div class="styleguide__preview">
-
-                    <ul class="rating">
-                      <li class="rating__star  rating__star--full"></li>
-                      <li class="rating__star  rating__star--full"></li>
-                      <li class="rating__star  rating__star--full"></li>
-                      <li class="rating__star  rating__star--half"></li>
-                      <li class="rating__star  rating__star--empty"></li>
-                    </ul>
-
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-
-
-
-
-
 
 
     <section class="styleguide__organisms">
         <h1 class="styleguide__section-title">Organisms</h1>
 
-        <!--
-          - ORGANIZM: Module
-          -->
-        <div class="styleguide__organism">
-            <h2 class="styleguide__organism-title">Module</h2>
 
-            <div class="styleguide__description">
-            </div>
-
-            <div class="styleguide__code">
-                <h3 class="styleguide__code-head">Usage</h3>
-
-                <pre class="styleguide__code-pre"><!--
-                 --><code class="styleguide__code-area">
-.module
-  .module__head
-    .module__title
-
-  .module__body
-    .module__section-title
-
-    p
-
-    .module__divider
-
-    .button
-    .button.button--is-hollow
-
-  .module__foot
-    p
-      a
-                    </code><!--
-             --></pre>
-            </div><!--
-
-         --><div class="styleguide__demo">
-                <h3 class="styleguide__demo-head">Example</h3>
-
-                <div class="styleguide__preview">
-                    <div class="module">
-                        <header class="module__head">
-                            <h2 class="module__title">Title</h2>
-                        </header>
-
-                        <div class="module__body">
-                            <h3 class="module__section-title">Section Title</h3>
-
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
-                            <hr class="module__divider" />
-
-                            <button class="button">Button</button>
-                            <button class="button button--is-hollow">Hollow</button>
-                        </div>
-
-                        <footer class="module__foot">
-                            <p>Module Demo <a href="#">Read More</a>
-                        </footer>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-
-
-        <!--
-          - ORGANIZM: Module - Tabbed
-          -->
-        <div class="styleguide__organism">
-            <h2 class="styleguide__organism-title">Module - Tabbed</h2>
-
-            <div class="styleguide__description">
-            </div>
-
-            <div class="styleguide__code">
-                <h3 class="styleguide__code-head">Usage</h3>
-
-                <pre class="styleguide__code-pre"><!--
-                 --><code class="styleguide__code-area">
-.module[.module--tabbed]
-  .module__tab[.module__tab--open]
-    .module__tab-title
-
-    .module__tab-body
-      [content]
-
-  .module_tab[.module__tab--is-hover]
-  .module_tab
-
-                    </code><!--
-             --></pre>
-            </div><!--
-
-         --><div class="styleguide__demo">
-                <h3 class="styleguide__demo-head">Example</h3>
-
-                <div class="styleguide__preview">
-                    <div class="module  module--tabbed">
-                        <div class="module__tab  module__tab--open">
-                            <h2 class="module__tab-title">Tab 1 - Active</h2>
-
-                            <div class="module__tab-body">
-
-                                <div class="profile__head">
-                                    <img class="profile__headshot" src="//lorempixel.com/50/50/cats" />
-                                    <h3 class="profile__name">Mauricio Estrella
-                                        <small class="profile__role">Associate Creative Director @EF</small>
-                                    </h3>
-                                </div>
-
-                                <h3 class="module__section-title">How a password changed my life.</h3>
-                                <p><em>“How could she do something like this to me?”</em> said a voice in my head. All the time. Every day… <a href="#">More</a>.</p>
-
-                            </div>
-                        </div>
-
-                        <div class="module__tab  module__tab--is-hover">
-                            <h2 class="module__tab-title">Tab 2 - Hover</h2>
-
-                            <div class="module__tab-body">
-
-                                <div class="profile__head">
-                                    <img class="profile__headshot" src="//lorempixel.com/50/50/cats" />
-                                    <h3 class="profile__name">Mauricio Estrella
-                                        <small class="profile__role">Associate Creative Director @EF</small>
-                                    </h3>
-                                </div>
-
-                                <h3 class="module__section-title">How a password changed my life.</h3>
-                                <p><em>“How could she do something like this to me?”</em> said a voice in my head. All the time. Every day… <a href="#">More</a>.</p>
-
-                            </div>
-                        </div>
-
-                        <div class="module__tab">
-                            <h2 class="module__tab-title">Tab 3</h2>
-
-
-                            <div class="module__tab-body">
-
-                                <div class="profile__head">
-                                    <img class="profile__headshot" src="//lorempixel.com/50/50/cats" />
-                                    <h3 class="profile__name">Mauricio Estrella
-                                        <small class="profile__role">Associate Creative Director @EF</small>
-                                    </h3>
-                                </div>
-
-                                <h3 class="module__section-title">How a password changed my life.</h3>
-                                <p><em>“How could she do something like this to me?”</em> said a voice in my head. All the time. Every day… <a href="#">More</a>.</p>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-
-
-        <!--
           - ORGANIZM: Module - Profile
-          -->
+
         <div class="styleguide__organism">
             <h2 class="styleguide__organism-title">Module - Profile</h2>
 
@@ -355,8 +27,8 @@ permalink: /styleguide/index.html
             <div class="styleguide__code">
                 <h3 class="styleguide__code-head">Usage</h3>
 
-                <pre class="styleguide__code-pre"><!--
-                 --><code class="styleguide__code-area">
+                <pre class="styleguide__code-pre">
+                 <code class="styleguide__code-area">
 .module[.module--profile]
     .module__head
         [content]
@@ -365,11 +37,11 @@ permalink: /styleguide/index.html
         [content]
 
 
-                    </code><!--
-             --></pre>
-            </div><!--
+                    </code>
+             </pre>
+            </div>
 
-         --><div class="styleguide__demo">
+         <div class="styleguide__demo">
                 <h3 class="styleguide__demo-head">Example</h3>
 
                 <div class="styleguide__preview">
@@ -392,14 +64,14 @@ permalink: /styleguide/index.html
                       <ul class="tag-list">
                         <li class="tag-list__item">
                           <a class="tag  tag--facebook"href="#"><i></i><span>Facebook</span></a>
-                        </li><!--
-                     --><li class="tag-list__item">
+                        </li>
+                     <li class="tag-list__item">
                           <a class="tag  tag--twitter"href="#"><i></i><span>Twitter</span></a>
-                        </li><!--
-                     --><li class="tag-list__item">
+                        </li>
+                     <li class="tag-list__item">
                           <a class="tag  tag--soundcloud"href="#"><i></i><span>Soundcloud</span></a>
-                        </li><!--
-                     --><li class="tag-list__item">
+                        </li>
+                     <li class="tag-list__item">
                           <a class="tag  tag--mixcloud"href="#"><i></i><span>Mixcloud</span></a>
                         </li>
                       </ul>
@@ -412,11 +84,11 @@ permalink: /styleguide/index.html
                       <ul class="tag-list">
                         <li class="tag-list__item">
                           <a class="tag  tag--genre" href="#"><i></i><span>House</span></a>
-                        </li><!--
-                     --><li class="tag-list__item">
+                        </li>
+                     <li class="tag-list__item">
                           <a class="tag  tag--genre" href="#"><i></i><span>Minimal</span></a>
-                        </li><!--
-                     --><li class="tag-list__item">
+                        </li>
+                     <li class="tag-list__item">
                           <a class="tag  tag--genre" href="#"><i></i><span>Techno</span></a>
                         </li>
                       </ul>
@@ -432,9 +104,9 @@ permalink: /styleguide/index.html
 
 
 
-        <!--
+
           - ORGANIZM: Module - Release
-          -->
+
         <div class="styleguide__organism">
             <h2 class="styleguide__organism-title">Module - Release</h2>
 
@@ -444,8 +116,8 @@ permalink: /styleguide/index.html
             <div class="styleguide__code">
                 <h3 class="styleguide__code-head">Usage</h3>
 
-                <pre class="styleguide__code-pre"><!--
-                 --><code class="styleguide__code-area">
+                <pre class="styleguide__code-pre">
+                 <code class="styleguide__code-area">
 .module[.module--release]
   .module__head
     .release_artwork
@@ -472,23 +144,23 @@ permalink: /styleguide/index.html
              .tag--amazon
              .tag--shopify]
 
-                    </code><!--
-             --></pre>
-            </div><!--
+                    </code>
+             </pre>
+            </div>
 
-         --><div class="styleguide__demo">
+         <div class="styleguide__demo">
                 <h3 class="styleguide__demo-head">Example</h3>
 
                 <div class="styleguide__preview">
 
                   <div class="module  module--release">
-                    <header class="module__head"><!--
-                   --><img class="release__artwork" src="//placehold.it/500x500" /><!--
-                   --><hgroup class="release__title"><!--
-                     --><h3 class="release__artist">Empire</h3><!--
-                     --><h2 class="release__name">Strike Back</h2><!--
-                   --></hgroup><!--
-                  --></header>
+                    <header class="module__head">
+                   <img class="release__artwork" src="//placehold.it/500x500" />
+                   <hgroup class="release__title">
+                     <h3 class="release__artist">Empire</h3>
+                     <h2 class="release__name">Strike Back</h2>
+                   </hgroup>
+                  </header>
 
                     <div class="module__body">
                       <p class="release__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -496,29 +168,29 @@ permalink: /styleguide/index.html
                       <ul class="tag-list">
                         <li class="tag-list__item">
                           <a class="tag  tag--genre" href="#"><i></i><span>House</span></a>
-                        </li><!--
-                     --><li class="tag-list__item">
+                        </li>
+                     <li class="tag-list__item">
                           <a class="tag  tag--genre" href="#"><i></i><span>Minimal</span></a>
-                        </li><!--
-                     --><li class="tag-list__item">
+                        </li>
+                     <li class="tag-list__item">
                           <a class="tag  tag--genre" href="#"><i></i><span>Techno</span></a>
                         </li>
                       </ul>
 
                       <ul class="release__track-list">
                         <li class="release__track">
-                          <span class="track__title">Luke Skywalker</span><!--
-                       --><span class="track__time">5:01</span>
-                        </li><!--
-                     --><li class="release__track">
-                          <span class="track__title">Rebel Swine</span><!--
-                       --><span class="track__time">5:01</span></li><!--
-                     --><li class="release__track">
-                          <span class="track__title">Like Swamp rats</span><!--
-                       --><span class="track__time">5:01</span></li><!--
-                     --><li class="release__track">
-                          <span class="track__title">Mandelorian Attack</span><!--
-                       --><span class="track__time">5:01</span></li>
+                          <span class="track__title">Luke Skywalker</span>
+                       <span class="track__time">5:01</span>
+                        </li>
+                     <li class="release__track">
+                          <span class="track__title">Rebel Swine</span>
+                       <span class="track__time">5:01</span></li>
+                     <li class="release__track">
+                          <span class="track__title">Like Swamp rats</span>
+                       <span class="track__time">5:01</span></li>
+                     <li class="release__track">
+                          <span class="track__title">Mandelorian Attack</span>
+                       <span class="track__time">5:01</span></li>
                       </ul>
 
                     </div>
@@ -551,6 +223,8 @@ permalink: /styleguide/index.html
 
 
 </article>
+
+-->
 
 
 

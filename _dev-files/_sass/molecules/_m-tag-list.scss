@@ -1,0 +1,7 @@
+.tag-list {
+  @extend %reset-list;
+}
+
+.tag-list__item {
+    display: inline-block;
+}

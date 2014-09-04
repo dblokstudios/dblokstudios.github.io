@@ -9,7 +9,35 @@
     display: inline-block;
     margin-bottom: $gutter--skinny;
     margin-right: $gutter--skinny;
+
+    position: relative;
 }
+    .tag:hover {
+        color: $color--white;
+
+        &:after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 999;
+            content: '';
+
+            background-color: rgba(255,255,255,0.15);
+        }
+    }
+
+    .tag:active,
+    .tag:focus {
+        color: $color--white;
+
+        &:after {
+            position: absolute;
+
+            background-color: rgba(0,0,0,0.3);
+        }
+    }
 
 
     .tag span:before {

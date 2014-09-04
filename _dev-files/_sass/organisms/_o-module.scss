@@ -1,78 +1,12 @@
-.module  {
+.module {
     border-radius: $size--border-radius;
     border: 1px solid $color--border;
     background-color: $color--grey;
     color: $color--white;
-    font-weight: 200;
-    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
     overflow: hidden;
 }
-
-    .module__head {
-        border-bottom: 1px solid $color--border;
-        text-transform: uppercase;
-    }
-
-        .module__title {
-            font-size: inherit;
-            margin: 0;
-            padding: 0;
-            line-height: $size--touch-target;
-        }
-
-    .module__body {
-        font-size: $type--base;
-        padding-left: $gutter--narrow;
-        padding-right: $gutter--narrow;
-
-        > :first-child {
-          margin-top: $gutter--narrow;
-        }
-
-        > :last-child {
-          margin-bottom: $gutter--narrow;
-        }
-    }
-
-        .module__section-title {
-            font-weight: 400;
-            font-style: normal;
-            font-size: $type--title;
-        }
-
-        .module__divider {
-            border: none;
-            border-top: 1px solid $color--border;
-            margin: $gutter--narrow 0;
-        }
-
-        .module__body p {
-            line-height: 20px;
-            margin-bottom: 10px;
-        }
-
-
-
-    .module__foot {
-        @extend %clearfix;
-        border-top: 1px solid $color--border;
-        color: $color--grey-light;
-        font-size: $type--base;
-        padding-left: $gutter--narrow;
-        padding-right: $gutter--narrow;
-
-        > :first-child {
-          margin-top: $gutter--narrow;
-        }
-
-        > :last-child {
-          margin-bottom: $gutter--narrow;
-        }
-    }
-
-        .module__foot p {
-            line-height: inherit;
-        }
 
 
     .module__head,
@@ -81,44 +15,55 @@
         background-color: $color--grey-dark;
     }
 
-
-
-
-
-    .module__tab {
+    .module__head {
         border-bottom: 1px solid $color--border;
-        max-height: $size--touch-target;
-        overflow: hidden;
-
-        &:last-child {
-            border-bottom: none;
-        }
-
-        &--open {
-            max-height: inherit;
-        }
-
-        &--is-hover, &:hover {
-            background-color: $color--grey-medium;
-        }
-
+        text-transform: uppercase;
     }
 
-        .module__tab-title {
-            font-size: $type--base;
+        .module__title {
+            font-size: $type--small;
             line-height: $size--touch-target;
-            margin: 0;
-            padding: 0 $gutter--narrow;
-
-            .module__tab--open & {
-                color: $color--primary;
-            }
-
         }
 
-        .module__tab-body {
-            padding: $gutter--narrow;
+
+    .module__body {
+        margin: $gutter--narrow;
+    }
+
+        .module__section-title {
+            font-size: $type--base;
         }
+
+
+    .module__foot {
+        border-top: 1px solid $color--border;
+        color: $color--grey-light;
+        padding-left: $gutter--narrow;
+        padding-right: $gutter--narrow;
+        font-size: $type--base;
+
+        > :first-child {
+            padding-top: $gutter--narrow;
+        }
+
+        > :last-child {
+            padding-bottom: $gutter--narrow;
+        }
+    }
+
+// Extension
+@import "o-module--tab";
+
+
+
+
+/*
+
+
+
+
+
+
 
 
 
@@ -260,4 +205,5 @@
                 display: block;
                 padding-top: $gutter--skinny;
             }
+*/
 
