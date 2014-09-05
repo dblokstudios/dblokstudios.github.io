@@ -1,15 +1,12 @@
 .module--is-profile {
     .module__head {
-        position: relative;
         height: 100px;
         margin-bottom: $size--touch-target;
-
     }
 
     .module__body {
         padding-top: $gutter--narrow;
     }
-
 
     .headshot {
         position: absolute;

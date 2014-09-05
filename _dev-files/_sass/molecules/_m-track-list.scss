@@ -1,0 +1,20 @@
+.track-list {
+    @extend %reset-list;
+    margin-top: $gutter--narrow;
+    margin-left: -$gutter--narrow;
+    margin-right: -$gutter--narrow;
+    border: 1px solid $color--border;
+    border-left: none;
+    border-right: none;
+}
+    .track {
+
+    }
+
+        .track__title {
+
+        }
+
+        .track__time {
+
+        }

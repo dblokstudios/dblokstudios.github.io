@@ -152,7 +152,7 @@
  * 5. Required to combine fluid widths and fixed gutters.
  */
 .styleguide__code,
-.styleguide__demo, .track__title, .track__time {
+.styleguide__demo {
   display: inline-block;
   /* [1] */
   padding-left: 20px;
@@ -176,19 +176,14 @@
  */
 .styleguide__atom,
 .styleguide__molecule,
-.styleguide__organism, .track {
+.styleguide__organism {
   margin-left: 0; }
   .styleguide__atom > .styleguide__code,
   .styleguide__molecule > .styleguide__code,
-  .styleguide__organism > .styleguide__code, .track > .styleguide__code,
+  .styleguide__organism > .styleguide__code,
   .styleguide__atom > .styleguide__demo,
   .styleguide__molecule > .styleguide__demo,
-  .styleguide__organism > .styleguide__demo,
-  .track > .styleguide__demo, .styleguide__atom > .track__title,
-  .styleguide__molecule > .track__title,
-  .styleguide__organism > .track__title, .track > .track__title, .styleguide__atom > .track__time,
-  .styleguide__molecule > .track__time,
-  .styleguide__organism > .track__time, .track > .track__time {
+  .styleguide__organism > .styleguide__demo {
     padding-left: 0; }
 
 /**
@@ -235,12 +230,6 @@
 /**
  * Sixths
  */
-.track__time {
-  width: 16.666%; }
-
-.track__title {
-  width: 83.333%; }
-
 /**
  * Eighths
  */
@@ -731,7 +720,7 @@
   display: inline-block;
   width: auto; }
 
-.rating, .tag-list, .track-list, h1,
+.rating, .tag-list, h1,
 h2,
 h3,
 h4,
@@ -740,7 +729,7 @@ h6, p, fieldset {
   padding: 0;
   margin: 0; }
 
-.rating, .tag-list, .track-list {
+.rating, .tag-list {
   list-style: none; }
 
 /*
@@ -1787,7 +1776,9 @@ figure {
 
 .module__head {
   border-bottom: 1px solid #20272D;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  line-height: 0;
+  position: relative; }
 
 .module__title {
   font-size: 1.03125em;
@@ -1837,7 +1828,6 @@ figure {
     padding: 11px; }
 
 .module--is-profile .module__head {
-  position: relative;
   height: 100px;
   margin-bottom: 44px; }
 .module--is-profile .module__body {
@@ -1860,27 +1850,8 @@ figure {
   margin: 0;
   color: #4D97CF; }
 
-.track {
-  background-color: #3c4952;
-  padding-left: 11px;
-  padding-right: 11px;
-  line-height: 1.5; }
-  .track:nth-of-type(2n) {
-    background-color: #35414a; }
-
-.track__time {
-  text-align: right; }
-
-.track-list {
-  margin-top: 11px;
-  margin-left: -11px;
-  margin-right: -11px;
-  border: 1px solid #20272D;
-  border-left: none;
-  border-right: none; }
-
-.album__artwork,
-.album__artwork img {
+.release__artwork,
+.release__artwork img {
   width: 100%;
   height: auto; }
 
@@ -1890,10 +1861,6 @@ figure {
   left: 11px;
   text-align: left;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); }
-
-.module__head {
-  line-height: 0;
-  position: relative; }
 
 .module {
   max-width: 400px; }

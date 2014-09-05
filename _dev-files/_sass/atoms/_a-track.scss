@@ -1,0 +1,23 @@
+.track {
+    @extend %grid--full;
+
+    background-color: $color--grey-medium;
+    padding-left: $gutter--narrow;
+    padding-right: $gutter--narrow;
+    line-height: 1.5;
+
+    &:nth-of-type(2n) {
+        background-color: $color--grey;
+    }
+}
+
+    .track__title {
+        @extend %grid__item;
+        @extend %five-sixths;
+    }
+
+        .track__time {
+            @extend %grid__item;
+            @extend %one-sixth;
+            text-align: right;
+        }
