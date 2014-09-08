@@ -9,84 +9,28 @@
     </header>
 
     <div class="module__body event__body">
-        <img class="event__artwork" src="http://graph.facebook.com/717639234952317/picture"
-                 id="event-image">
 
         <h1 class="event__title">The Friday Night Warmup</h1>
-        <h2 class="event__sub-title">Featuring Lokie &amp; Triple XL
-</h2>
+        <h2 class="event__sub-title">Featuring Lokie &amp; Triple XL</h2>
 
-        <ul class="event-info">
-            <li class="event-info__date">October 3, 2014</li>
-            <li class="event-info__time"><time>8pm - 10pm PST</time>
-            <li class="event-info__location">dblokstudios.com</li>
-        </ul>
+        <div class="event-info">
+            <ul class="event-info__date">
+                <li class="event-info__month">Oct</li>
+                <li class="event-info__day">3</li>
+            </ul>
+
+            <ul class="event-info__time">
+                <li class="event-info__start"><time>8pm</time></li>
+                <li class="event-info__end"><time>10pm</time></li>
+            </ul>
+
+            <ul class="event-info__location">
+                <li class="event-info__location">dblokstudios.com</li>
+            </ul>
+        </div>
+
+
 
         <button class="button  button--is-hollow">View Event Page</button>
     </div>
-
-    <script>
-        window.onload = function() {
-            var colorImage = function(image, x, y, x2, y2) {
-                x2 = typeof x2 !== 'undefined' ? x2 : 1;
-                y2 = typeof y2 !== 'undefined' ? y2 : 1;
-
-                // create canvas and 2d context
-                var canvasContext = document.createElement('canvas').getContext('2d');
-
-                // place image into canvas context at 0, 0
-                canvasContext.drawImage(image, 0, 0);
-
-                // get color from x, y, x2, y2
-                var colorData = canvasContext.getImageData(x, y, x2, y2).data;
-
-                // change background color to rgba(r,g,b,a);
-                module = document.getElementById('event-module');
-                module.style.backgroundColor = "rgba("+colorData[0]+","+colorData[1]+","+colorData[2]+","+colorData[3]+")";
-            };
-
-            colorImage(document.getElementById('event-image'),0,0,1,1);
-        }
-    </script>
 </div>
-
-<!--
-<div class="module  module--is-profile">
-
-    <header class="module__head">
-        <div class="cover">
-            <img src="//placehold.it/500x200" />
-        </div>
-        <img class="headshot" src="//placehold.it/128x128" />
-
-        <h1 class="person-name">
-            Gregory Daynes
-            <small class="person-role">Chief Technical Officer</small>
-        </h1>
-
-    </header>
-
-    <div class="module__body">
-        <p>Graphic designer and teacher. Still walking with earphones in his ears. Design addict.</p>
-    </div>
-
-    <footer class="module__foot">
-        <ul class="tag-list">
-            <li class="tag-list__item">
-              <a class="tag  tag--facebook"href="#"><span>Facebook</span></a>
-            </li>
-         <li class="tag-list__item">
-              <a class="tag  tag--twitter"href="#"><span>Twitter</span></a>
-            </li>
-         <li class="tag-list__item">
-              <a class="tag  tag--soundcloud"href="#"><span>Soundcloud</span></a>
-            </li>
-         <li class="tag-list__item">
-              <a class="tag  tag--mixcloud"href="#"><span>Mixcloud</span></a>
-            </li>
-          </ul>
-    </footer>
-
-</div>
-
--->

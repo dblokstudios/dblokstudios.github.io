@@ -6,44 +6,30 @@
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
+
+    * {
+        float: left;
+        clear: left;
+        display: block;
+        width: 100%;
+    }
 }
 
+    .module p {
+        margin: 0;
+
+    }
 
     .module__head,
     .module__foot {
         text-align: center;
         background-color: $color--grey-dark;
-    }
 
-    .module__head {
-        border-bottom: 1px solid $color--border;
-        text-transform: uppercase;
-        line-height: 0;
-        position: relative;
-    }
 
-        .module__title {
-            font-size: $type--small;
-            line-height: $size--touch-target;
+        p:last-of-type,
+        ul:last-of-type {
+            margin: 0;
         }
-
-
-    .module__body {
-        margin: $gutter--narrow;
-        position: relative;
-    }
-
-        .module__section-title {
-            font-size: $type--base;
-        }
-
-
-    .module__foot {
-        border-top: 1px solid $color--border;
-        color: $color--grey-light;
-        padding-left: $gutter--narrow;
-        padding-right: $gutter--narrow;
-        font-size: $type--base;
 
         > :first-child {
             padding-top: $gutter--narrow;
@@ -54,8 +40,54 @@
         }
     }
 
+    .module__head {
+        border-bottom: 1px solid $color--border;
+    }
+
+    .module__foot {
+        border-top: 1px solid $color--border;
+        color: $color--grey-light;
+        padding: 0 $gutter--narrow;
+        font-size: $type--base;
+    }
+
+
+    .module__head{}
+        .module__title {
+            text-transform: uppercase;
+            font-size: $type--small;
+        }
+
+    .artwork,
+    .artwork__img {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+
+        .module__head & {
+            padding: 0;
+        }
+
+        .module__foot & {
+            padding: $gutter--narrow 0;
+        }
+    }
+
+/*
+
+
+
+
+
+*/
+
+
+
+
+/*
 // Extension
 @import "o-module--tab";
 @import "o-module--profile";
 @import "o-module--release";
 @import "o-module--event";
+*/
