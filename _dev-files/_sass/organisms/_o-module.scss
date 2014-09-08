@@ -30,6 +30,7 @@
 
     .module__body {
         margin: $gutter--narrow;
+        position: relative;
     }
 
         .module__section-title {
@@ -57,3 +58,4 @@
 @import "o-module--tab";
 @import "o-module--profile";
 @import "o-module--release";
+@import "o-module--event";
