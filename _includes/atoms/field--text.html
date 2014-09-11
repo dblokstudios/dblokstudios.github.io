@@ -1,12 +1,26 @@
-<div class="field-container">
-    <label for="text">Text Input <abbr title="Required">*</abbr></label>
-    <input id="text" type="text" placeholder="Text Input">
-</div>
-<div class="field-container">
-    <label class="label--is-error">Error Input</label>
-    <input class="input--is-error" type="text" placeholder="Text Input">
-</div>
-<div class="field-container">
-    <label class="label--is-valid">Valid</label>
-    <input class="input--is-valid" type="text" placeholder="Text Input">
-</div>
+<label class="form-field">
+    <span class="form-field__label">Text Input</span>
+    <input class="form-field__input  form-field__input--text"
+           id="text"
+           name="text"
+           type="text"
+           placeholder="Text Input">
+</label>
+
+<label class="form-field">
+    <span class="form-field__label  form-field__label--is-valid">Valid Input</span>
+    <input class="form-field__input  form-field__input--text  form-field__input--is-valid"
+           id="text"
+           name="text"
+           type="text"
+           placeholder="Text Input">
+</label>
+
+<label class="form-field">
+    <span class="form-field__label  form-field__label--is-error">Error Input</span>
+    <input class="form-field__input  form-field__input--text  form-field__input--is-error"
+           id="text"
+           name="text"
+           type="text"
+           placeholder="Text Input">
+</label>
