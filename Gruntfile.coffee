@@ -153,6 +153,7 @@ module.exports = (grunt) ->
           engine: 'node'
           stylesheet: 'scss'
           font: 'icons'
+          hashes: false
           relativeFontPath: '/assets/fonts'
           syntax: 'bem'
           templateOptions:
