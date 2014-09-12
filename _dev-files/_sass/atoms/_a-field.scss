@@ -16,14 +16,14 @@ legend {
 
 /**
  * Label
- */
+ * /
 
 label {
     display: block;
 
     /**
      * Required Notation
-     */
+     * /
     abbr[title] {
         border-bottom: none;
         text-decoration: none;
@@ -40,7 +40,7 @@ label {
 
 /**
  * Input
- */
+ * /
 
 input {
     width: 100%;
@@ -54,19 +54,19 @@ input {
 
     /**
      * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
-     */
+     * /
 
     &[type="search"] {
-        -webkit-appearance: textfield; /* 1 */
+        -webkit-appearance: textfield; /* 1 * /
 
         /**
          * 1. Remove inner padding and search cancel button in Safari and Chrome
          *    on OS X. Safari (but not Chrome) clips the cancel button when the
          *    search input has padding (and `textfield` appearance).
-         */
+         * /
         &::-webkit-search-cancel-button,
         &::-webkit-search-decoration {
-            -webkit-appearance: none; /* 1 */
+            -webkit-appearance: none; /* 1 * /
         }
     }
 
@@ -90,10 +90,10 @@ input {
 /**
  * Textarea
  * 1. Remove default vertical scrollbar in IE 8/9/10/11.
- */
+ * /
 
 textarea {
-    overflow: auto; /* 1 */
+    overflow: auto; /* 1 * /
     margin-bottom: $gutter--narrow;
 
     width: 100%;
@@ -111,29 +111,8 @@ textarea {
 }
 
 /**
- * Checkbox
- */
-
-input[type="checkbox"] {
-    width: auto;
-    float: left;
-    margin-right: $gutter--narrow;
-}
-
-.checkbox-label {
-    height: 44px;
-    overflow: visible;
-    white-space: nowrap;
-    margin-bottom: $gutter--normal;
-
-    span {
-        line-height: $size--touch-target;
-    }
-}
-
-/**
  * Radios
- */
+ * /
 
  input[type="radio"] {
     width: auto;
@@ -155,7 +134,7 @@ input[type="checkbox"] {
 
 /**
  * Range Input
- */
+ * /
 
 input[type="range"] {
     box-sizing: content-box;
@@ -180,7 +159,7 @@ input[type="range"] {
 
 /**
  * Select
- */
+ * /
 
 select {
     text-transform: none;
@@ -191,3 +170,44 @@ select {
     color: $color--border;
     width: 100%;
 }
+
+
+
+/**/
+
+
+/*
+
+
+
+
+*/
+
+
+
+.form-field {
+    @extend %grid--full;
+
+//     display: block;
+
+    height: 44px;
+//     overflow: visible;
+//     white-space: nowrap;
+//     margin-bottom: $gutter--normal;
+}
+
+    .form-field__input {
+        @extend %one-whole;
+    }
+
+        .form-field__input--checkbox {
+//             width: auto;
+//             float: left;
+//             margin-right: $gutter--narrow;
+        }
+
+    .form-field__label {
+        @extend %one-whole;
+//         line-height: $size--touch-target;
+    }
+

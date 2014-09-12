@@ -23,17 +23,18 @@
     .button:focus,
     .button--is-focus,
     .button:active,
-    .button--is-focus {
+    .button--is-active {
         background-color: $color--primary-dark;
     }
 
     .button--is-disabled {
+        opacity: 0.66;
         background-color: $color--gray-light;
         cursor: default;
     }
 
         .button--is-disabled:hover,
-        .button--is-active {
+        .button--is-diabled.button--is-active {
             background-color: $color--gray-light;
         }
 
@@ -65,3 +66,15 @@
         .button--tertiary:active {
             background-color: $color--tertiary-dark;
         }
+
+    .button--positive {
+        background-color: $color--positive;
+    }
+
+    .button--negative {
+        background-color: $color--negative;
+    }
+
+    .button--neutral {
+        background-color: $color--neutral;
+    }

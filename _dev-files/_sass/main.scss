@@ -149,9 +149,15 @@ $color--secondary: #fd8524;
 $color--secondary-light: #fc923c;
 $color--secondary-dark: #e28436;
 
-$color--secondary: #fd8524;
-$color--secondary-light: #fc923c;
-$color--secondary-dark: #e28436;
+$color--tertiary: #fd8524;
+$color--tertiary-light: #fc923c;
+$color--tertiary-dark: #e28436;
+
+$color--positive: $color--green;
+$color--negative: $color--red;
+$color--neutral: $color--gray-light;
+
+
 
 $color--facebook: #3b5998;
 $color--twitter: #00aced;
