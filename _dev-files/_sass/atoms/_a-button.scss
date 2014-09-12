@@ -12,65 +12,56 @@
     color: $color--white;
     width: 100%;
     text-align: center;
-    
-    &--is-hover, &:hover {
+}
+
+    .button:hover,
+    .button--is-hover {
         background-color: $color--primary-light;
         color: $color--white;
     }
-    
-    &--is-focus, &:focus,
-    &--is-active, &:active {
+
+    .button:focus,
+    .button--is-focus,
+    .button:active,
+    .button--is-focus {
         background-color: $color--primary-dark;
     }
-    
-    &--is-disabled {
+
+    .button--is-disabled {
         background-color: $color--gray-light;
         cursor: default;
-        
-        &:hover,
-        &:active {
+    }
+
+        .button--is-disabled:hover,
+        .button--is-active {
             background-color: $color--gray-light;
         }
-    }
-    
-    &--is-hollow {
+
+    .button--primary {}
+
+    .button--secondary {
         background-color: transparent;
         border: 2px solid $color--white;
         line-height: $size--touch-target - 4px;
-        
-        &:hover {
+    }
+
+        .button--secondary:hover {
             background-color: rgba(255,255,255,0.1);
         }
-        
-        &:active {
+
+        .button--secondary:active {
             background-color: rgba(0,0,0,0.1);
         }
-    }
-    
-    &--is-alt {
-        background-color: $color--secondary;
-        
-        &:hover {
-            background-color: $color--secondary-light;
-        }
-        
-        &:focus,
-        &:active {
-            background-color: $color--secondary-dark;
-        }
-    }
-    
-    &--is-hollow-alt {
-        @extend .button--is-hollow;
-        
-        border-color: $color--grey-dark;
-        color: $color--grey-dark;
-        
-        &:hover {
-            border-color: $color--grey-light;
-            color: $color--grey-light;
-        }
-    }
-    
-}
 
+    .button--tertiary {
+        background-color: $color--tertiary;
+    }
+
+        .button--tertiary:hover {
+            background-color: $color--tertiary-light;
+        }
+
+        .button--tertiary:focus,
+        .button--tertiary:active {
+            background-color: $color--tertiary-dark;
+        }
