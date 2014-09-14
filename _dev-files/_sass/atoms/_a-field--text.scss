@@ -1,0 +1,37 @@
+.form-field__input--text,
+.form-field__input--email,
+.form-field__input--number,
+.form-field__input--password,
+.form-field__input--url,
+.form-field__input--search,
+.form-field__input--textarea {
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+    padding: $gutter--skinny $gutter--narrow;
+    line-height: 1.5;
+    color: $color--gray-dark;
+    background-color: $color--white;
+    border: 0;
+    border-radius: $size--border-radius;
+    cursor: pointer;
+    outline: 0;
+    appearance: none;
+
+    /* Undo the Firefox inner focus ring */
+    &:focus {
+        box-shadow: 0 0 0 1px #fff,
+                    0 0 0 3px $color--primary;
+    }
+
+    /* Active/open */
+    &:active {
+      color: #fff;
+      background-color: $color--primary;
+    }
+}
+
+
+.form-field__input--textarea {
+    overflow: auto;
+}

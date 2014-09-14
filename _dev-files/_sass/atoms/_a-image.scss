@@ -1,0 +1,33 @@
+.image {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    line-height: 0;
+}
+
+    .image__img {
+        width: 100%;
+        height: auto;
+    }
+
+.image--restrained {
+    width: auto;
+    display: inline-block;
+}
+
+    .image--restrained .image__image {
+        width: inherit;
+    }
+
+
+.image--headshot {
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid $color--border;
+    display: inline-block;
+    width: auto;
+}
+
+    .image--headshot .image__img {
+        width: inherit;
+    }

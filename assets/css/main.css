@@ -176,15 +176,14 @@
  */
 .styleguide__atom,
 .styleguide__molecule,
-.styleguide__organism, .form-field {
+.styleguide__organism {
   margin-left: 0; }
   .styleguide__atom > .styleguide__code,
   .styleguide__molecule > .styleguide__code,
-  .styleguide__organism > .styleguide__code, .form-field > .styleguide__code,
+  .styleguide__organism > .styleguide__code,
   .styleguide__atom > .styleguide__demo,
   .styleguide__molecule > .styleguide__demo,
-  .styleguide__organism > .styleguide__demo,
-  .form-field > .styleguide__demo {
+  .styleguide__organism > .styleguide__demo {
     padding-left: 0; }
 
 /**
@@ -216,9 +215,6 @@
 /**
  * Whole
  */
-.form-field__input, .form-field__label {
-  width: 100%; }
-
 /**
  * Halves
  */
@@ -724,16 +720,16 @@
   display: inline-block;
   width: auto; }
 
-.rating, .tag-list, h1,
+.rating, .tag-list, .event-info, h1,
 h2,
 h3,
 h4,
 h5,
-h6, p, fieldset {
+h6, p {
   padding: 0;
   margin: 0; }
 
-.rating, .tag-list {
+.rating, .tag-list, .event-info {
   list-style: none; }
 
 /*
@@ -1378,11 +1374,109 @@ dd {
 /**
  * Form Fields
  */
-fieldset {
-  border: none; }
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
 
 /**
- * Legend
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal; }
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  box-sizing: border-box;
+  /* 1 */
+  /* 2 */ }
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
  * 1. Correct `color` not being inherited in IE 8/9/10/11.
  * 2. Remove padding so people aren't caught out if they zero out fieldsets.
  */
@@ -1393,173 +1487,292 @@ legend {
   /* 2 */ }
 
 /**
- * Label
- * /
-
-label {
-    display: block;
-
-    /**
-     * Required Notation
-     * /
-    abbr[title] {
-        border-bottom: none;
-        text-decoration: none;
-    }
-
-    &.label--is-valid {
-        color: $color--green;
-    }
-
-    &.label--is-error {
-        color: $color--red;
-    }
-}
-
-/**
- * Input
- * /
-
-input {
-    width: 100%;
-    border-radius: $size--border-radius;
-    line-height: $size--touch-target;
-    height: $size--touch-target;
-    border: 1px solid $color--border;
-    padding: 0 $gutter--narrow;
-    color: $color--grey-dark;
-    margin-bottom: $gutter--narrow;
-
-    /**
-     * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
-     * /
-
-    &[type="search"] {
-        -webkit-appearance: textfield; /* 1 * /
-
-        /**
-         * 1. Remove inner padding and search cancel button in Safari and Chrome
-         *    on OS X. Safari (but not Chrome) clips the cancel button when the
-         *    search input has padding (and `textfield` appearance).
-         * /
-        &::-webkit-search-cancel-button,
-        &::-webkit-search-decoration {
-            -webkit-appearance: none; /* 1 * /
-        }
-    }
-
-    &:focus {
-        outline: 3px solid $color--selection;
-    }
-
-    &.input--is-valid {
-        border-width: 3px;
-        color: $color--green;
-        border-color: $color--green;
-    }
-
-    &.input--is-error {
-        border-width: 3px;
-        color: $color--red;
-        border-color: $color--red;
-    }
-}
-
-/**
- * Textarea
- * 1. Remove default vertical scrollbar in IE 8/9/10/11.
- * /
-
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
 textarea {
-    overflow: auto; /* 1 * /
-    margin-bottom: $gutter--narrow;
-
-    width: 100%;
-    border-radius: $size--border-radius;
-    line-height: $size--touch-target;
-    border: 1px solid $color--border;
-    padding: 0 $gutter--narrow;
-    color: $color--grey-dark;
-    margin-bottom: $gutter--narrow;
-
-
-    &:focus {
-        outline: 3px solid $color--selection;
-    }
-}
+  overflow: auto; }
 
 /**
- * Radios
- * /
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold; }
 
- input[type="radio"] {
-    width: auto;
-    float: left;
-    margin-right: $gutter--narrow;
- }
-
-.radio-label {
-    height: 44px;
-    overflow: visible;
-    white-space: nowrap;
-    margin-bottom: $gutter--normal;
-
-    span {
-        line-height: $size--touch-target;
-    }
-}
-
-
-/**
- * Range Input
- * /
-
-input[type="range"] {
-    box-sizing: content-box;
-    height: $gutter--skinny / 2;
-    width: auto;
-    display: block;
-    -webkit-appearance: none;
-    background-color: $color--white;
-    border: 1px solid $color--border;
-    margin-top: $size--touch-target / 2 - ($gutter--skinny / 2);
-    margin-bottom: $size--touch-target / 2 - ($gutter--skinny / 2);
- }
-
-::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    background-color: $color--primary;
-    width: $gutter--narrow;
-    height: $gutter--narrow;
-    border-radius: 50%;
-    border: 1px solid $color--border;
-}
-
-/**
- * Select
- * /
-
-select {
-    text-transform: none;
-    height: 44px;
-    margin: $gutter--normal - ($gutter--normal / 2) 0;
-    line-height: $size--touch-target;
-    border: 1px solid $color--border;
-    color: $color--border;
-    width: 100%;
-}
-
-
-
-/**/
-/*
-
-
-
-
-*/
 .form-field {
-  height: 44px; }
+  position: relative;
+  display: inline-block;
+  color: #ffffff;
+  cursor: pointer; }
+
+.form-field__input--checkbox,
+.form-field__input--radio {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+  /* Put the input behind the label so it doesn't overlay text */ }
+
+.form-field .form-field__indicator {
+  position: absolute;
+  top: .25rem;
+  left: 0;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  line-height: 1rem;
+  font-size: 65%;
+  color: #ffffff;
+  text-align: center;
+  background-color: #ffffff;
+  background-size: 50% 50%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin-left: 1.5rem; }
+
+.form-field__input--checkbox ~ .form-field__label,
+.form-field__input--radio ~ .form-field__label {
+  margin-left: 1.5rem; }
+
+/* Hover state */
+/* Uncomment if you need it, but be aware of the sticky iOS states.
+.control:hover .control-indicator {
+  color: #fff;
+  background-color: #ccc;
+}
+*/
+/* Focus */
+.form-field input:focus ~ .form-field__indicator {
+  box-shadow: 0 0 0 1px #ffffff, 0 0 0 2px #4D97CF; }
+
+/* Checked state */
+.form-field input:checked ~ .form-field__indicator {
+  color: #fff;
+  background-color: #4D97CF; }
+
+/* Active */
+.form-field input:active ~ .form-field__indicator {
+  color: #fff;
+  background-color: #4D97CF; }
+
+/* Checkbox modifiers */
+.form-field__input--checkbox ~ .form-field__indicator {
+  border-radius: 4px; }
+
+.form-field .form-field__input--checkbox:checked ~ .form-field__indicator {
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgOCA4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4IDgiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTYuNCwxTDUuNywxLjdMMi45LDQuNUwyLjEsMy43TDEuNCwzTDAsNC40bDAuNywwLjdsMS41LDEuNWwwLjcsMC43bDAuNy0wLjdsMy41LTMuNWwwLjctMC43TDYuNCwxTDYuNCwxeiINCgkvPg0KPC9zdmc+DQo=); }
+
+/* Radio modifiers */
+.form-field__input--radio ~ .form-field__indicator {
+  border-radius: 50%; }
+
+.form-field .form-field__input--radio:checked ~ .form-field__indicator {
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4xLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgOCA4IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA4IDgiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTQsMUMyLjMsMSwxLDIuMywxLDRzMS4zLDMsMywzczMtMS4zLDMtM1M1LjcsMSw0LDF6Ii8+DQo8L3N2Zz4NCg==); }
+
+/*
+ * Select
+ */
+.form-field__input--select {
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  padding: .5rem 2.25rem .5rem 1rem;
+  line-height: 1.5;
+  color: #555;
+  background-color: #eee;
+  border: 0;
+  border-radius: .25rem;
+  cursor: pointer;
+  outline: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
+/* Undo the Firefox inner focus ring */
+.form-field__input--select:focus:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000; }
+
+/* Dropdown arrow */
+.form-field__input--select:after {
+  position: absolute;
+  top: 50%;
+  right: 1.25rem;
+  display: inline-block;
+  content: "";
+  width: 0;
+  height: 0;
+  margin-top: -.15rem;
+  pointer-events: none;
+  border-top: .35rem solid;
+  border-right: .35rem solid transparent;
+  border-bottom: .35rem solid transparent;
+  border-left: .35rem solid transparent; }
+
+/* Focus */
+.form-field__input--select:focus {
+  box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem #0074d9; }
+
+/* Active/open */
+.form-field__input--select:active {
+  color: #fff;
+  background-color: #0074d9; }
+
+/* Hide the arrow in IE10 and up */
+.form-field__input--select-::-ms-expand {
+  display: none; }
+
+/* Media query to target Firefox only */
+@-moz-document url-prefix() {
+  /* Firefox hack to hide the arrow */
+  .form-field__input--select {
+    text-indent: 0.01px;
+    text-overflow: '';
+    padding-right: 1rem; }
+
+  /* <option> elements inherit styles from <select>, so reset them. */
+  .form-field__input--select option {
+    background-color: white; } }
+/* IE9 hack to hide the arrow */
+@media screen and (min-width: 0\0) {
+  .form-field__input--select {
+    z-index: 1;
+    padding: .5rem 1.5rem .5rem 1rem; }
+
+  .form-field__input--select:after {
+    z-index: 5; }
+
+  .form-field__input--select:before {
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    bottom: 0;
+    z-index: 2;
+    content: "";
+    display: block;
+    width: 1.5rem;
+    background-color: #eee; }
+
+  .form-field__input--select:hover,
+  .form-field__input--select:focus,
+  .form-field__input--select:active {
+    color: #555;
+    background-color: #eee; } }
+.form-field__input--text,
+.form-field__input--email,
+.form-field__input--number,
+.form-field__input--password,
+.form-field__input--url,
+.form-field__input--search,
+.form-field__input--textarea {
+  display: inline-block;
+  width: 100%;
+  margin: 0;
+  padding: 5.5px 11px;
+  line-height: 1.5;
+  color: #333333;
+  background-color: #ffffff;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: 0;
+  appearance: none;
+  /* Undo the Firefox inner focus ring */
+  /* Active/open */ }
+  .form-field__input--text:focus,
+  .form-field__input--email:focus,
+  .form-field__input--number:focus,
+  .form-field__input--password:focus,
+  .form-field__input--url:focus,
+  .form-field__input--search:focus,
+  .form-field__input--textarea:focus {
+    box-shadow: 0 0 0 1px #fff, 0 0 0 3px #4D97CF; }
+  .form-field__input--text:active,
+  .form-field__input--email:active,
+  .form-field__input--number:active,
+  .form-field__input--password:active,
+  .form-field__input--url:active,
+  .form-field__input--search:active,
+  .form-field__input--textarea:active {
+    color: #fff;
+    background-color: #4D97CF; }
+
+.form-field__input--textarea {
+  overflow: auto; }
+
+/*
+ * Progress
+ */
+.progress {
+  display: inline-block;
+  height: 1rem; }
+
+.progress[value] {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Remove Firefox and Opera border */
+  border: 0;
+  /* IE10 uses `color` to set the bar background-color */
+  color: #0074d9; }
+
+.progress[value]::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: .2rem; }
+
+.progress[value]::-webkit-progress-value {
+  background-color: #0074d9;
+  border-top-left-radius: .2rem;
+  border-bottom-left-radius: .2rem; }
+
+.progress[value="100"]::-webkit-progress-value {
+  border-top-right-radius: .2rem;
+  border-bottom-right-radius: .2rem; }
+
+/* Firefox styles must be entirely separate or it busts Webkit styles. */
+@-moz-document url-prefix() {
+  .progress[value] {
+    background-color: #eee;
+    border-radius: .2rem; }
+
+  .progress[value]::-moz-progress-bar {
+    background-color: #0074d9;
+    border-top-left-radius: .2rem;
+    border-bottom-left-radius: .2rem; }
+
+  .progress[value="100"]::-moz-progress-bar {
+    border-top-right-radius: .2rem;
+    border-bottom-right-radius: .2rem; } }
+/* IE9 hacks to accompany custom markup. We don't need to scope this via media queries, but I feel better doing it anyway. */
+@media screen and (min-width: 0\0) {
+  .progress {
+    background-color: #eee;
+    border-radius: .2rem; }
+
+  .progress-bar {
+    display: inline-block;
+    height: 1rem;
+    text-indent: -999rem;
+    /* Simulate hiding of value as in native `<progress>` */
+    background-color: #0074d9;
+    border-top-left-radius: .2rem;
+    border-bottom-left-radius: .2rem; }
+
+  .progress[width="100%"] {
+    border-top-right-radius: .2rem;
+    border-bottom-right-radius: .2rem; } }
+/*
+ * Control layouts
+ */
+.form-field {
+  display: block; }
+
+.form-field + .form-field {
+  margin-top: 11px; }
 
 /**
  * Buttons
@@ -1782,18 +1995,34 @@ th {
   margin: auto; }
 
 /**
- * Headshot
+ * Image
  */
-.headshot {
-  border-radius: 50%;
+.image {
+  width: 100%;
+  height: auto;
   overflow: hidden;
-  width: 100px;
-  height: 100px;
-  border: 2px solid #20272D; }
+  line-height: 0; }
 
-.headshot img {
+.image__img {
   width: 100%;
   height: auto; }
+
+.image--restrained {
+  width: auto;
+  display: inline-block; }
+
+.image--restrained .image__image {
+  width: inherit; }
+
+.image--headshot {
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #20272D;
+  display: inline-block;
+  width: auto; }
+
+.image--headshot .image__img {
+  width: inherit; }
 
 /**
  * Person
@@ -1808,7 +2037,7 @@ th {
   display: block; }
 
 .tag-list__item {
-  display: inline-block; }
+  display: inline; }
 
 /**
  * Address margin not present in IE 8/9 and Safari.
@@ -1824,11 +2053,6 @@ figure {
   margin-left: auto;
   margin-right: auto;
   overflow: hidden; }
-  .module * {
-    float: left;
-    clear: left;
-    display: block;
-    width: 100%; }
 
 .module p {
   margin: 0; }
@@ -1836,7 +2060,8 @@ figure {
 .module__head,
 .module__foot {
   text-align: center;
-  background-color: #2D3840; }
+  background-color: #2D3840;
+  position: relative; }
   .module__head p:last-of-type,
   .module__head ul:last-of-type,
   .module__foot p:last-of-type,
@@ -1862,32 +2087,83 @@ figure {
   text-transform: uppercase;
   font-size: 1.03125em; }
 
-.artwork,
-.artwork__img {
-  width: auto;
-  height: auto;
-  max-width: 100%; }
-  .module__head .artwork, .module__head
-  .artwork__img {
-    padding: 0; }
-  .module__foot .artwork, .module__foot
-  .artwork__img {
-    padding: 11px 0; }
+.module__body {
+  padding: 11px; }
 
-/*
+.module__pane:last-child .module__head {
+  border-bottom: none; }
+.module__pane--is-open {
+  border-bottom: 1px solid #20272D; }
+.module__pane--is-open:last-child {
+  border-bottom: none; }
+.module__pane--is-open:last-child .module__head {
+  border-bottom: 1px solid #20272D; }
 
+.module__title {
+  background-color: #2D3840;
+  line-height: 44px;
+  text-transform: uppercase;
+  padding-left: 11px;
+  padding-right: 11px;
+  margin: 0; }
+  .module__pane--is-hover .module__title, .module__pane:hover .module__title {
+    background-color: #3c4952; }
 
+.module__content {
+  max-height: 0;
+  overflow: hidden; }
+  .module__pane--is-open .module__content {
+    max-height: inherit;
+    padding: 11px; }
 
+.module--is-profile .module__head {
+  height: 100px;
+  margin-bottom: 44px; }
+.module--is-profile .module__body {
+  padding-top: 11px; }
+.module--is-profile .image--headshot {
+  position: absolute;
+  top: 100%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 11px; }
+.module--is-profile .person-name {
+  margin: 0;
+  padding-top: 11px;
+  position: absolute;
+  top: 100%;
+  left: 122px;
+  text-align: left; }
+.module--is-profile .person-role {
+  margin: 0;
+  color: #4D97CF; }
 
+.release__artwork,
+.release__artwork img {
+  width: 100%;
+  height: auto; }
 
-*/
-/*
-// Extension
-@import "o-module--tab";
-@import "o-module--profile";
-@import "o-module--release";
-@import "o-module--event";
-*/
+.release__title {
+  position: absolute;
+  bottom: 11px;
+  left: 11px;
+  text-align: left;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); }
+
+.module--is-event {
+  text-align: center; }
+
+.event__artwork {
+  display: none; }
+
+.event__body {
+  margin: 0;
+  padding: 11px;
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.2));
+  background-image: linear-gradient(top, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.2));
+  text-shadow: 0 2px 1px rgba(0, 0, 0, 0.3); }
+
 .module {
   max-width: 400px; }
 

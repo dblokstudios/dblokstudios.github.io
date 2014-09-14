@@ -6,13 +6,6 @@
     margin-left: auto;
     margin-right: auto;
     overflow: hidden;
-
-    * {
-        float: left;
-        clear: left;
-        display: block;
-        width: 100%;
-    }
 }
 
     .module p {
@@ -24,6 +17,7 @@
     .module__foot {
         text-align: center;
         background-color: $color--grey-dark;
+        position: relative;
 
 
         p:last-of-type,
@@ -58,36 +52,16 @@
             font-size: $type--small;
         }
 
-    .artwork,
-    .artwork__img {
-        width: auto;
-        height: auto;
-        max-width: 100%;
-
-        .module__head & {
-            padding: 0;
-        }
-
-        .module__foot & {
-            padding: $gutter--narrow 0;
-        }
+    .module__body {
+        padding: $gutter--narrow;
     }
 
-/*
 
 
 
 
-
-*/
-
-
-
-
-/*
 // Extension
 @import "o-module--tab";
 @import "o-module--profile";
 @import "o-module--release";
 @import "o-module--event";
-*/

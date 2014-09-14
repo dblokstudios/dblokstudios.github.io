@@ -11,18 +11,22 @@ module.exports = (grunt) ->
         css: '_dev-files/_css'
         tmp: '_dev-files/_tmp/css'
         build: 'assets/css'
+        site: '_site/assets/css'
       img:  'assets/img'
       js:
         coffee: '_dev-files/_coffee'
         js: '_dev-files/_js'
         tmp: '_dev-files/_tmp/js'
         build: 'assets/js'
+        site: '_site/assets/js'
       icons:
         dev: '_dev-files/_icons/_svg'
         tmp: '_dev-files/_tmp/svg'
         build: 'assets/icons'
+        site: '_site/assets/icons'
       fonts:
         build: 'assets/fonts'
+        site: '_site/assets/fonts'
 
       layout:
         dev: '_dev-files/_layouts'
@@ -57,6 +61,11 @@ module.exports = (grunt) ->
         src: '**/*.css'
         dest: '<%= globalConfig.css.build %>'
         expand: true
+      css_site:
+        cwd: '<%= globalConfig.css.build %>'
+        src: '**/*.css'
+        dest: '<%= globalConfig.css.site %>'
+        expand: true
       js_tmp:
         cwd: '<%= globalConfig.js.js %>'
         src: '**/*.js'
@@ -66,6 +75,11 @@ module.exports = (grunt) ->
         cwd: '<%= globalConfig.js.tmp %>'
         src: '**/*.js'
         dest: '<%= globalConfig.js.build %>'
+        expand: true
+      js_site:
+        cwd: '<%= globalConfig.js.build %>'
+        src: '**/*.css'
+        dest: '<%= globalConfig.js.site %>'
         expand: true
       layout_tmp:
         cwd: '<%= globalConfig.layout.dev %>'
@@ -135,7 +149,10 @@ module.exports = (grunt) ->
         tasks: ['js']
       layout:
         files: '<%= globalConfig.layout.dev %>/**/*.html'
-        tasks: ['layout']
+        tasks: ['layout','jekyll']
+      html:
+        files: ['**/*.html', '**/*.md', '!_dev_files/**/*.html']
+        tasks: ['jekyll']
 
     svgmin:
       build:
@@ -160,6 +177,12 @@ module.exports = (grunt) ->
             baseClass: 'icon'
             classPrefix: 'icon--'
 
+    jekyll:
+        dev:
+            dest: '_site'
+            drafts: true
+            config: '_config.yml'
+
 
 
 
@@ -174,6 +197,7 @@ module.exports = (grunt) ->
     'copy:css_tmp'
     'autoprefixer'
     'copy:css'
+    'copy:css_site'
   ]
 
   grunt.registerTask 'css-deploy', [
@@ -189,6 +213,7 @@ module.exports = (grunt) ->
     'coffee'
     'copy:js_tmp'
     'copy:js'
+    'copy:js_site'
   ]
 
   grunt.registerTask 'js-deploy', [
@@ -222,7 +247,6 @@ module.exports = (grunt) ->
 
 
   grunt.registerTask 'default', [
-    'icons'
 
     'css'
 
@@ -230,7 +254,15 @@ module.exports = (grunt) ->
 
     'layout'
 
+    'jekyll'
+
     'watch'
+
+  ]
+
+
+  grunt.registerTask 'icons', [
+    'icons'
   ]
 
 
