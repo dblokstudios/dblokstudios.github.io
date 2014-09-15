@@ -2,20 +2,6 @@
 /* -- $FUNCTIONS --                         */
 /* em($px) - convert px to ems              */
 /* ---- Custom */
-/*
-
-
-// Organisms
-// -- modules
-@import 'organisms/o-module';
-
-// -- page elements
-@import 'organisms/o-page-head';
-@import 'organisms/o-primary-nav-new';
-// @import 'o-page-foot';
-// @import 'o-artists';
-
-*/
 /*------------------------------------*\
     $CSSWIZARDRY-GRIDS
 \*------------------------------------*/
@@ -152,7 +138,7 @@
  * 5. Required to combine fluid widths and fixed gutters.
  */
 .styleguide__code,
-.styleguide__demo {
+.styleguide__demo, .page-nav__list, .social-nav__list, .page-nav__item, .social-nav__item {
   display: inline-block;
   /* [1] */
   padding-left: 20px;
@@ -176,14 +162,25 @@
  */
 .styleguide__atom,
 .styleguide__molecule,
-.styleguide__organism {
+.styleguide__organism, .primary-nav, .page-nav__list, .social-nav__list {
   margin-left: 0; }
   .styleguide__atom > .styleguide__code,
   .styleguide__molecule > .styleguide__code,
-  .styleguide__organism > .styleguide__code,
+  .styleguide__organism > .styleguide__code, .primary-nav > .styleguide__code, .page-nav__list > .styleguide__code, .social-nav__list > .styleguide__code,
   .styleguide__atom > .styleguide__demo,
   .styleguide__molecule > .styleguide__demo,
-  .styleguide__organism > .styleguide__demo {
+  .styleguide__organism > .styleguide__demo,
+  .primary-nav > .styleguide__demo,
+  .page-nav__list > .styleguide__demo,
+  .social-nav__list > .styleguide__demo, .styleguide__atom > .page-nav__list,
+  .styleguide__molecule > .page-nav__list,
+  .styleguide__organism > .page-nav__list, .primary-nav > .page-nav__list, .page-nav__list > .page-nav__list, .social-nav__list > .page-nav__list, .styleguide__atom > .social-nav__list,
+  .styleguide__molecule > .social-nav__list,
+  .styleguide__organism > .social-nav__list, .primary-nav > .social-nav__list, .page-nav__list > .social-nav__list, .social-nav__list > .social-nav__list, .styleguide__atom > .page-nav__item,
+  .styleguide__molecule > .page-nav__item,
+  .styleguide__organism > .page-nav__item, .primary-nav > .page-nav__item, .page-nav__list > .page-nav__item, .social-nav__list > .page-nav__item, .styleguide__atom > .social-nav__item,
+  .styleguide__molecule > .social-nav__item,
+  .styleguide__organism > .social-nav__item, .primary-nav > .social-nav__item, .page-nav__list > .social-nav__item, .social-nav__list > .social-nav__item {
     padding-left: 0; }
 
 /**
@@ -344,12 +341,21 @@
   /**
    * Thirds
    */
+  .social-nav__item {
+    width: 33.333%; }
+
   /**
    * Quarters
    */
   /**
    * Fifths
    */
+  .social-nav__list, .page-nav__item {
+    width: 20%; }
+
+  .page-nav__list {
+    width: 80%; }
+
   /**
    * Sixths
    */
@@ -544,107 +550,119 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-.icon--amazon--alt:before {
+.icon--about:before, .nav__link--about span:before {
   content: "\f101"; }
 
-.icon--amazon:before, .tag--amazon span:before {
+.icon--amazon--alt:before {
   content: "\f102"; }
 
-.icon--apple:before, .tag--itunes span:before {
+.icon--amazon:before, .tag--amazon span:before {
   content: "\f103"; }
 
-.icon--calendar:before {
+.icon--apple:before, .tag--itunes span:before {
   content: "\f104"; }
 
-.icon--cloud:before, .tag--mixcloud span:before {
+.icon--artists:before {
   content: "\f105"; }
 
-.icon--facebook:before, .tag--facebook span:before {
+.icon--calendar:before, .nav__link--events span:before {
   content: "\f106"; }
 
-.icon--github:before {
+.icon--cloud:before, .tag--mixcloud span:before, .nav__link--mixcloud span:before {
   content: "\f107"; }
 
-.icon--group:before {
+.icon--facebook:before, .tag--facebook span:before, .nav__link--facebook span:before {
   content: "\f108"; }
 
-.icon--headphones:before {
+.icon--github:before {
   content: "\f109"; }
 
-.icon--heart--outline:before {
+.icon--group:before {
   content: "\f10a"; }
 
-.icon--heart:before {
+.icon--headphones:before {
   content: "\f10b"; }
 
-.icon--instagram:before {
+.icon--heart--outline:before {
   content: "\f10c"; }
 
-.icon--lab:before {
+.icon--heart:before {
   content: "\f10d"; }
 
-.icon--mail:before {
+.icon--home:before, .nav__link--home span:before {
   content: "\f10e"; }
 
-.icon--map-marker:before {
+.icon--instagram:before {
   content: "\f10f"; }
 
-.icon--music:before {
+.icon--lab:before {
   content: "\f110"; }
 
-.icon--pause:before {
+.icon--mail:before {
   content: "\f111"; }
 
-.icon--play:before {
+.icon--map-marker:before {
   content: "\f112"; }
 
-.icon--quote--close:before {
+.icon--music:before {
   content: "\f113"; }
 
-.icon--quote--open:before {
+.icon--pause:before {
   content: "\f114"; }
 
-.icon--rss:before {
+.icon--play:before {
   content: "\f115"; }
 
-.icon--shopify:before, .tag--shopify span:before {
+.icon--quote--close:before {
   content: "\f116"; }
 
-.icon--soundcloud:before, .tag--soundcloud span:before {
+.icon--quote--open:before {
   content: "\f117"; }
 
-.icon--star--half:before, .rating__star--half:before {
+.icon--rss:before {
   content: "\f118"; }
 
-.icon--star--outline:before, .rating__star--empty:before {
+.icon--shopify:before, .tag--shopify span:before {
   content: "\f119"; }
 
-.icon--star:before, .rating__star--full:before {
+.icon--shows:before, .nav__link--shows span:before {
   content: "\f11a"; }
 
-.icon--tag:before {
+.icon--soundcloud:before, .tag--soundcloud span:before {
   content: "\f11b"; }
 
-.icon--tumblr:before {
+.icon--star--half:before, .rating__star--half:before {
   content: "\f11c"; }
 
-.icon--twitter:before, .tag--twitter span:before {
+.icon--star--outline:before, .rating__star--empty:before {
   content: "\f11d"; }
 
-.icon--user:before {
+.icon--star:before, .rating__star--full:before {
   content: "\f11e"; }
 
-.icon--volume--down:before {
+.icon--tag:before {
   content: "\f11f"; }
 
-.icon--volume--mute:before {
+.icon--tumblr:before {
   content: "\f120"; }
 
-.icon--volume--up:before {
+.icon--twitter:before, .tag--twitter span:before, .nav__link--twitter span:before {
   content: "\f121"; }
 
-.icon--youtube:before {
+.icon--user:before {
   content: "\f122"; }
+
+.icon--volume--down:before {
+  content: "\f123"; }
+
+.icon--volume--mute:before {
+  content: "\f124"; }
+
+.icon--volume--up:before {
+  content: "\f125"; }
+
+.icon--youtube:before {
+  content: "\f126"; }
 
 .styleguide {
   padding: 0;
@@ -720,16 +738,16 @@
   display: inline-block;
   width: auto; }
 
-.rating, .tag-list, .track-list, .event-info, .page-nav__list, h1,
+.rating, .tag-list, .track-list, .event-info, h1,
 h2,
 h3,
 h4,
 h5,
-h6, p, .page-head__logo {
+h6, p {
   padding: 0;
   margin: 0; }
 
-.rating, .tag-list, .track-list, .event-info, .page-nav__list {
+.rating, .tag-list, .track-list, .event-info {
   list-style: none; }
 
 /*
@@ -2200,279 +2218,126 @@ figure {
   background-image: linear-gradient(top, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.2));
   text-shadow: 0 2px 1px rgba(0, 0, 0, 0.3); }
 
-.page-nav__item {
-  display: inline-block; }
+.primary-nav {
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 44px;
+  height: 44px;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+  @media screen and (min-width: 64em) {
+    .primary-nav {
+      height: auto;
+      background-color: #5d9632;
+      overflow: visible; } }
 
-/*------------------------------------*\
-    #primary-nav
-\*------------------------------------* /
+.primary-nav:before {
+  color: #4D97CF;
+  content: "☰";
+  font-size: 16px;
+  text-align: center;
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  line-height: 44px; }
+  @media screen and (min-width: 64em) {
+    .primary-nav:before {
+      content: normal;
+      content: none; } }
+
+.primary-nav--open {
+  overflow: visible;
+  height: auto; }
+
+.primary-nav--open:before {
+  content: "✕";
+  display: block;
+  color: #ffffff;
+  background-color: #579dd2; }
+  @media screen and (min-width: 64em) {
+    .primary-nav--open:before {
+      content: normal;
+      content: none; } }
+
+.primary-nav--open .nav__list {
+  padding-top: 44px;
+  background-color: #4D97CF; }
+
+.nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  z-index: -1;
+  overflow: hidden; }
+  @media screen and (min-width: 64em) {
+    .nav__list {
+      padding-top: 0; } }
+  .nav__list:first-child {
+    padding-top: 44px; }
+    @media screen and (min-width: 64em) {
+      .nav__list:first-child {
+        padding-top: 0; } }
+
+.social-nav__list:first-child {
+  padding-top: 0; }
+
+.nav__link {
+  padding-right: 33px;
+  border-top: 1px solid #61a3d4;
+  background-color: #4D97CF;
+  color: #ffffff;
+  display: block;
+  white-space: nowrap;
+  line-height: 44px;
+  text-decoration: none; }
+  .nav__link:hover, .nav__link:hover:before {
+    background-color: #fd8524;
+    border-top-color: #fd933d; }
+  .nav__link span:before {
+    font-family: "icons";
+    font-weight: normal;
+    font-style: normal;
+    speak: none;
+    text-decoration: none;
+    text-transform: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    color: #ffffff; }
+
+.nav__link--facebook span:before {
+  background-color: #3b5998; }
+
+.nav__link--twitter span:before {
+  background-color: #00aced; }
+
+.nav__link--mixcloud span:before {
+  background-color: #5d9632; }
+
+.nav__link--artists span:before {
+  content: "\f105"; }
 
 .primary-nav {
-    // generic styling
-    font-family: $type__sans-serif;
-    background-color: blue;
-
-    // top left
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-
-    // menu icon
-    width: $size--touch-target;
-    height: $size--touch-target;
-    overflow: hidden;
-    cursor: pointer;
-
-    // prevent selection
-    user-select: none;
-
-
-    // lap device - ipad portrait and up
-    @media screen and (min-width: $breakpoint--lap) {
-        height: auto;
-        background-color: $color--green;
-        overflow: visible;
-    }
-
-    // hamburger icon
-    &:before {
-        color: $color--primary;
-        content: "☰";
-        font-size: $size--icon;
-        text-align: center;
-        position: absolute;
-        width: $size--touch-target;
-        height: $size--touch-target;
-        line-height: $size--touch-target;
-
-        // remove on non-palm devices
-        @media screen and (min-width: $breakpoint--lap) {
-          content: normal;
-          content: none;
-        }
-    }
-
-
-    // open menu
-    &--open {
-        overflow: visible;
-        height: auto;
-
-        // modify the hamburger icon
-        &:before {
-            content: "✕";
-            display: block;
-            color: $color--white;
-            background-color: lighten($color--primary, 2.5%);
-
-            // hide icon on larger than palm devices
-            @media screen and (min-width: $breakpoint--lap) {
-                content: normal;
-                content: none;
-            }
-        }
-
-        // open menu background color
-        .page-nav__list {
-            padding-top: $size--touch-target;
-            background-color: $color--primary;
-        }
-    }
-
-    .page-nav__list,
-    .social-nav__list {
-        list-style: none;
-        margin:  0;
-        padding: 0;
-        z-index: -1;
-        overflow: hidden;
-
-
-        @media screen and (min-width: $breakpoint--lap) {
-          padding-top: 0;
-        }
-
-        &:first-child {
-            padding-top: $size--touch-target;
-
-            @media screen and (min-width: $breakpoint--lap) {
-              padding-top: 0;
-            }
-        }
-    }
-
-        .page-nav__item,
-        .social-nav__item {
-
-        }
-
-            .page-nav__link,
-            .social-nav__link {
-                padding-right: $size--touch-target / 2 + $gutter--narrow;
-                border-top: 1px solid lighten($color--primary, 5%);
-                background-color: $color--primary;
-                color: $color--white;
-                display: block;
-                white-space: nowrap;
-                line-height: $size--touch-target;
-                text-decoration: none;
-
-                &:hover,
-                &:hover:before {
-                  background-color: $color--secondary;
-                  border-top-color: lighten($color--secondary, 5%);
-                }
-
-                // icons
-                &:before {
-                  width:  $size--touch-target;
-                  height: $size--touch-target;
-                  line-height: $size--touch-target;
-                  text-align: center;
-                  padding: 0;
-                  background-color: lighten($color--primary, 2.5%);
-                  margin-right: $gutter--narrow;
-                }
-            }
-
-            .social-nav__link {
-                border-top-color: lighten($color--primary, 15%);
-                background-color: lighten($color--primary, 10%);
-
-                &:before {
-                    background-color: lighten($color--primary, 12.5%);
-                }
-            }
-
-
-}
-
-.primary-nav {
-    @extend %grid--full;
-    width: 100%;
-}
+  width: 100%; }
 
 .page-nav__list {
-    @extend %grid--full;
-    @extend %grid__item;
-    @extend %breakpoint-lap--four-fifths;
-
-    width: $size--touch-target;
-
-}
-
-.social-nav__list {
-    @extend %grid--full;
-    @extend %grid__item;
-    @extend %breakpoint-lap--one-fifth;
-
-
-}
-
-.page-nav__item {
-    @extend %grid__item;
-    @extend %breakpoint-lap--one-fifth;
-}
+  width: 44px; }
 
 .social-nav__item {
-    @extend %grid__item;
-    @extend %breakpoint-lap--one-third;
-
-    max-width: $size--touch-target;
-    overflow: hidden;
-
-}
-/**/
-.page-head {
-  display: block;
-  height: 75vw;
-  min-height: 150px;
-  max-height: 300px;
-  text-align: center;
-  border-bottom: 1px solid #20272D;
-  background-color: #2D3840;
-  position: relative; }
-
-.page-head__logo {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%) translateX(-50%);
-      -ms-transform: translateY(-50%) translateX(-50%);
-          transform: translateY(-50%) translateX(-50%);
-  width: 50%;
-  text-indent: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  height: 100%;
-  left: 50%;
-  background-color: #ffffff;
-  /* Filename, Position / Size, Repeat */
-  /* Modernizr.cssmask is the test needed to pass - snippet below */
-  -webkit-mask: url(/assets/img/dblok-logo.svg) center center no-repeat;
-  -ms-mask: url(/assets/img/dblok-logo.svg) center center no-repeat;
-  mask: url(/assets/img/dblok-logo.svg) center center no-repeat; }
-
-.page-head__tagline {
-  font-size: 1.03125em;
-  display: block; }
+  max-width: 44px;
+  overflow: hidden; }
 
 .module {
   max-width: 400px; }
-
-/*
-
-
-body {
-  font-size: 14px;
-  line-height: 21px;
-}
-h1 {
-  font-size: 47px;
-  line-height: 63px;
-  margin-top: 42px;
-  margin-bottom: 21px;
-}
-h2 {
-  font-size: 32px;
-  line-height: 42px;
-  margin-top: 42px;
-  margin-bottom: 21px;
-}
-h3 {
-  font-size: 21px;
-  line-height: 21px;
-  margin-top: 21px;
-  margin-bottom: 21px;
-}
-h4 {
-  font-size: 14px;
-  line-height: 21px;
-  margin-top: 21px;
-  margin-bottom: 21px;
-}
-p, ul, ol, pre, table, blockquote {
-  margin-top: 21px;
-  margin-bottom: 21px;
-}
-
-hr {
-  border: 1px solid;
-  margin: -1px 0;
-}
-ul ul, ol ol, ul ol, ol ul {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-b, strong, em, small, code {
-  line-height: 1;
-}
-sup, sub {
-  vertical-align: baseline;
-  position: relative;
-  top: -0.4em;
-}
-sub {
-  top: 0.4em;
-}
-*/

@@ -170,20 +170,7 @@ $color--simpsons:  #eabf04;
 
 $color--selection: rgba(253, 133, 47, 0.70);
 
-/*
 
-
-// Organisms
-// -- modules
-@import 'organisms/o-module';
-
-// -- page elements
-@import 'organisms/o-page-head';
-@import 'organisms/o-primary-nav-new';
-// @import 'o-page-foot';
-// @import 'o-artists';
-
-*/
 @import '../../bower_components/csswizardry-grids/csswizardry-grids';
 @import '../../assets/fonts/icons';
 
@@ -195,70 +182,6 @@ $color--selection: rgba(253, 133, 47, 0.70);
 @import 'atoms';
 @import 'molecules';
 @import 'organisims';
-
-
-
-
-
-/*
-
-
-body {
-  font-size: 14px;
-  line-height: 21px;
-}
-h1 {
-  font-size: 47px;
-  line-height: 63px;
-  margin-top: 42px;
-  margin-bottom: 21px;
-}
-h2 {
-  font-size: 32px;
-  line-height: 42px;
-  margin-top: 42px;
-  margin-bottom: 21px;
-}
-h3 {
-  font-size: 21px;
-  line-height: 21px;
-  margin-top: 21px;
-  margin-bottom: 21px;
-}
-h4 {
-  font-size: 14px;
-  line-height: 21px;
-  margin-top: 21px;
-  margin-bottom: 21px;
-}
-p, ul, ol, pre, table, blockquote {
-  margin-top: 21px;
-  margin-bottom: 21px;
-}
-
-hr {
-  border: 1px solid;
-  margin: -1px 0;
-}
-ul ul, ol ol, ul ol, ol ul {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-b, strong, em, small, code {
-  line-height: 1;
-}
-sup, sub {
-  vertical-align: baseline;
-  position: relative;
-  top: -0.4em;
-}
-sub {
-  top: 0.4em;
-}
-*/
-
-
-
 
 
 
