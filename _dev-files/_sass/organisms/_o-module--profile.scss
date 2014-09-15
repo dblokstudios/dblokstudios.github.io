@@ -2,11 +2,30 @@
     .module__head {
         height: 100px;
         margin-bottom: $size--touch-target;
+
     }
 
     .module__body {
         padding-top: $gutter--narrow;
     }
+
+    .image--cover {
+        height: 100px;
+        position: relative;
+    }
+
+        .image--cover .image__img {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+    .image--headshot {
+        height: 100px;
+        width: 100px;
+    }
+
 
     .image--headshot {
         position: absolute;
@@ -31,7 +50,6 @@
         }
 
 }
-
 
 
 

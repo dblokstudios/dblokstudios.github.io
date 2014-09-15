@@ -16,9 +16,9 @@ sass:
 
 
 # Site Defaults
-# name: "D-Blok Studios"
-# tagline: "We make beats. We throw parties. You get down."
-# copyright: "©2014 D-Blok Studios LLC."
+name: "D-Blok Studios"
+tagline: "We make beats. We throw parties. You get down."
+copyright: "©2014 D-Blok Studios LLC."
 social:
   -
     safe: "facebook"

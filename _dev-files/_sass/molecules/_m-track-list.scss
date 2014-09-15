@@ -1,20 +1,10 @@
 .track-list {
     @extend %reset-list;
-    margin-top: $gutter--narrow;
-    margin-left: -$gutter--narrow;
-    margin-right: -$gutter--narrow;
-    border: 1px solid $color--border;
-    border-left: none;
-    border-right: none;
+
+    border-top: 1px solid $color--border;
+    border-bottom: 1px solid $color--border;
 }
-    .track {
 
+    .track-list .track:nth-of-type(2n + 2) {
+        background-color: rgba(255,255,255,0.1);
     }
-
-        .track__title {
-
-        }
-
-        .track__time {
-
-        }

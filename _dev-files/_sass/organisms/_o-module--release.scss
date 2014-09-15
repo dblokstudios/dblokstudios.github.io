@@ -19,3 +19,21 @@
     .release__description {
 
     }
+
+    .track-list {
+        margin-left: -$gutter--narrow;
+        margin-right: -$gutter--narrow;
+    }
+
+        .track {
+            padding-left: $gutter--narrow;
+            padding-right: $gutter--narrow;
+        }
+
+
+    .module__body {
+        padding-top: $gutter--narrow;
+    }
+
+
+

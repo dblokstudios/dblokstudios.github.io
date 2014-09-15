@@ -1,5 +1,5 @@
 .button {
-    display: inline-block;
+    width: 100%;
     margin: $gutter--skinny 0;
     border-radius: $size--border-radius;
     border: none;
@@ -10,8 +10,8 @@
     padding-right:  $gutter--normal;
     line-height: $size--touch-target;
     color: $color--white;
-    width: 100%;
     text-align: center;
+    box-sizing: border-box;
 }
 
     .button:hover,

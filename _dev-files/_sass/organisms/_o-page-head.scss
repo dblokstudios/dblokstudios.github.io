@@ -1,37 +1,33 @@
-/*------------------------------------*\
-    #page-head
-\*------------------------------------*/
-
 .page-head {
     display: block;
     height: 75vw;
     min-height: 150px;
     max-height: 300px;
     text-align: center;
-    position: relative;
     border-bottom: 1px solid $color--border;
     background-color: $color--grey-dark;
-
+    position: relative;
 }
 
     .page-head__logo {
         @extend %reset-box;
-        
+
         position: absolute;
         top: 50%;
-        transform: translateY(-50%);
-        width: 100%;
+        transform: translateY(-50%)
+                   translateX(-50%);
+        width: 50%;
         text-indent: 100%;
         overflow: hidden;
         white-space: nowrap;
         height: 100%;
+        left: 50%;
         background-color: $color--white;
-        
-        @include mask(url(/assets/img/dblok-logo.svg) 50% 50% no-repeat);
+
+        @include mask(url(/assets/img/dblok-logo.svg) center center no-repeat);
     }
-    
+
         .page-head__tagline {
             font-size: $type--small;
             display: block;
         }
-       
