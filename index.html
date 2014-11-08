@@ -1,90 +1,386 @@
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
+<!doctype html>
+<html lang="en-GB">
+<head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+    
+    <style>
+        body {
+            background-color: #35414A;
+        }
+        
+        .logo {
+            width: 250px;
+            height: 250px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+        }
+        
+        h3,
+        h4 {
+            font-weight: 100;
+            font-family: hevetica, sans-serif;
+            color: rgba(0,0,0,0);
+            -webkit-animation: text 2.2s 3.4s ease-in-out forwards;
+            text-align: center;
+            margin: 0;
+        }
 
-    <title>d-blok studios preset: Revenants, October 31</title>
+        
+        footer {
+            position: absolute;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            color: #fff;
+            font-family: hevetica, sans-serif;
+            font-size: 12px;
+            font-weight: 200;
+        }
+        
+        
+        @-webkit-keyframes text {
+              0% { color: rgba(0,0,0,0) }
+            100% { color: rgba(255,255,255,1) }
+        }
+        
+    </style>
+<body>
+    
+    <div class="logo">
+        <img src="dblok-logo.svg">
+        
+        <h3>d-blok studios</h3>
+        <h4 id="quote">You'd better sit down.</h4>
+    </div>
+    
+    <footer>
+        © 2014 d-blok studios llc.
+    </footer>
+    
+    
+    
+<script type="text/javascript">
+//store the quotations in arrays
+genres = [
+    "Alternative",
+"Alternative Rock",
+"College Rock",
+"Experimental Rock",
+"Goth / Gothic Rock",
+"Grunge",
+"Hardcore Punk",
+"Hard Rock",
+"Indie Rock",
+"New Wave",
+"Progressive Rock",
+"Punk",
+"Shoegaze (with thx to Jackie Herrera)",
+"Steampunk (with thx to Christopher Schaeffer)",
+"Anime",
+"Blues",
+"Acoustic Blues",
+"Chicago Blues",
+"Classic Blues",
+"Contemporary Blues",
+"Country Blues",
+"Delta Blues",
+"Electric Blues",
+"Children’s Music",
+"Lullabies",
+"Sing-Along",
+"Stories",
+"Classical",
+"Avant-Garde",
+"Baroque",
+"Chamber Music",
+"Chant",
+"Choral",
+"Classical Crossover",
+"Early Music",
+"High Classical",
+"Impressionist",
+"Medieval",
+"Minimalism",
+"Modern Composition",
+"Opera",
+"Orchestral",
+"Renaissance",
+"Romantic",
+"Wedding Music",
+"Comedy",
+"Novelty",
+"Standup Comedy",
+"Commercial (thank you Sheldon Reynolds)",
+"Jingles",
+"TV Themes",
+"Country",
+"Alternative Country",
+"Americana",
+"Bluegrass",
+"Contemporary Bluegrass",
+"Contemporary Country",
+"Country Gospel",
+"Country Pop (thanks Sarah Johnson)",
+"Honky Tonk",
+"Outlaw Country",
+"Traditional Bluegrass",
+"Traditional Country",
+"Urban Cowboy",
+"Dance (EMD – Electronic Dance Music – see Electronic below – with thx to Eric Shaffer-Whiting)",
+"Club / Club Dance (thx Luke Allfree)",
+"Breakbeat",
+"Deep House (cheers Venus Pang)",
+"Dubstep",
+"Electro House (thx Luke Allfree)",
+"Exercise",
+"Garage",
+"Hardcore",
+"Hard Dance",
+"Hi-NRG / Eurodance",
+"House",
+"Jackin House (with thx to Jermaine Benjamin Dale Bruce)",
+"Jungle / Drum’n’bass",
+"Techno",
+"Trance",
+"Trap (thx Luke Allfree)",
+"Disney",
+"Easy Listening",
+"Bop",
+"Lounge",
+"Swing",
+"Electronic",
+"8bit – aka 8-bit, Bitpop and Chiptune - (thx Marcel Borchert)",
+"Ambient",
+"Bassline (thx Leon Oliver)",
+"Chiptune (kudos to Dominik Landahl)",
+"Crunk (with thx to Jillian Edwards)",
+"Downtempo",
+"Drum & Bass (thx Luke Allfree)",
+"Electro",
+"Electro-swing (thank you Daniel Forthofer)",
+"Electronica",
+"Electronic Rock",
+"Hardstyle (kudos to Dominik Landahl)",
+"IDM/Experimental",
+"Industrial",
+"Trip Hop (thank you Michael Tait Tafoya)",
+"Enka",
+"French Pop",
+"German Folk",
+"German Pop",
+"Fitness & Workout",
+"Hip-Hop/Rap",
+"Alternative Rap",
+"Bounce",
+"Dirty South",
+"East Coast Rap",
+"Gangsta Rap",
+"Hardcore Rap",
+"Hip-Hop",
+"Latin Rap",
+"Old School Rap",
+"Rap",
+"Turntablism (thank you Luke Allfree)",
+"Underground Rap",
+"West Coast Rap",
+"Holiday",
+"Chanukah",
+"Christmas",
+"Christmas: Children’s",
+"Christmas: Classic",
+"Christmas: Classical",
+"Christmas: Jazz",
+"Christmas: Modern",
+"Christmas: Pop",
+"Christmas: R&B",
+"Christmas: Religious",
+"Christmas: Rock",
+"Easter",
+"Halloween",
+"Holiday: Other",
+"Thanksgiving",
+"Indie Pop",
+"Industrial",
+"Inspirational – Christian & Gospel",
+"CCM",
+"Christian Metal",
+"Christian Pop",
+"Christian Rap",
+"Christian Rock",
+"Classic Christian",
+"Contemporary Gospel",
+"Gospel",
+"Christian & Gospel",
+"Praise & Worship",
+"Qawwali (with thx to Jillian Edwards)",
+"Southern Gospel",
+"Traditional Gospel",
+"Instrumental",
+"March (Marching Band)",
+"J-Pop",
+"J-Rock",
+"J-Synth",
+"J-Ska",
+"J-Punk",
+"Jazz",
+"Acid Jazz (with thx to Hunter Nelson)",
+"Avant-Garde Jazz",
+"Big Band",
+"Blue Note (with thx to Jillian Edwards)",
+"Contemporary Jazz",
+"Cool",
+"Crossover Jazz",
+"Dixieland",
+"Ethio-jazz (with thx to Jillian Edwards)",
+"Fusion",
+"Gypsy Jazz (kudos to Mike Tait Tafoya)",
+"Hard Bop",
+"Latin Jazz",
+"Mainstream Jazz",
+"Ragtime",
+"Smooth Jazz",
+"Trad Jazz",
+"K-Pop",
+"Karaoke",
+"Kayokyoku",
+"Latin",
+"Alternativo & Rock Latino",
+"Argentine tango (gracias P. Moth & Sandra Sanders)",
+"Baladas y Boleros",
+"Bossa Nova (with thx to Marcos José Sant’Anna Magalhães & Alex Ede for the reclassification)",
+"Brazilian",
+"Contemporary Latin",
+"Flamenco / Spanish Flamenco (thank you Michael Tait Tafoya & Sandra Sanders)",
+"Latin Jazz",
+"Nuevo Flamenco (and again Michael Tafoya)",
+"Pop Latino",
+"Portuguese fado (and again Sandra Sanders)",
+"Raíces",
+"Reggaeton y Hip-Hop",
+"Regional Mexicano",
+"Salsa y Tropical",
+"New Age",
+"Environmental",
+"Healing",
+"Meditation",
+"Nature",
+"Relaxation",
+"Travel",
+"Opera",
+"Pop",
+"Adult Contemporary",
+"Britpop",
+"Pop/Rock",
+"Soft Rock",
+"Teen Pop",
+"R&B/Soul",
+"Contemporary R&B",
+"Disco (not a top level genre Sheldon Reynolds!)",
+"Doo Wop",
+"Funk",
+"Motown",
+"Neo-Soul",
+"Quiet Storm",
+"Soul",
+"Reggae",
+"Dancehall",
+"Dub",
+"Roots Reggae",
+"Ska",
+"Rock",
+"Acid Rock (with thanks to Alex Antonio)",
+"Adult Alternative",
+"American Trad Rock",
+"Arena Rock",
+"Blues-Rock",
+"British Invasion",
+"Death Metal / Black Metal",
+"Glam Rock",
+"Gothic Metal (fits here Sam DeRenzis – thx)",
+"Hair Metal",
+"Hard Rock",
+"Metal",
+"Noise Rock (genre – Japanoise – thx Dominik Landahl)",
+"Jam Bands",
+"Prog-Rock/Art Rock",
+"Psychedelic",
+"Rock & Roll",
+"Rockabilly (it’s here Mark Murdock!)",
+"Roots Rock",
+"Singer/Songwriter",
+"Southern Rock",
+"Surf",
+"Tex-Mex",
+"Singer/Songwriter",
+"Alternative Folk",
+"Contemporary Folk",
+"Contemporary Singer/Songwriter",
+"Folk-Rock",
+"Love Song (Chanson – merci Marcel Borchert)",
+"New Acoustic",
+"Traditional Folk",
+"Soundtrack",
+"Foreign Cinema",
+"Musicals",
+"Original Score",
+"Soundtrack",
+"TV Soundtrack",
+"Spoken Word",
+"Tex-Mex / Tejano (with thx to Israel Lopez)",
+"Chicano",
+"Classic",
+"Conjunto",
+"Conjunto Progressive",
+"New Mex",
+"Tex-Mex",
+"Vocal",
+"A cappella (with kudos to Sheldon Reynolds)",
+"Barbershop (with thx to Kelly Chism)",
+"Doo-wop (with thx to Bradley Thompson)",
+"Standards",
+"Traditional Pop",
+"Vocal Jazz",
+"Vocal Pop",
+"World",
+"Africa",
+"Afro-Beat",
+"Afro-Pop",
+"Asia",
+"Australia",
+"Cajun",
+"Calypso (thx Gerald John)",
+"Caribbean",
+"Celtic",
+"Celtic Folk",
+"Contemporary Celtic",
+"Drinking Songs",
+"Drone )with thx to Robert Conrod)",
+"Europe",
+"France",
+"Hawaii",
+"Indian Pop",
+"Japan",
+"Japanese Pop",
+"Klezmer",
+"Middle East",
+"North America",
+"Ode (thank you Sheldon Reynolds)",
+"Polka",
+"Soca (thx Gerald John)",
+"South Africa",
+"South America",
+"Traditional Celtic",
+"Worldbeat",
+"Zydeco"
+];
 
-    <!-- Bootstrap core CSS -->
-    <link href="/assets/stylesheets/style.css" rel="stylesheet">
+//calculate a random index number
+index = Math.floor(Math.random() * genres.length);
 
-    <!-- Custom styles for this template -->
-    <link href="jumbotron-narrow.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="/assets/js/ie-emulation-modes-warning.js"></script>
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
-
-  <body>
-
-    <div class="container">
-      <div class="header">
-        <h3 class="text-muted">d-blok studios present</h3>
-      </div>
-
-      <div class="jumbotron">
-        <h1>Revenants</h1>
-        <p class="lead">This Halloween, join D-Blok Studios for A night of Costumes, Drum & Bass, Breaks, Dubstep… and probably Trap.</p>
-
-            <h3>Featuring</h3>
-            <h2>Abstrakt Sonnance</h2>
-            <h3>Woodhead • Spoon</h3>
-            <h4>Badger • B-Mid • Hertz Donut</h4>
-            <p><small>Secure Indoor Venue, Duncan, BC.</small></p>
-            <p><a class="btn btn-lg btn-success" href="https://www.facebook.com/events/874719412541070/" role="button">Visit Event Page</a></p>
-
-
-      </div>
-
-      <div class="row marketing">
-        <div class="col-lg-6 col-md-6">
-          <h3>Tickets</h3>
-          <p>$20 until October 15th; $25 until day of; $30 at door</p>
-
-          <h3>Lineup</h3>
-          <p>8-9: Badger</p>
-          <p>9-10: B-Mid</p>
-          <p>10-11: Spoon</p>
-          <p>11-12: Hertz Donut</p>
-          <p>12-1:30: Woodhead</p>
-          <p>1:30-3: Abstrakt Sonance</p>
-
-          <h3>Woodhead</h3>
-          <p>Homebreakin Records, East Van Digital
-          <p>Vancouver’s Darren Woodhead is a West Coast institution. Having cut his teeth touring Western Canada and the States with punk bands, He then went on to host the now legendary Sauna Sessions podcast, broadcasting live from a mobile sauna party somewhere in East Van, and hosted the hugely popular Signal Saturdays at the now defunct Lotus Lounge. He was a mainstay at the Renegade stage at another fabled West Coast festival, Soundwave.</p>
-        </div>
-
-        <div class="col-lg-6 col-md-6">
-          <h3>Abstrakt Sonance</h3>
-          <p>A force like no other in the bass music world. Slaying every genre, plus experimenting into uncharted realms, Abstrakt is still very known world wide with his Dubstep and Drum & Bass. His influences and attitude were born from years of absolute madness, abuse, drugs, near death and a desire to use these negatives as a positive and create something new, something that constantly evolves with him on his new life. His mind is now on a focused path to constantly create and share his message and music with the world. With constant shows, and tours slowly tracing around the globe, Abstrakt will no doubt be a name, and a face, you wont soon forget.</p>
-
-          <h3>Spoon</h3>
-          <p>Homebreakin Records, East Van Digital
-          <p>aka Shawn Spoor has been moving dance floors all over Vancouver Island, with his mixed varieties of drum and bass and broken beats since 2006. Whether it be festivals, bush parties, club nights or house parties, you'll never know what this boy is going to throw at you next. He always knows how to read a crowd and rock a dance floor! Spoon is not one to be missed!</p>
-        </div>
-      </div>
-
-      <div class="footer">
-        <p>&copy; 2014 D-Blok Studios</p>
-      </div>
-
-    </div> <!-- /container -->
-
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-  </body>
-</html>
+document.getElementById('quote').innerHTML = 'Fuck your '+genres[index];
+//done
+</script>
