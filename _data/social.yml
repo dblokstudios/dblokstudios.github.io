@@ -1,0 +1,19 @@
+- name: Mail
+  url: mailto:{{ site.email }}
+  icon: envelope-square
+
+- name: Facebook
+  url:  //facebook.com/dblokstudios
+  icon: facebook-official
+
+- name: Twitter
+  url:  //twitter.com/dblokstudios
+  icon: twitter-square
+
+- name: Github
+  url:  //github.com/dblokstudios
+  icon: github-square
+
+- name: Youtube
+  url:  //www.youtube.com/user/dblokstudios
+  icon: youtube-square

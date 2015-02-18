@@ -1,0 +1,29 @@
+- name: Grumpy & The Brain
+  hosts:
+    - Jason Druyts
+    - Gregory Daynes
+  topics:
+    - Science
+    - Technology
+    - Humanity
+  description: A semi-weekly radio/podcast show about current topics in Science, Technology, and Humanity. Join Jason Druyts and Gregory Daynes in dissecting hot topics and ideas from the internet.
+  disclaimer: Neither Jason or Greg are authorities on any of the subjects discussed. They just enjoy talking about and trying to figure out the whats and whys
+  
+- name: Blok Talk
+  hosts:
+    - Jason Druyts
+    - Special Guests
+  topics:
+    - Music
+    - Talk
+    - Culture
+  description: Join Jason Druyts on a weekly radio/podcast with special guests talk about anything and everything. They just may challenge the way you think about the world.
+  disclaimer: Some of the topics are controversial, get heated, and not what you're used to hearing. Come with an open mind, prepared to ask questions, and challenge everything you know to be true
+  
+# - name: The Friday Night Warmup
+#   hosts:
+#     - Weekly Guest Artists
+#   topics:
+#     - Music
+#     - Entertainment
+#   description: To get you excited for the weekend, Join us for two hours of music from different guests weekly. From Drum & Bass, to Hip-Hop, Top 40, Deep house to space pop. And maybe some Synth-pop/New wave.

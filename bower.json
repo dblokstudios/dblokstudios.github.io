@@ -1,0 +1,24 @@
+{
+  "name": "dblokstudios.com",
+  "version": "0.0.1",
+  "homepage": "dblokstudos.com",
+  "authors": [
+    "Gregory Daynes <gregdaynes@gmail.com>"
+  ],
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fastclick": "~1.0.6",
+    "html5shiv": "~3.7.2",
+    "normalize.css": "~3.0.2",
+    "fullpage.js": "~2.5.6"
+  }
+}
