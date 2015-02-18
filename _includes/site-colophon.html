@@ -1,0 +1,22 @@
+<section class="site-colophon">
+
+    <h2 class="section-title sr-only">More from D-Blok</h2>
+
+    <div class="container-fluid">
+        <div class="social  col-sm-6">
+            <ul class="social__list  list-inline">
+
+                {% for social in site.data.social %}
+                <li class="social__item">
+                    <a href="{{ social.url }}" class="social__link"><span class="fa fa-{{ social.icon | downcase }}"></span><span class="sr-only">{{ social.name }}</span></a>
+                </li>
+                {% endfor %}
+
+            </ul>
+        </div>
+        <div class="col-sm-6">
+            <p class="text">{{ site.description }}</p>
+        </div>
+    </div>
+
+</section>

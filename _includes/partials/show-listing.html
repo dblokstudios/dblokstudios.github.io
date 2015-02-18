@@ -1,0 +1,17 @@
+--><div class="show">
+    <h2>{{show.name}}</h2>
+    <ul>
+        {% for topic in show.topics %}
+            <li>{{topic}}</li>
+        {% endfor %}
+    </ul>
+    <ul>
+        {% for host in show.hosts %}
+            <li>{{host}}</li>
+        {% endfor %}
+    </ul>
+    <p>{{show.description}}</p>
+    {% if show.disclaimer %}
+    <p class="disclaimer">Disclaimer: {{show.disclaimer}}</p>
+    {% endif %}
+</div><!--

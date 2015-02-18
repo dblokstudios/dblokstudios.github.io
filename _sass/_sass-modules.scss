@@ -1,0 +1,124 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:200,400,700);
+@import "normalize";
+@import "csswizardry-grids";
+
+$color--primary-bg: #334455;
+$color--gray-lightest: #fff;
+$font--title: 'Source Code Pro';
+$font--body: 'Source Code Pro';
+$gutter--base: 20px;
+$gutter--short: $gutter--base / 2;
+$gutter--narrow: $gutter--base / 4;
+$gutter: $gutter--base;
+
+*:before,
+*,
+*:after {
+    box-sizing: border-box;
+    margin-top: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font--title;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+body {
+    font-family: $font--body;
+    font-size: 16px;
+    font-weight: 200;
+}
+
+header,
+section,
+.section {
+    margin: 0 auto;
+}
+
+header {
+    background-color: $color--primary-bg;
+    color: $color--gray-lightest;
+    text-align: center;
+    margin-bottom: $gutter--base * 2;
+}
+
+section,
+.section {
+    width: 35em;    
+    margin-bottom: $gutter--base * 2;
+    @extend %grid;
+}
+
+.wrapper {
+    
+    .inner {
+        
+        width: 35em;
+        margin: 0 auto;
+    }
+}
+
+.person {
+    margin-bottom: $gutter--short;
+        
+    p {
+        margin-bottom: 0;
+    }
+    
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    li {
+        display: inline;
+    }
+    
+}
+
+.who {
+    width: 100%;
+
+    .person {
+        @extend %grid__item;
+        @extend %one-quarter;        
+    }
+}
+
+.about {
+    .wrapper {
+        @extend %grid--full;
+    }
+    
+    
+    .person {
+        @extend %grid__item;
+        @extend %one-third;
+    }
+}
+
+.shows {
+    width: 100%;
+    
+    .show {
+        @extend %grid__item;
+        @extend %one-half;
+    }
+}
+
+.show {
+    
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    li {
+        display: inline;
+    }
+}

@@ -1,0 +1,19 @@
+- name: Jason Druyts
+  role:
+    - CEO
+    - Producer
+    - Host
+
+- name: Gregory Daynes
+  role:
+    - CTO
+    - Resident Robot
+    - Host
+    
+- name: Neil Hamilton
+  role:
+    - Stage Manager
+    
+- name: Felix Huet
+  role:
+    - Visuals Manager

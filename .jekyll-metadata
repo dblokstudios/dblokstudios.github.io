@@ -1,0 +1,366 @@
+---
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/atom.xml":
+  mtime: 2015-01-30 21:24:32.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/index.html":
+  mtime: 2015-02-17 22:11:43.000000000 -08:00
+  deps:
+  - "/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/_includes/partials/who.html"
+  - "/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/_includes/partials/show-listing.html"
+  - "/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/_includes/partials/license.html"
+  - "/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/_includes/head.html"
+  - "/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/_includes/page-title.html"
+  - "/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/_includes/feature-test.html"
+  - "/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/_includes/head__metadata.html"
+  - "/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/_includes/ie.html"
+  - "/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/_includes/icons.html"
+  - "/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/_includes/mobile.html"
+  - "/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/_includes/site-navigation.html"
+  - "/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/_includes/site-header.html"
+  - "/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/_includes/site-footer.html"
+  - "/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/_includes/site-colophon.html"
+  - "/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/_includes/snippets/copyright.html"
+  - "/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/_includes/site-scripts.html"
+  - "/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/_layouts/default.html"
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/404.html":
+  mtime: 2015-02-02 19:08:36.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/CNAME":
+  mtime: 2015-01-30 21:06:40.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/apple-touch-icon.png":
+  mtime: 2015-02-02 19:08:36.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/img/dblok-logo.svg":
+  mtime: 2015-01-30 21:06:40.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/fastclick/lib/fastclick.js":
+  mtime: 2015-01-26 13:19:01.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/fullpage.js/README.md":
+  mtime: 2015-01-26 05:16:00.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/fullpage.js/bower.json":
+  mtime: 2015-01-26 05:16:00.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/fullpage.js/jquery.fullPage.css":
+  mtime: 2015-01-26 05:16:00.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/fullpage.js/jquery.fullPage.js":
+  mtime: 2015-01-26 05:16:00.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/fullpage.js/jquery.fullPage.min.js":
+  mtime: 2015-01-26 05:16:00.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/fullpage.js/vendors/jquery.easings.min.js":
+  mtime: 2015-01-26 05:16:00.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/fullpage.js/vendors/jquery.slimscroll.min.js":
+  mtime: 2015-01-26 05:16:00.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/html5shiv/dist/html5shiv-printshiv.min.js":
+  mtime: 2014-05-03 03:11:35.000000000 -07:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/html5shiv/dist/html5shiv.min.js":
+  mtime: 2014-05-03 03:11:35.000000000 -07:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/MIT-LICENSE.txt":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/bower.json":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/dist/jquery.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/dist/jquery.min.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/dist/jquery.min.map":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/ajax.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/ajax/jsonp.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/ajax/load.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/ajax/parseJSON.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/ajax/parseXML.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/ajax/script.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/ajax/var/nonce.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/ajax/var/rquery.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/ajax/xhr.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/attributes.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/attributes/attr.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/attributes/classes.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/attributes/prop.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/attributes/support.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/attributes/val.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/callbacks.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/core.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/core/access.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/core/init.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/core/parseHTML.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/core/ready.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/core/var/rsingleTag.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/css.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/css/addGetHookIf.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/css/curCSS.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/css/defaultDisplay.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/css/hiddenVisibleSelectors.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/css/support.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/css/swap.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/css/var/cssExpand.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/css/var/isHidden.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/css/var/rmargin.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/css/var/rnumnonpx.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/data.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/data/accepts.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/data/support.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/deferred.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/deprecated.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/dimensions.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/effects.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/effects/Tween.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/effects/animatedSelector.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/effects/support.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/event.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/event/ajax.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/event/alias.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/event/support.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/exports/amd.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/exports/global.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/intro.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/jquery.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/manipulation.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/manipulation/support.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/manipulation/var/rcheckableType.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/offset.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/outro.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/queue.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/queue/delay.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/selector-sizzle.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/selector.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/serialize.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/sizzle/dist/sizzle.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/sizzle/dist/sizzle.min.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/sizzle/dist/sizzle.min.map":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/support.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/traversing.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/traversing/findFilter.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/traversing/var/rneedsContext.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/var/class2type.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/var/concat.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/var/deletedIds.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/var/hasOwn.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/var/indexOf.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/var/pnum.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/var/push.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/var/rnotwhite.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/var/slice.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/var/strundefined.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/var/support.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/var/toString.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/jquery/src/wrap.js":
+  mtime: 2014-12-17 07:28:04.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/normalize.css/LICENSE.md":
+  mtime: 2014-10-04 12:39:33.000000000 -07:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/normalize.css/README.md":
+  mtime: 2014-10-04 12:39:33.000000000 -07:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/normalize.css/bower.json":
+  mtime: 2014-10-04 12:39:33.000000000 -07:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/assets/vendor/normalize.css/normalize.css":
+  mtime: 2014-10-04 12:39:33.000000000 -07:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/bower.json":
+  mtime: 2015-01-31 15:07:46.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/browserconfig.xml":
+  mtime: 2015-02-03 06:12:11.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/crossdomain.xml":
+  mtime: 2015-02-02 19:08:36.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/favicon.ico":
+  mtime: 2015-02-02 19:08:36.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/fuck.html":
+  mtime: 2015-01-30 21:06:40.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/humans.txt":
+  mtime: 2015-02-03 06:12:51.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/robots.txt":
+  mtime: 2015-02-02 19:08:36.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/tile-wide.png":
+  mtime: 2015-02-02 19:08:36.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/tile.png":
+  mtime: 2015-02-02 19:08:36.000000000 -08:00
+  deps: []
+"/Users/gregdaynes/Desktop/D-Blok/dblokstudios.com/_includes/partials/who.html":
+  mtime: 2015-02-17 21:51:13.000000000 -08:00
+  deps: []

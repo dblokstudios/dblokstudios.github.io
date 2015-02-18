@@ -1,0 +1,39 @@
+safe: true
+lsi: false
+# source: your top-level directory
+
+version: 0.0.1
+keywords:
+publisher: D-Blok Studios
+twitter: dblokstudios
+facebook: dblokstudios
+rss:
+contactemail: administrator@dblokstudios.com
+analytics: 'UA-30347152-1'
+color: 333333
+copyright: (c) 2015. All rights reserved.
+license: 'Apache License: v2.0. http://www.apache.org/licenses/LICENSE-2.0'
+language: en
+creator:
+  - name: Gregory Daynes
+  - twitter: gregdaynes
+
+name: D-Blok Studios
+tagline: We make beats. We throw parties. You get down.
+email: info@dblokstudios.com
+url: //dblokstudios.com # the base hostname & protocol for your site
+description: > # this means to ignore newlines until "baseurl:"
+  Founded in 2011, we aim to bring you quality events as well as an affordable and state of the art studio space for all your recording and mastering needs!
+baseurl: "" # the subpath of your site, e.g. /blog/
+company: D-Blok Studios LLC
+exclude: ['assets/vendor/fastclick/bower.json', 'assets/vendor/fastclick/LICENSE', 'assets/vendor/fastclick/README.md',
+          'assets/vendor/html5shiv/bower.json', 'assets/vendor/html5shiv/Gruntfile.js', 'assets/vendor/html5shiv/package.json', 'assets/vendor/html5shiv/readme.md', 'assets/vendor/html5shiv/dist/html5shiv-printshiv.js', 'assets/vendor/html5shiv/dist/html5shiv.js']
+sass:
+    style: :compressed
+paginate: 5
+
+# Site settings
+
+
+
+

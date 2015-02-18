@@ -1,0 +1,65 @@
+<!-- Meta/Document -->
+<meta name='version' content="<!-- $version -->">
+<meta name="date" content="<!-- $date -->">
+<meta name="author" content="<!-- @path humans.txt -->">
+<meta name="keywords" content="<!-- $keywords -->">
+<meta name="generator" content="<!-- $publisher -->">
+<meta name="no-email-collection" content="<!-- @path tos -->">
+
+<!-- Meta/Facebook -->
+<meta property="og:title" content="<!-- $title --> | <!-- $siteName -->">
+<meta property="og:type" content="<!-- $ogType | website -->">
+<meta property="og:url" content="<!-- $siteUrl --><!-- $uri -->">
+<meta property="og:site_name" content="<!-- $siteName -->">
+<meta property="og:description" name="description" content="<!-- $description -->">
+<meta property="og:locale" content="<!-- $language -->">
+<meta property="og:image" content="<!-- $graphImage | /assets/img/graph-200x200.png -->">
+<meta property="og:image:type" content="<!-- $graphType | image/png -->">
+<meta property="og:image:width" content="<!-- $graphWidth | 200 -->">
+<meta property="og:image:height" content="<!-- $graphHeight | 200 -->">
+
+<!-- Meta/Twitter -->
+<meta name="twitter:card" content="<!-- $twitterCard -->">
+<meta name="twitter:site" content="<!-- $twitter -->">
+<meta name="twitter:creator" content="<!-- $twitter -->">
+<meta name="twitter:url" content="<!-- $siteUrl --><!-- $uri -->">
+<meta name="twitter:description" content="<!-- $description -->">
+<meta name="twitter:title" content="<!-- $title -->">
+<meta name="twitter:image" content="<!-- $graphImage | /assets/img/graph-200x200.png -->">
+<meta name="twitter:image:width" content="<!-- $graphWidth | 200 -->">
+<meta name="twitter:image:height" content="<!-- $graphHeight | 200 -->">
+
+<!-- Meta/Links -->
+<link rel="author" href="<!-- @path humans.txt -->">
+<link rel="shorturl" href="<!-- $siteUrlShort -->" />
+
+
+<!-- Meta/Mobile
+     [2] ios web-app features
+     [3] keep web-app saved pages in ios from opening every link in Safari
+         may be safer to not use.
+     [4] single startup image - multiples may be used for customization
+     -->
+<meta name="apple-mobile-web-app-title" content="<!-- $name -->">   <!-- [2] -->
+<meta name="apple-mobile-web-app-capable" content="yes">            <!-- [2] -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black"> <!-- [2] -->
+
+<!-- Meta/Windows
+     [1] Metro tile icon
+     [2] Metro tile background color
+     [3] Name pinned site
+     [4] Pinned tooltip
+     [5] starting url for pinned
+     [6] Recolor IE's controls manually for a Pinned Site
+     [7] Disable link highlighting upon tap in IE10
+     -->
+<meta name="msapplication-TileImage" content="<!-- @path logo-microsoft-tile-icon.png -->"><!--[1]-->
+<meta name="msapplication-TileColor" content="<!-- $siteColor -->"><!--[2]-->
+<meta name="application-name" content="Sample Title"><!--[3]-->
+<meta name="msapplication-tooltip" content="A description of what this site does."><!--[4]-->
+<meta name="msapplication-starturl" content="http://www.example.com/index.html?pinned=true"><!--[5]-->
+<meta name="msapplication-starturl" content="http://www.example.com/index.html?pinned=true"><!--[6]-->
+<meta name="msapplication-tap-highlight" content="no" /><!--[7]-->
+
+
+<meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">

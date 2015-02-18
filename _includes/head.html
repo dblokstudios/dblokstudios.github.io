@@ -1,0 +1,37 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    {% include page-title.html %}
+    <meta name="description" content="<!-- $description -->">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% include feature-test.html %}
+
+    {% include head__metadata.html %}
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Direct search spiders to your sitemap -->
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+
+    <!-- Hide pages from search engines: Contact, complaints, etc -->
+    <!-- <meta name="robots" content="noindex"> -->
+
+    <!-- Pingback -->
+    <!-- <link rel="pingback" href=""> -->
+
+    <!-- Canonical URL -->
+    <!-- <link rel="canonical" href=""> -->
+
+    <!-- Short URL -->
+    <!-- <link rel="shortlink" href="h5bp.com"> -->
+
+
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
+
+    {% include ie.html %}
+
+    {% include icons.html %}
+
+    {% include mobile.html %}
+
